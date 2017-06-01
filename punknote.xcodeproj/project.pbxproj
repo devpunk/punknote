@@ -459,7 +459,6 @@
 		DA5146851EE0CB0900873C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = punknote/Info.plist;
@@ -467,13 +466,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.punknote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		DA5146861EE0CB0900873C06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = punknote/Info.plist;
@@ -481,6 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.punknote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
