@@ -6,21 +6,8 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		DA5146761EE0CB0900873C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5146751EE0CB0900873C06 /* AppDelegate.swift */; };
-		DA5146781EE0CB0900873C06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5146771EE0CB0900873C06 /* ViewController.swift */; };
-		DA51467B1EE0CB0900873C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5146791EE0CB0900873C06 /* Main.storyboard */; };
-		DA51467D1EE0CB0900873C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA51467C1EE0CB0900873C06 /* Assets.xcassets */; };
-		DA5146801EE0CB0900873C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA51467E1EE0CB0900873C06 /* LaunchScreen.storyboard */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA5146751EE0CB0900873C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA5146771EE0CB0900873C06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA51467A1EE0CB0900873C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DA51467C1EE0CB0900873C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DA51467F1EE0CB0900873C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,11 +41,6 @@
 		DA5146741EE0CB0900873C06 /* punknote */ = {
 			isa = PBXGroup;
 			children = (
-				DA5146751EE0CB0900873C06 /* AppDelegate.swift */,
-				DA5146771EE0CB0900873C06 /* ViewController.swift */,
-				DA5146791EE0CB0900873C06 /* Main.storyboard */,
-				DA51467C1EE0CB0900873C06 /* Assets.xcassets */,
-				DA51467E1EE0CB0900873C06 /* LaunchScreen.storyboard */,
 				DA5146811EE0CB0900873C06 /* Info.plist */,
 			);
 			path = punknote;
@@ -124,9 +106,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5146801EE0CB0900873C06 /* LaunchScreen.storyboard in Resources */,
-				DA51467D1EE0CB0900873C06 /* Assets.xcassets in Resources */,
-				DA51467B1EE0CB0900873C06 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,31 +116,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5146781EE0CB0900873C06 /* ViewController.swift in Sources */,
-				DA5146761EE0CB0900873C06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		DA5146791EE0CB0900873C06 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA51467A1EE0CB0900873C06 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DA51467E1EE0CB0900873C06 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA51467F1EE0CB0900873C06 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA5146821EE0CB0900873C06 /* Debug */ = {
@@ -304,6 +262,7 @@
 				DA5146861EE0CB0900873C06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
