@@ -37,6 +37,7 @@
 		DA75E5091EE0D5AC007F8445 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E4EC1EE0D5AC007F8445 /* VToast.swift */; };
 		DA75E50A1EE0D5AC007F8445 /* VView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E4ED1EE0D5AC007F8445 /* VView.swift */; };
 		DA75E50D1EE0D849007F8445 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E50C1EE0D849007F8445 /* CCreate.swift */; };
+		DA75E5101EE0D86F007F8445 /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E50F1EE0D86F007F8445 /* VCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		DA75E4EC1EE0D5AC007F8445 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA75E4ED1EE0D5AC007F8445 /* VView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VView.swift; sourceTree = "<group>"; };
 		DA75E50C1EE0D849007F8445 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
+		DA75E50F1EE0D86F007F8445 /* VCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		DA75E4E01EE0D5AC007F8445 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA75E50E1EE0D868007F8445 /* Create */,
 				DA75E4E11EE0D5AC007F8445 /* Home */,
 				DA75E4E31EE0D5AC007F8445 /* Main */,
 			);
@@ -247,6 +250,14 @@
 			isa = PBXGroup;
 			children = (
 				DA75E50C1EE0D849007F8445 /* CCreate.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		DA75E50E1EE0D868007F8445 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				DA75E50F1EE0D86F007F8445 /* VCreate.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -337,6 +348,7 @@
 				DA75E4F01EE0D5AC007F8445 /* CAppDelegate.swift in Sources */,
 				DA75E4F21EE0D5AC007F8445 /* CParent.swift in Sources */,
 				DA75E4FA1EE0D5AC007F8445 /* ExtensionUIColor.swift in Sources */,
+				DA75E5101EE0D86F007F8445 /* VCreate.swift in Sources */,
 				DA75E4F91EE0D5AC007F8445 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA75E50A1EE0D5AC007F8445 /* VView.swift in Sources */,
 				DA75E5061EE0D5AC007F8445 /* VParent.swift in Sources */,
