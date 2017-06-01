@@ -34,7 +34,7 @@ class CParent:UIViewController
     {
         super.viewDidLoad()
         
-        let controller:CHome = CHome()
+        let controller:CCreate = CCreate()
         mainController(controller:controller)
     }
     

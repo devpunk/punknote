@@ -1,6 +1,6 @@
 import UIKit
 
-class CCreate:CController
+class CCreate:CController<VCreate>
 {
     
 }
