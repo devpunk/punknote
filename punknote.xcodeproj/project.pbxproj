@@ -38,6 +38,7 @@
 		DA75E50A1EE0D5AC007F8445 /* VView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E4ED1EE0D5AC007F8445 /* VView.swift */; };
 		DA75E50D1EE0D849007F8445 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E50C1EE0D849007F8445 /* CCreate.swift */; };
 		DA75E5101EE0D86F007F8445 /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E50F1EE0D86F007F8445 /* VCreate.swift */; };
+		DA75E5121EE0DD1D007F8445 /* VCreateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		DA75E4ED1EE0D5AC007F8445 /* VView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VView.swift; sourceTree = "<group>"; };
 		DA75E50C1EE0D849007F8445 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DA75E50F1EE0D86F007F8445 /* VCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
+		DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				DA75E50F1EE0D86F007F8445 /* VCreate.swift */,
+				DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				DA75E5001EE0D5AC007F8445 /* VHome.swift in Sources */,
 				DA75E4FB1EE0D5AC007F8445 /* ExtensionUIFont.swift in Sources */,
 				DA75E4F01EE0D5AC007F8445 /* CAppDelegate.swift in Sources */,
+				DA75E5121EE0DD1D007F8445 /* VCreateBar.swift in Sources */,
 				DA75E4F21EE0D5AC007F8445 /* CParent.swift in Sources */,
 				DA75E4FA1EE0D5AC007F8445 /* ExtensionUIColor.swift in Sources */,
 				DA75E5101EE0D86F007F8445 /* VCreate.swift in Sources */,
