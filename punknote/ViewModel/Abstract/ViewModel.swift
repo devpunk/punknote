@@ -4,7 +4,6 @@ class ViewModel<T:DefinitionProtocol>:UIViewController
 {
     init()
     {
-        
         super.init(nibName:nil, bundle:nil)
     }
     
