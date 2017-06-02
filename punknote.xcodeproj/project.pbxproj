@@ -39,6 +39,7 @@
 		DA75E50D1EE0D849007F8445 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E50C1EE0D849007F8445 /* CCreate.swift */; };
 		DA75E5101EE0D86F007F8445 /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E50F1EE0D86F007F8445 /* VCreate.swift */; };
 		DA75E5121EE0DD1D007F8445 /* VCreateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */; };
+		DABE69D81EE0E8DF00703C5D /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69D71EE0E8DF00703C5D /* Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		DA75E50C1EE0D849007F8445 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DA75E50F1EE0D86F007F8445 /* VCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 		DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateBar.swift; sourceTree = "<group>"; };
+		DABE69D71EE0E8DF00703C5D /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				DA75E4C91EE0D5AC007F8445 /* CAppDelegate.swift */,
 				DA75E4CA1EE0D5AC007F8445 /* CController.swift */,
 				DA75E4CB1EE0D5AC007F8445 /* CParent.swift */,
+				DABE69D71EE0E8DF00703C5D /* Controller.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				DA75E5121EE0DD1D007F8445 /* VCreateBar.swift in Sources */,
 				DA75E4F21EE0D5AC007F8445 /* CParent.swift in Sources */,
 				DA75E4FA1EE0D5AC007F8445 /* ExtensionUIColor.swift in Sources */,
+				DABE69D81EE0E8DF00703C5D /* Controller.swift in Sources */,
 				DA75E5101EE0D86F007F8445 /* VCreate.swift in Sources */,
 				DA75E4F91EE0D5AC007F8445 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA75E50A1EE0D5AC007F8445 /* VView.swift in Sources */,

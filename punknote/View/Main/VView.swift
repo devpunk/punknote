@@ -1,6 +1,6 @@
 import UIKit
 
-class VView<T:UIViewController>:UIView
+class VView<T>:UIView where T:CController<VView.Ty>
 {
     weak var controller:T!
     weak var layoutLeft:NSLayoutConstraint!
