@@ -16,7 +16,7 @@ class ControllerParent:UIViewController
         case none = 0
     }
     
-    private(set) weak var viewParent:VParent!
+    private(set) weak var viewParent:ViewParent!
     private var barHidden:Bool = false
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.default
     
@@ -40,7 +40,7 @@ class ControllerParent:UIViewController
     
     override func loadView()
     {
-        let viewParent:VParent = VParent(controller:self)
+        let viewParent:ViewParent = ViewParent(controller:self)
         self.viewParent = viewParent
         view = viewParent
     }
@@ -57,13 +57,13 @@ class ControllerParent:UIViewController
     
     //MARK: private
     
-    private func slide(controller:UIViewController, left:CGFloat)
+    private func slide(controller:Controller<View>, left:CGFloat)
     {
         guard
             
-            let currentController:CController = childViewControllers.last as? CController,
-            let newView:VView = controller.view as? VView,
-            let currentView:VView = currentController.view as? VView
+            let currentController:Controller<View> = childViewControllers.last as? Controller<View>,
+            let newView:View = controller.view as? View,
+            let currentView:View = currentController.view as? View
             
         else
         {
@@ -99,21 +99,21 @@ class ControllerParent:UIViewController
         setNeedsStatusBarAppearanceUpdate()
     }
     
-    func slideTo(horizontal:TransitionHorizontal, controller:UIViewController)
+    func slideTo(horizontal:Horizontal, controller:Controller<View>)
     {
         let left:CGFloat = -viewParent.bounds.maxX * horizontal.rawValue
         slide(controller:controller, left:left)
     }
     
-    func mainController(controller:UIViewController)
+    func mainController(controller:Controller<View>)
     {
         addChildViewController(controller)
         
         guard
             
-            let newView:VView = controller.view as? VView
+            let newView:View = controller.view as? View
             
-            else
+        else
         {
             return
         }
@@ -122,9 +122,9 @@ class ControllerParent:UIViewController
     }
     
     func push(
-        controller:UIViewController,
-        horizontal:TransitionHorizontal = TransitionHorizontal.none,
-        vertical:TransitionVertical = TransitionVertical.none,
+        controller:Controller<View>,
+        horizontal:Horizontal = Horizontal.none,
+        vertical:Vertical = Vertical.none,
         background:Bool = true,
         completion:(() -> ())? = nil)
     {
@@ -135,10 +135,10 @@ class ControllerParent:UIViewController
         
         guard
             
-            let currentController:CController = childViewControllers.last as? CController,
-            let newView:VView = controller.view as? VView
+            let currentController:Controller<View> = childViewControllers.last as? Controller<View>,
+            let newView:View = controller.view as? View
             
-            else
+        else
         {
             return
         }
@@ -160,14 +160,14 @@ class ControllerParent:UIViewController
         }
     }
     
-    func animateOver(controller:UIViewController)
+    func animateOver(controller:Controller<View>)
     {
         guard
             
-            let currentController:CController = childViewControllers.last as? CController,
-            let newView:VView = controller.view as? VView
+            let currentController:Controller<View> = childViewControllers.last as? Controller<View>,
+            let newView:View = controller.view as? View
             
-            else
+        else
         {
             return
         }
@@ -194,10 +194,10 @@ class ControllerParent:UIViewController
             
             guard
                 
-                let controller:CController = childViewControllers[controllers] as? CController,
-                let view:VView = controller.view as? VView
+                let controller:Controller = childViewControllers[controllers] as? Controller,
+                let view:View = controller.view as? View
                 
-                else
+            else
             {
                 continue
             }
@@ -219,10 +219,10 @@ class ControllerParent:UIViewController
             
             guard
                 
-                let controller:CController = childViewControllers[controllers] as? CController,
-                let view:VView = controller.view as? VView
+                let controller:Controller<View> = childViewControllers[controllers] as? Controller<View>,
+                let view:View = controller.view as? View
                 
-                else
+            else
             {
                 continue
             }
@@ -235,8 +235,8 @@ class ControllerParent:UIViewController
     }
     
     func pop(
-        horizontal:TransitionHorizontal = TransitionHorizontal.none,
-        vertical:TransitionVertical = TransitionVertical.none,
+        horizontal:Horizontal = Horizontal.none,
+        vertical:Vertical = Vertical.none,
         completion:(() -> ())? = nil)
     {
         let width:CGFloat = viewParent.bounds.maxX
@@ -249,11 +249,11 @@ class ControllerParent:UIViewController
         {
             guard
                 
-                let currentController:CController = childViewControllers[controllers - 1] as? CController,
-                let previousController:CController = childViewControllers[controllers - 2] as? CController,
-                let currentView:VView = currentController.view as? VView
+                let currentController:Controller<View> = childViewControllers[controllers - 1] as? Controller<View>,
+                let previousController:Controller<View> = childViewControllers[controllers - 2] as? Controller<View>,
+                let currentView:View = currentController.view as? View
                 
-                else
+            else
             {
                 return
             }
@@ -292,10 +292,10 @@ class ControllerParent:UIViewController
         {
             guard
                 
-                let removeController:CController = childViewControllers[removeIndex] as? CController,
-                let removeView:VView = removeController.view as? VView
+                let removeController:Controller<View> = childViewControllers[removeIndex] as? Controller<View>,
+                let removeView:View = removeController.view as? View
                 
-                else
+            else
             {
                 return
             }
@@ -315,10 +315,10 @@ class ControllerParent:UIViewController
     {
         guard
             
-            let currentController:CController = childViewControllers.last as? CController,
-            let currentView:VView = currentController.view as? VView
+            let currentController:Controller<View> = childViewControllers.last as? Controller<View>,
+            let currentView:View = currentController.view as? View
             
-            else
+        else
         {
             return
         }
@@ -327,9 +327,9 @@ class ControllerParent:UIViewController
         
         guard
             
-            let previousController:CController = childViewControllers.last as? CController
+            let previousController:Controller<View> = childViewControllers.last as? Controller<View>
             
-            else
+        else
         {
             return
         }

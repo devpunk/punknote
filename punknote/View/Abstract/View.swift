@@ -7,7 +7,7 @@ class View:UIView
     weak var layoutRight:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutBottom:NSLayoutConstraint!
-    weak var pushBackground:VParentPushBackground?
+    weak var pushBackground:VPushBackground?
     
     required init(viewModel:UIViewController)
     {

@@ -14,7 +14,7 @@ class AppDelegate:UIResponder, UIApplicationDelegate
         window.backgroundColor = UIColor.white
         window.makeKeyAndVisible()
         
-        let parent:CParent = CParent()
+        let parent:ControllerParent = ControllerParent()
         window.rootViewController = parent
         self.window = window
         

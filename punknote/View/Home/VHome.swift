@@ -1,6 +1,6 @@
 import UIKit
 
-class VHome:VView<UIViewController>
+class VHome:View
 {
     
 }
