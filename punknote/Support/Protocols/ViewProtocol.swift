@@ -1,6 +1,6 @@
 import Foundation
 
-class ViewProtocol
+protocol ViewProtocol
 {
     associatedtype viewModel:ViewModel
 }

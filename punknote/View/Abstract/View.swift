@@ -1,8 +1,8 @@
 import UIKit
 
-class View<T:ViewModel>:UIView
+class View<T:ViewProtocol>:UIView
 {
-    weak var viewModel:T!
+    weak var viewModel:T.viewModel!
     
     init()
     {
@@ -21,6 +21,5 @@ class View<T:ViewModel>:UIView
     
     func viewDidLoad(viewModel:T)
     {
-        self.viewModel = viewModel
     }
 }

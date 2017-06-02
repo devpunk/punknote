@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewModel<T:View>:UIViewController
+class ViewModel<T:ViewModelProtocol>:UIViewController
 {
     init()
     {
