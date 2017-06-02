@@ -1,5 +1,5 @@
 import UIKit
 
-class VCreate:VView<CCreate>
+class VCreate:VView<UIViewController>
 {
 }

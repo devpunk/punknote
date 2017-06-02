@@ -40,6 +40,7 @@
 		DA75E5101EE0D86F007F8445 /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E50F1EE0D86F007F8445 /* VCreate.swift */; };
 		DA75E5121EE0DD1D007F8445 /* VCreateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */; };
 		DABE69D81EE0E8DF00703C5D /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69D71EE0E8DF00703C5D /* Controller.swift */; };
+		DABE69DA1EE0E91100703C5D /* ControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69D91EE0E91100703C5D /* ControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		DA75E50F1EE0D86F007F8445 /* VCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 		DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateBar.swift; sourceTree = "<group>"; };
 		DABE69D71EE0E8DF00703C5D /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		DABE69D91EE0E91100703C5D /* ControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				DA75E4CA1EE0D5AC007F8445 /* CController.swift */,
 				DA75E4CB1EE0D5AC007F8445 /* CParent.swift */,
 				DABE69D71EE0E8DF00703C5D /* Controller.swift */,
+				DABE69D91EE0E91100703C5D /* ControllerProtocol.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				DA75E4F91EE0D5AC007F8445 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA75E50A1EE0D5AC007F8445 /* VView.swift in Sources */,
 				DA75E5061EE0D5AC007F8445 /* VParent.swift in Sources */,
+				DABE69DA1EE0E91100703C5D /* ControllerProtocol.swift in Sources */,
 				DA75E4EF1EE0D5AC007F8445 /* CHome.swift in Sources */,
 				DA75E5041EE0D5AC007F8445 /* VCollection.swift in Sources */,
 				DA75E5011EE0D5AC007F8445 /* VAlert.swift in Sources */,
