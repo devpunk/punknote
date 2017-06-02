@@ -40,6 +40,7 @@
 		DA3130781EE1A40000DB2FE4 /* CParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130541EE1A40000DB2FE4 /* CParent.swift */; };
 		DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130591EE1A40000DB2FE4 /* MSession.swift */; };
 		DA31307B1EE1A50F00DB2FE4 /* DefinitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31307A1EE1A50F00DB2FE4 /* DefinitionProtocol.swift */; };
+		DA31307E1EE1A59900DB2FE4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31307D1EE1A59900DB2FE4 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		DA3130541EE1A40000DB2FE4 /* CParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CParent.swift; sourceTree = "<group>"; };
 		DA3130591EE1A40000DB2FE4 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DA31307A1EE1A50F00DB2FE4 /* DefinitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionProtocol.swift; sourceTree = "<group>"; };
+		DA31307D1EE1A59900DB2FE4 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +200,7 @@
 		DA31304C1EE1A40000DB2FE4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DA31307C1EE1A59000DB2FE4 /* Abstract */,
 				DA31304D1EE1A40000DB2FE4 /* Create */,
 				DA31304F1EE1A40000DB2FE4 /* Home */,
 				DA3130511EE1A40000DB2FE4 /* Main */,
@@ -261,6 +264,14 @@
 				DA3130591EE1A40000DB2FE4 /* MSession.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DA31307C1EE1A59000DB2FE4 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA31307D1EE1A59900DB2FE4 /* ViewModel.swift */,
+			);
+			path = Abstract;
 			sourceTree = "<group>";
 		};
 		DA5146691EE0CB0900873C06 = {
@@ -386,6 +397,7 @@
 				DA3130691EE1A40000DB2FE4 /* VHome.swift in Sources */,
 				DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */,
 				DA3130731EE1A40000DB2FE4 /* VView.swift in Sources */,
+				DA31307E1EE1A59900DB2FE4 /* ViewModel.swift in Sources */,
 				DA31306C1EE1A40000DB2FE4 /* VBorder.swift in Sources */,
 				DA31306F1EE1A40000DB2FE4 /* VParent.swift in Sources */,
 				DA3130611EE1A40000DB2FE4 /* ExtensionUICollectionReusableView.swift in Sources */,
