@@ -41,7 +41,6 @@
 		DA75E5121EE0DD1D007F8445 /* VCreateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */; };
 		DABE69D81EE0E8DF00703C5D /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69D71EE0E8DF00703C5D /* Controller.swift */; };
 		DABE69DE1EE0E9DD00703C5D /* ViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69DD1EE0E9DD00703C5D /* ViewMain.swift */; };
-		DABE69E41EE0EDF200703C5D /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69E31EE0EDF200703C5D /* ViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +80,6 @@
 		DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateBar.swift; sourceTree = "<group>"; };
 		DABE69D71EE0E8DF00703C5D /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DABE69DD1EE0E9DD00703C5D /* ViewMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMain.swift; sourceTree = "<group>"; };
-		DABE69E31EE0EDF200703C5D /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +250,6 @@
 				DA75E4EC1EE0D5AC007F8445 /* VToast.swift */,
 				DA75E4ED1EE0D5AC007F8445 /* VView.swift */,
 				DABE69DD1EE0E9DD00703C5D /* ViewMain.swift */,
-				DABE69E31EE0EDF200703C5D /* ViewProtocol.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -372,7 +369,6 @@
 				DA75E5011EE0D5AC007F8445 /* VAlert.swift in Sources */,
 				DA75E4F11EE0D5AC007F8445 /* CController.swift in Sources */,
 				DA75E5071EE0D5AC007F8445 /* VParentPushBackground.swift in Sources */,
-				DABE69E41EE0EDF200703C5D /* ViewProtocol.swift in Sources */,
 				DA75E5091EE0D5AC007F8445 /* VToast.swift in Sources */,
 				DA75E4F61EE0D5AC007F8445 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA75E4FD1EE0D5AC007F8445 /* MSession.swift in Sources */,
