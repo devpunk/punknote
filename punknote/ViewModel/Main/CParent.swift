@@ -32,10 +32,10 @@ class CParent:UIViewController
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()
-        
-        let controller:CCreate = CCreate()
-        mainController(controller:controller)
+//        super.viewDidLoad()
+//        
+//        let controller:CCreate = CCreate()
+//        mainController(controller:controller)
     }
     
     override func loadView()
