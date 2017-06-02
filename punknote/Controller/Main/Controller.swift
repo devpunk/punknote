@@ -1,6 +1,6 @@
 import UIKit
 
-class Controller<T:UIView>:UIViewController
+class Controller<T:UIView>:UIViewController where T:ViewProtocol
 {
     init()
     {
@@ -14,15 +14,7 @@ class Controller<T:UIView>:UIViewController
     
     override func loadView()
     {
-        guard
-            
-            let viewMain:ViewMain.Type = T as? ViewMain.Type
-        else
-        {
-            return
-        }
-        let view:T = T(controller:self)
-        self.view = view
+        
     }
     
     override func viewDidLoad()
