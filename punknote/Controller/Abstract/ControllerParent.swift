@@ -32,10 +32,10 @@ class ControllerParent:UIViewController
     
     override func viewDidLoad()
     {
-        //        super.viewDidLoad()
-        //
-        //        let controller:CCreate = CCreate()
-        //        mainController(controller:controller)
+        super.viewDidLoad()
+
+        let controller:CCreate = CCreate()
+        mainController(controller:controller)
     }
     
     override func loadView()
@@ -57,11 +57,11 @@ class ControllerParent:UIViewController
     
     //MARK: private
     
-    private func slide(controller:Controller<View>, left:CGFloat)
+    private func slide(controller:UIViewController, left:CGFloat)
     {
         guard
             
-            let currentController:Controller<View> = childViewControllers.last as? Controller<View>,
+            let currentController:UIViewController = childViewControllers.last,
             let newView:View = controller.view as? View,
             let currentView:View = currentController.view as? View
             
@@ -99,13 +99,13 @@ class ControllerParent:UIViewController
         setNeedsStatusBarAppearanceUpdate()
     }
     
-    func slideTo(horizontal:Horizontal, controller:Controller<View>)
+    func slideTo(horizontal:Horizontal, controller:UIViewController)
     {
         let left:CGFloat = -viewParent.bounds.maxX * horizontal.rawValue
         slide(controller:controller, left:left)
     }
     
-    func mainController(controller:Controller<View>)
+    func mainController(controller:UIViewController)
     {
         addChildViewController(controller)
         
@@ -122,7 +122,7 @@ class ControllerParent:UIViewController
     }
     
     func push(
-        controller:Controller<View>,
+        controller:UIViewController,
         horizontal:Horizontal = Horizontal.none,
         vertical:Vertical = Vertical.none,
         background:Bool = true,
@@ -135,7 +135,7 @@ class ControllerParent:UIViewController
         
         guard
             
-            let currentController:Controller<View> = childViewControllers.last as? Controller<View>,
+            let currentController:UIViewController = childViewControllers.last,
             let newView:View = controller.view as? View
             
         else
@@ -160,11 +160,11 @@ class ControllerParent:UIViewController
         }
     }
     
-    func animateOver(controller:Controller<View>)
+    func animateOver(controller:UIViewController)
     {
         guard
             
-            let currentController:Controller<View> = childViewControllers.last as? Controller<View>,
+            let currentController:UIViewController = childViewControllers.last,
             let newView:View = controller.view as? View
             
         else
@@ -192,9 +192,10 @@ class ControllerParent:UIViewController
         {
             controllers -= 1
             
+            let controller:UIViewController = childViewControllers[controllers]
+            
             guard
                 
-                let controller:Controller = childViewControllers[controllers] as? Controller,
                 let view:View = controller.view as? View
                 
             else
@@ -217,9 +218,10 @@ class ControllerParent:UIViewController
         {
             controllers -= 1
             
+            let controller:UIViewController = childViewControllers[controllers]
+            
             guard
                 
-                let controller:Controller<View> = childViewControllers[controllers] as? Controller<View>,
                 let view:View = controller.view as? View
                 
             else
@@ -247,10 +249,11 @@ class ControllerParent:UIViewController
         
         if controllers > 1
         {
+            let currentController:UIViewController = childViewControllers[controllers - 1]
+            let previousController:UIViewController = childViewControllers[controllers - 2]
+            
             guard
                 
-                let currentController:Controller<View> = childViewControllers[controllers - 1] as? Controller<View>,
-                let previousController:Controller<View> = childViewControllers[controllers - 2] as? Controller<View>,
                 let currentView:View = currentController.view as? View
                 
             else
@@ -290,9 +293,10 @@ class ControllerParent:UIViewController
         
         if controllers > removeIndex
         {
+            let removeController:UIViewController = childViewControllers[removeIndex]
+            
             guard
                 
-                let removeController:Controller<View> = childViewControllers[removeIndex] as? Controller<View>,
                 let removeView:View = removeController.view as? View
                 
             else
@@ -315,7 +319,7 @@ class ControllerParent:UIViewController
     {
         guard
             
-            let currentController:Controller<View> = childViewControllers.last as? Controller<View>,
+            let currentController:UIViewController = childViewControllers.last,
             let currentView:View = currentController.view as? View
             
         else
@@ -327,7 +331,7 @@ class ControllerParent:UIViewController
         
         guard
             
-            let previousController:Controller<View> = childViewControllers.last as? Controller<View>
+            let previousController:UIViewController = childViewControllers.last
             
         else
         {

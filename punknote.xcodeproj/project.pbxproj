@@ -148,8 +148,8 @@
 			children = (
 				DA31307F1EE1A60200DB2FE4 /* Abstract */,
 				DA31313C1EE1EF6800DB2FE4 /* Basic */,
-				DA31303C1EE1A40000DB2FE4 /* Create */,
 				DA31303F1EE1A40000DB2FE4 /* Home */,
+				DA31303C1EE1A40000DB2FE4 /* Create */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				DA3131261EE1ECDA00DB2FE4 /* Abstract */,
-				DA3131281EE1ECDA00DB2FE4 /* Create */,
 				DA31312A1EE1ECDA00DB2FE4 /* Home */,
+				DA3131281EE1ECDA00DB2FE4 /* Create */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
