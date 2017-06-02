@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewMain<T:UIViewController>:UIView
+class ViewMain<T:Controller<UIView>>:UIView
 {
     required init(controller:T)
     {
