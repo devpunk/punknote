@@ -38,10 +38,10 @@
 		DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130861EE1AEE700DB2FE4 /* MCreate.swift */; };
 		DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131291EE1ECDA00DB2FE4 /* CCreate.swift */; };
 		DA3131321EE1ECDA00DB2FE4 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312B1EE1ECDA00DB2FE4 /* CHome.swift */; };
-		DA3131331EE1ECDA00DB2FE4 /* CAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312D1EE1ECDA00DB2FE4 /* CAppDelegate.swift */; };
 		DA3131341EE1ECDA00DB2FE4 /* CController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312E1EE1ECDA00DB2FE4 /* CController.swift */; };
 		DA3131351EE1ECDA00DB2FE4 /* CParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312F1EE1ECDA00DB2FE4 /* CParent.swift */; };
 		DA3131371EE1ECE800DB2FE4 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131361EE1ECE800DB2FE4 /* Controller.swift */; };
+		DA3131391EE1ED4800DB2FE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131381EE1ED4800DB2FE4 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,10 +76,10 @@
 		DA3130861EE1AEE700DB2FE4 /* MCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
 		DA3131291EE1ECDA00DB2FE4 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DA31312B1EE1ECDA00DB2FE4 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
-		DA31312D1EE1ECDA00DB2FE4 /* CAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAppDelegate.swift; sourceTree = "<group>"; };
 		DA31312E1EE1ECDA00DB2FE4 /* CController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CController.swift; sourceTree = "<group>"; };
 		DA31312F1EE1ECDA00DB2FE4 /* CParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CParent.swift; sourceTree = "<group>"; };
 		DA3131361EE1ECE800DB2FE4 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		DA3131381EE1ED4800DB2FE4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3131361EE1ECE800DB2FE4 /* Controller.swift */,
+				DA3131381EE1ED4800DB2FE4 /* AppDelegate.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -271,7 +272,6 @@
 		DA31312C1EE1ECDA00DB2FE4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DA31312D1EE1ECDA00DB2FE4 /* CAppDelegate.swift */,
 				DA31312E1EE1ECDA00DB2FE4 /* CController.swift */,
 				DA31312F1EE1ECDA00DB2FE4 /* CParent.swift */,
 			);
@@ -378,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3131391EE1ED4800DB2FE4 /* AppDelegate.swift in Sources */,
 				DA3130811EE1A61800DB2FE4 /* View.swift in Sources */,
 				DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */,
 				DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */,
@@ -388,7 +389,6 @@
 				DA31305D1EE1A40000DB2FE4 /* ExtensionNotification.swift in Sources */,
 				DA31305F1EE1A40000DB2FE4 /* ExtensionNSManagedObject.swift in Sources */,
 				DA31306E1EE1A40000DB2FE4 /* VCollectionFlow.swift in Sources */,
-				DA3131331EE1ECDA00DB2FE4 /* CAppDelegate.swift in Sources */,
 				DA3130681EE1A40000DB2FE4 /* VCreateBar.swift in Sources */,
 				DA31306A1EE1A40000DB2FE4 /* VAlert.swift in Sources */,
 				DA3130631EE1A40000DB2FE4 /* ExtensionUIFont.swift in Sources */,

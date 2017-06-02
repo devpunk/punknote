@@ -4,7 +4,7 @@ import UIKit
 class AppDelegate:UIResponder, UIApplicationDelegate
 {
     var window:UIWindow?
-
+    
     func application(
         _ application:UIApplication,
         didFinishLaunchingWithOptions
@@ -23,6 +23,6 @@ class AppDelegate:UIResponder, UIApplicationDelegate
     
     func applicationWillEnterForeground(_ application:UIApplication)
     {
-     //   MSession.sharedInstance.settings?.addTtl()
+        //   MSession.sharedInstance.settings?.addTtl()
     }
 }
