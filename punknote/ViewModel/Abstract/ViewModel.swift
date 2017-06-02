@@ -14,6 +14,14 @@ class ViewModel<T:DefinitionProtocol>:UIViewController
     
     override func loadView()
     {
+        let view:UIView = T.View()
+        
+        if let view:View<T> = view as? View<T>
+        {
+            view
+        }
+        
+        self.view = view
     }
     
     override func viewDidLoad()
