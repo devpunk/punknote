@@ -23,16 +23,6 @@
 		DA3130671EE1A40000DB2FE4 /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31303D1EE1A40000DB2FE4 /* VCreate.swift */; };
 		DA3130681EE1A40000DB2FE4 /* VCreateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31303E1EE1A40000DB2FE4 /* VCreateBar.swift */; };
 		DA3130691EE1A40000DB2FE4 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130401EE1A40000DB2FE4 /* VHome.swift */; };
-		DA31306A1EE1A40000DB2FE4 /* VAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130421EE1A40000DB2FE4 /* VAlert.swift */; };
-		DA31306B1EE1A40000DB2FE4 /* VBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130431EE1A40000DB2FE4 /* VBlur.swift */; };
-		DA31306C1EE1A40000DB2FE4 /* VBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130441EE1A40000DB2FE4 /* VBorder.swift */; };
-		DA31306D1EE1A40000DB2FE4 /* VCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130451EE1A40000DB2FE4 /* VCollection.swift */; };
-		DA31306E1EE1A40000DB2FE4 /* VCollectionFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130461EE1A40000DB2FE4 /* VCollectionFlow.swift */; };
-		DA31306F1EE1A40000DB2FE4 /* VParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130471EE1A40000DB2FE4 /* VParent.swift */; };
-		DA3130701EE1A40000DB2FE4 /* VParentPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130481EE1A40000DB2FE4 /* VParentPushBackground.swift */; };
-		DA3130711EE1A40000DB2FE4 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130491EE1A40000DB2FE4 /* VSpinner.swift */; };
-		DA3130721EE1A40000DB2FE4 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31304A1EE1A40000DB2FE4 /* VToast.swift */; };
-		DA3130731EE1A40000DB2FE4 /* VView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31304B1EE1A40000DB2FE4 /* VView.swift */; };
 		DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130591EE1A40000DB2FE4 /* MSession.swift */; };
 		DA3130811EE1A61800DB2FE4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130801EE1A61800DB2FE4 /* View.swift */; };
 		DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130861EE1AEE700DB2FE4 /* MCreate.swift */; };
@@ -41,6 +31,15 @@
 		DA3131371EE1ECE800DB2FE4 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131361EE1ECE800DB2FE4 /* Controller.swift */; };
 		DA3131391EE1ED4800DB2FE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131381EE1ED4800DB2FE4 /* AppDelegate.swift */; };
 		DA31313B1EE1EE4A00DB2FE4 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31313A1EE1EE4A00DB2FE4 /* ControllerParent.swift */; };
+		DA3131451EE1EF6800DB2FE4 /* VAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31313D1EE1EF6800DB2FE4 /* VAlert.swift */; };
+		DA3131461EE1EF6800DB2FE4 /* VBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31313E1EE1EF6800DB2FE4 /* VBlur.swift */; };
+		DA3131471EE1EF6800DB2FE4 /* VBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31313F1EE1EF6800DB2FE4 /* VBorder.swift */; };
+		DA3131481EE1EF6800DB2FE4 /* VCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131401EE1EF6800DB2FE4 /* VCollection.swift */; };
+		DA3131491EE1EF6800DB2FE4 /* VCollectionFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131411EE1EF6800DB2FE4 /* VCollectionFlow.swift */; };
+		DA31314A1EE1EF6800DB2FE4 /* VParentPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131421EE1EF6800DB2FE4 /* VParentPushBackground.swift */; };
+		DA31314B1EE1EF6800DB2FE4 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131431EE1EF6800DB2FE4 /* VSpinner.swift */; };
+		DA31314C1EE1EF6800DB2FE4 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131441EE1EF6800DB2FE4 /* VToast.swift */; };
+		DA31314E1EE1EF7400DB2FE4 /* VParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31314D1EE1EF7400DB2FE4 /* VParent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,16 +59,6 @@
 		DA31303D1EE1A40000DB2FE4 /* VCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 		DA31303E1EE1A40000DB2FE4 /* VCreateBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateBar.swift; sourceTree = "<group>"; };
 		DA3130401EE1A40000DB2FE4 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
-		DA3130421EE1A40000DB2FE4 /* VAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VAlert.swift; sourceTree = "<group>"; };
-		DA3130431EE1A40000DB2FE4 /* VBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBlur.swift; sourceTree = "<group>"; };
-		DA3130441EE1A40000DB2FE4 /* VBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBorder.swift; sourceTree = "<group>"; };
-		DA3130451EE1A40000DB2FE4 /* VCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCollection.swift; sourceTree = "<group>"; };
-		DA3130461EE1A40000DB2FE4 /* VCollectionFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCollectionFlow.swift; sourceTree = "<group>"; };
-		DA3130471EE1A40000DB2FE4 /* VParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VParent.swift; sourceTree = "<group>"; };
-		DA3130481EE1A40000DB2FE4 /* VParentPushBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VParentPushBackground.swift; sourceTree = "<group>"; };
-		DA3130491EE1A40000DB2FE4 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
-		DA31304A1EE1A40000DB2FE4 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
-		DA31304B1EE1A40000DB2FE4 /* VView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VView.swift; sourceTree = "<group>"; };
 		DA3130591EE1A40000DB2FE4 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DA3130801EE1A61800DB2FE4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DA3130861EE1AEE700DB2FE4 /* MCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
@@ -78,6 +67,15 @@
 		DA3131361EE1ECE800DB2FE4 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA3131381EE1ED4800DB2FE4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA31313A1EE1EE4A00DB2FE4 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
+		DA31313D1EE1EF6800DB2FE4 /* VAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VAlert.swift; sourceTree = "<group>"; };
+		DA31313E1EE1EF6800DB2FE4 /* VBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBlur.swift; sourceTree = "<group>"; };
+		DA31313F1EE1EF6800DB2FE4 /* VBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBorder.swift; sourceTree = "<group>"; };
+		DA3131401EE1EF6800DB2FE4 /* VCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCollection.swift; sourceTree = "<group>"; };
+		DA3131411EE1EF6800DB2FE4 /* VCollectionFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCollectionFlow.swift; sourceTree = "<group>"; };
+		DA3131421EE1EF6800DB2FE4 /* VParentPushBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VParentPushBackground.swift; sourceTree = "<group>"; };
+		DA3131431EE1EF6800DB2FE4 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
+		DA3131441EE1EF6800DB2FE4 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
+		DA31314D1EE1EF7400DB2FE4 /* VParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VParent.swift; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,9 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				DA31307F1EE1A60200DB2FE4 /* Abstract */,
+				DA31313C1EE1EF6800DB2FE4 /* Basic */,
 				DA31303C1EE1A40000DB2FE4 /* Create */,
 				DA31303F1EE1A40000DB2FE4 /* Home */,
-				DA3130411EE1A40000DB2FE4 /* Main */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,23 +169,6 @@
 				DA3130401EE1A40000DB2FE4 /* VHome.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		DA3130411EE1A40000DB2FE4 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				DA3130421EE1A40000DB2FE4 /* VAlert.swift */,
-				DA3130431EE1A40000DB2FE4 /* VBlur.swift */,
-				DA3130441EE1A40000DB2FE4 /* VBorder.swift */,
-				DA3130451EE1A40000DB2FE4 /* VCollection.swift */,
-				DA3130461EE1A40000DB2FE4 /* VCollectionFlow.swift */,
-				DA3130471EE1A40000DB2FE4 /* VParent.swift */,
-				DA3130481EE1A40000DB2FE4 /* VParentPushBackground.swift */,
-				DA3130491EE1A40000DB2FE4 /* VSpinner.swift */,
-				DA31304A1EE1A40000DB2FE4 /* VToast.swift */,
-				DA31304B1EE1A40000DB2FE4 /* VView.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		DA3130551EE1A40000DB2FE4 /* Model */ = {
@@ -226,6 +207,7 @@
 		DA31307F1EE1A60200DB2FE4 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
+				DA31314D1EE1EF7400DB2FE4 /* VParent.swift */,
 				DA3130801EE1A61800DB2FE4 /* View.swift */,
 			);
 			path = Abstract;
@@ -265,6 +247,21 @@
 				DA31312B1EE1ECDA00DB2FE4 /* CHome.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DA31313C1EE1EF6800DB2FE4 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				DA31313D1EE1EF6800DB2FE4 /* VAlert.swift */,
+				DA31313E1EE1EF6800DB2FE4 /* VBlur.swift */,
+				DA31313F1EE1EF6800DB2FE4 /* VBorder.swift */,
+				DA3131401EE1EF6800DB2FE4 /* VCollection.swift */,
+				DA3131411EE1EF6800DB2FE4 /* VCollectionFlow.swift */,
+				DA3131421EE1EF6800DB2FE4 /* VParentPushBackground.swift */,
+				DA3131431EE1EF6800DB2FE4 /* VSpinner.swift */,
+				DA3131441EE1EF6800DB2FE4 /* VToast.swift */,
+			);
+			path = Basic;
 			sourceTree = "<group>";
 		};
 		DA5146691EE0CB0900873C06 = {
@@ -367,37 +364,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA31314E1EE1EF7400DB2FE4 /* VParent.swift in Sources */,
 				DA3131391EE1ED4800DB2FE4 /* AppDelegate.swift in Sources */,
 				DA31313B1EE1EE4A00DB2FE4 /* ControllerParent.swift in Sources */,
 				DA3130811EE1A61800DB2FE4 /* View.swift in Sources */,
+				DA3131451EE1EF6800DB2FE4 /* VAlert.swift in Sources */,
 				DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */,
+				DA31314C1EE1EF6800DB2FE4 /* VToast.swift in Sources */,
 				DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */,
-				DA3130701EE1A40000DB2FE4 /* VParentPushBackground.swift in Sources */,
 				DA3130601EE1A40000DB2FE4 /* ExtensionString.swift in Sources */,
-				DA3130721EE1A40000DB2FE4 /* VToast.swift in Sources */,
 				DA3130621EE1A40000DB2FE4 /* ExtensionUIColor.swift in Sources */,
 				DA31305D1EE1A40000DB2FE4 /* ExtensionNotification.swift in Sources */,
+				DA3131481EE1EF6800DB2FE4 /* VCollection.swift in Sources */,
 				DA31305F1EE1A40000DB2FE4 /* ExtensionNSManagedObject.swift in Sources */,
-				DA31306E1EE1A40000DB2FE4 /* VCollectionFlow.swift in Sources */,
 				DA3130681EE1A40000DB2FE4 /* VCreateBar.swift in Sources */,
-				DA31306A1EE1A40000DB2FE4 /* VAlert.swift in Sources */,
 				DA3130631EE1A40000DB2FE4 /* ExtensionUIFont.swift in Sources */,
-				DA31306B1EE1A40000DB2FE4 /* VBlur.swift in Sources */,
+				DA3131471EE1EF6800DB2FE4 /* VBorder.swift in Sources */,
 				DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */,
-				DA3130711EE1A40000DB2FE4 /* VSpinner.swift in Sources */,
 				DA31305E1EE1A40000DB2FE4 /* ExtensionNSLayoutConstraint.swift in Sources */,
+				DA3131461EE1EF6800DB2FE4 /* VBlur.swift in Sources */,
 				DA3130691EE1A40000DB2FE4 /* VHome.swift in Sources */,
 				DA3131321EE1ECDA00DB2FE4 /* CHome.swift in Sources */,
 				DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */,
+				DA3131491EE1EF6800DB2FE4 /* VCollectionFlow.swift in Sources */,
+				DA31314A1EE1EF6800DB2FE4 /* VParentPushBackground.swift in Sources */,
 				DA3131371EE1ECE800DB2FE4 /* Controller.swift in Sources */,
 				DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */,
-				DA3130731EE1A40000DB2FE4 /* VView.swift in Sources */,
-				DA31306C1EE1A40000DB2FE4 /* VBorder.swift in Sources */,
-				DA31306F1EE1A40000DB2FE4 /* VParent.swift in Sources */,
 				DA3130611EE1A40000DB2FE4 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA3130671EE1A40000DB2FE4 /* VCreate.swift in Sources */,
+				DA31314B1EE1EF6800DB2FE4 /* VSpinner.swift in Sources */,
 				DA3130641EE1A40000DB2FE4 /* ExtensionURL.swift in Sources */,
-				DA31306D1EE1A40000DB2FE4 /* VCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
