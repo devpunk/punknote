@@ -1,9 +1,9 @@
 import UIKit
 
-class VParent:UIView
+class ViewParent:UIView
 {
     weak var panRecognizer:UIPanGestureRecognizer!
-    private weak var controller:CParent!
+    private weak var controller:ControllerParent!
     private weak var layoutBarTop:NSLayoutConstraint!
     private var panningX:CGFloat?
     private let kAnimationDuration:TimeInterval = 0.4
@@ -12,9 +12,9 @@ class VParent:UIView
     private let kMaxXDelta:CGFloat = 210
     private let kMinXDelta:CGFloat = 30
     
-    convenience init(controller:CParent)
+    init(controller:ControllerParent)
     {
-        self.init()
+        super.init(frame:CGRect.zero)
         clipsToBounds = true
         backgroundColor = UIColor.white
         self.controller = controller
@@ -24,15 +24,20 @@ class VParent:UIView
             action:#selector(actionPanRecognized(sender:)))
         panRecognizer.isEnabled = false
         self.panRecognizer = panRecognizer
+        
         addGestureRecognizer(panRecognizer)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
     }
     
     //MARK: actions
     
     func actionPanRecognized(sender panGesture:UIPanGestureRecognizer)
     {
-        let location:CGPoint = panGesture.location(
-            in:self)
+        let location:CGPoint = panGesture.location(in:self)
         let xPos:CGFloat = location.x
         
         switch panGesture.state
@@ -66,7 +71,7 @@ class VParent:UIView
                     
                     guard
                         
-                        let topView:VView = subviews.last as? VView
+                        let topView:View = subviews.last as? View
                         
                     else
                     {
@@ -107,14 +112,14 @@ class VParent:UIView
     
     private func gesturePop()
     {
-        controller.pop(horizontal:CParent.TransitionHorizontal.fromRight)
+        controller.pop(horizontal:ControllerParent.Horizontal.right)
     }
     
     private func gestureRestore()
     {
         guard
             
-            let topView:VView = subviews.last as? VView
+            let topView:View = subviews.last as? View
             
         else
         {
@@ -147,7 +152,7 @@ class VParent:UIView
         layoutBarTop.constant = -barTopConstant
     }
     
-    func mainView(view:VView<UIViewController>)
+    func mainView(view:View)
     {
         addSubview(view)
         
@@ -166,8 +171,8 @@ class VParent:UIView
     }
     
     func slide(
-        currentView:VView<UIViewController>,
-        newView:VView<UIViewController>,
+        currentView:View,
+        newView:View,
         left:CGFloat,
         completion:@escaping(() -> ()))
     {
@@ -209,7 +214,7 @@ class VParent:UIView
     }
     
     func push(
-        newView:VView<UIViewController>,
+        newView:View,
         left:CGFloat,
         top:CGFloat,
         background:Bool,
@@ -273,9 +278,9 @@ class VParent:UIView
         UIView.animate(
             withDuration:kAnimationDuration,
             animations:
-        {
-            self.layoutIfNeeded()
-            newView.pushBackground?.alpha = 1
+            {
+                self.layoutIfNeeded()
+                newView.pushBackground?.alpha = 1
         })
         { (done:Bool) in
             
@@ -284,7 +289,7 @@ class VParent:UIView
     }
     
     func animateOver(
-        newView:VView<UIViewController>,
+        newView:View,
         completion:@escaping(() -> ()))
     {
         newView.alpha = 0
@@ -317,7 +322,7 @@ class VParent:UIView
     }
     
     func pop(
-        currentView:VView<UIViewController>,
+        currentView:View,
         left:CGFloat,
         top:CGFloat,
         completion:@escaping(() -> ()))
@@ -330,9 +335,9 @@ class VParent:UIView
         UIView.animate(
             withDuration:kAnimationDuration,
             animations:
-        {
-            self.layoutIfNeeded()
-            currentView.pushBackground?.alpha = 0
+            {
+                self.layoutIfNeeded()
+                currentView.pushBackground?.alpha = 0
         })
         { (done:Bool) in
             
@@ -343,7 +348,7 @@ class VParent:UIView
     }
     
     func dismissAnimateOver(
-        currentView:VView<UIViewController>,
+        currentView:View,
         completion:@escaping(() -> ()))
     {
         UIView.animate(

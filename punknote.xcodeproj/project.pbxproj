@@ -39,7 +39,7 @@
 		DA31314A1EE1EF6800DB2FE4 /* VParentPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131421EE1EF6800DB2FE4 /* VParentPushBackground.swift */; };
 		DA31314B1EE1EF6800DB2FE4 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131431EE1EF6800DB2FE4 /* VSpinner.swift */; };
 		DA31314C1EE1EF6800DB2FE4 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131441EE1EF6800DB2FE4 /* VToast.swift */; };
-		DA31314E1EE1EF7400DB2FE4 /* VParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31314D1EE1EF7400DB2FE4 /* VParent.swift */; };
+		DA3131501EE1EF8400DB2FE4 /* ViewParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31314F1EE1EF8400DB2FE4 /* ViewParent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +75,7 @@
 		DA3131421EE1EF6800DB2FE4 /* VParentPushBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VParentPushBackground.swift; sourceTree = "<group>"; };
 		DA3131431EE1EF6800DB2FE4 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA3131441EE1EF6800DB2FE4 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
-		DA31314D1EE1EF7400DB2FE4 /* VParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VParent.swift; sourceTree = "<group>"; };
+		DA31314F1EE1EF8400DB2FE4 /* ViewParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParent.swift; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,7 +207,7 @@
 		DA31307F1EE1A60200DB2FE4 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				DA31314D1EE1EF7400DB2FE4 /* VParent.swift */,
+				DA31314F1EE1EF8400DB2FE4 /* ViewParent.swift */,
 				DA3130801EE1A61800DB2FE4 /* View.swift */,
 			);
 			path = Abstract;
@@ -364,9 +364,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA31314E1EE1EF7400DB2FE4 /* VParent.swift in Sources */,
 				DA3131391EE1ED4800DB2FE4 /* AppDelegate.swift in Sources */,
 				DA31313B1EE1EE4A00DB2FE4 /* ControllerParent.swift in Sources */,
+				DA3131501EE1EF8400DB2FE4 /* ViewParent.swift in Sources */,
 				DA3130811EE1A61800DB2FE4 /* View.swift in Sources */,
 				DA3131451EE1EF6800DB2FE4 /* VAlert.swift in Sources */,
 				DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */,
