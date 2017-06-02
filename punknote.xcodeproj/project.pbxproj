@@ -38,8 +38,6 @@
 		DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130861EE1AEE700DB2FE4 /* MCreate.swift */; };
 		DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131291EE1ECDA00DB2FE4 /* CCreate.swift */; };
 		DA3131321EE1ECDA00DB2FE4 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312B1EE1ECDA00DB2FE4 /* CHome.swift */; };
-		DA3131341EE1ECDA00DB2FE4 /* CController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312E1EE1ECDA00DB2FE4 /* CController.swift */; };
-		DA3131351EE1ECDA00DB2FE4 /* CParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312F1EE1ECDA00DB2FE4 /* CParent.swift */; };
 		DA3131371EE1ECE800DB2FE4 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131361EE1ECE800DB2FE4 /* Controller.swift */; };
 		DA3131391EE1ED4800DB2FE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131381EE1ED4800DB2FE4 /* AppDelegate.swift */; };
 		DA31313B1EE1EE4A00DB2FE4 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31313A1EE1EE4A00DB2FE4 /* ControllerParent.swift */; };
@@ -77,8 +75,6 @@
 		DA3130861EE1AEE700DB2FE4 /* MCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
 		DA3131291EE1ECDA00DB2FE4 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DA31312B1EE1ECDA00DB2FE4 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
-		DA31312E1EE1ECDA00DB2FE4 /* CController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CController.swift; sourceTree = "<group>"; };
-		DA31312F1EE1ECDA00DB2FE4 /* CParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CParent.swift; sourceTree = "<group>"; };
 		DA3131361EE1ECE800DB2FE4 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA3131381EE1ED4800DB2FE4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA31313A1EE1EE4A00DB2FE4 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -241,7 +237,6 @@
 				DA3131261EE1ECDA00DB2FE4 /* Abstract */,
 				DA3131281EE1ECDA00DB2FE4 /* Create */,
 				DA31312A1EE1ECDA00DB2FE4 /* Home */,
-				DA31312C1EE1ECDA00DB2FE4 /* Main */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,9 +244,9 @@
 		DA3131261EE1ECDA00DB2FE4 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				DA3131361EE1ECE800DB2FE4 /* Controller.swift */,
-				DA31313A1EE1EE4A00DB2FE4 /* ControllerParent.swift */,
 				DA3131381EE1ED4800DB2FE4 /* AppDelegate.swift */,
+				DA31313A1EE1EE4A00DB2FE4 /* ControllerParent.swift */,
+				DA3131361EE1ECE800DB2FE4 /* Controller.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -270,15 +265,6 @@
 				DA31312B1EE1ECDA00DB2FE4 /* CHome.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		DA31312C1EE1ECDA00DB2FE4 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				DA31312E1EE1ECDA00DB2FE4 /* CController.swift */,
-				DA31312F1EE1ECDA00DB2FE4 /* CParent.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		DA5146691EE0CB0900873C06 = {
@@ -402,8 +388,6 @@
 				DA31305E1EE1A40000DB2FE4 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA3130691EE1A40000DB2FE4 /* VHome.swift in Sources */,
 				DA3131321EE1ECDA00DB2FE4 /* CHome.swift in Sources */,
-				DA3131351EE1ECDA00DB2FE4 /* CParent.swift in Sources */,
-				DA3131341EE1ECDA00DB2FE4 /* CController.swift in Sources */,
 				DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */,
 				DA3131371EE1ECE800DB2FE4 /* Controller.swift in Sources */,
 				DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */,
