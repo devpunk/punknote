@@ -222,7 +222,7 @@ class ViewParent:UIView
     {
         if background
         {
-            let pushBackground:VParentPushBackground = VParentPushBackground()
+            let pushBackground:VPushBackground = VPushBackground()
             newView.pushBackground = pushBackground
             
             addSubview(pushBackground)
