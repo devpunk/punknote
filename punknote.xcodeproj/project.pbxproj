@@ -39,6 +39,7 @@
 		DA3130771EE1A40000DB2FE4 /* CController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130531EE1A40000DB2FE4 /* CController.swift */; };
 		DA3130781EE1A40000DB2FE4 /* CParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130541EE1A40000DB2FE4 /* CParent.swift */; };
 		DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130591EE1A40000DB2FE4 /* MSession.swift */; };
+		DA31307B1EE1A50F00DB2FE4 /* DefinitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31307A1EE1A50F00DB2FE4 /* DefinitionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		DA3130531EE1A40000DB2FE4 /* CController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CController.swift; sourceTree = "<group>"; };
 		DA3130541EE1A40000DB2FE4 /* CParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CParent.swift; sourceTree = "<group>"; };
 		DA3130591EE1A40000DB2FE4 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
+		DA31307A1EE1A50F00DB2FE4 /* DefinitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionProtocol.swift; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 		DA3130271EE1A40000DB2FE4 /* Definition */ = {
 			isa = PBXGroup;
 			children = (
+				DA31307A1EE1A50F00DB2FE4 /* DefinitionProtocol.swift */,
 			);
 			path = Definition;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				DA3130761EE1A40000DB2FE4 /* CAppDelegate.swift in Sources */,
 				DA3130721EE1A40000DB2FE4 /* VToast.swift in Sources */,
 				DA3130621EE1A40000DB2FE4 /* ExtensionUIColor.swift in Sources */,
+				DA31307B1EE1A50F00DB2FE4 /* DefinitionProtocol.swift in Sources */,
 				DA31305D1EE1A40000DB2FE4 /* ExtensionNotification.swift in Sources */,
 				DA31305F1EE1A40000DB2FE4 /* ExtensionNSManagedObject.swift in Sources */,
 				DA31306E1EE1A40000DB2FE4 /* VCollectionFlow.swift in Sources */,
