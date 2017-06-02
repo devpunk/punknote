@@ -2,11 +2,8 @@ import UIKit
 
 class ViewModel<T:DefinitionProtocol>:UIViewController
 {
-    let definition:T
-    
     init()
     {
-        definition = T()
         
         super.init(nibName:nil, bundle:nil)
     }

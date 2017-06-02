@@ -2,8 +2,7 @@ import UIKit
 
 protocol DefinitionProtocol
 {
-    init()
-    
-    var model:Any { get }
-    var view:UIView.Type { get }
+    associatedtype Model:Any
+    associatedtype View:UIView
+    associatedtype ViewModel:UIViewController
 }
