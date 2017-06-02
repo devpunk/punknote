@@ -1,6 +1,6 @@
 import UIKit
 
-class VCreate:UIView
+class View:UIView
 {
     
 }

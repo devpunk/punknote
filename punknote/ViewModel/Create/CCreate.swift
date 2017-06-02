@@ -1,6 +1,6 @@
 import UIKit
 
-class CCreate:Controller<UIView>
+class CCreate:ViewModel
 {
     
 }
