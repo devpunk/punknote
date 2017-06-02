@@ -1,25 +1,20 @@
 import UIKit
 
-class View<T:ViewProtocol>:UIView
+class View:UIView
 {
-    weak var viewModel:T.viewModel!
+    private(set) weak var viewModel:UIViewController!
     
-    init()
+    required init(viewModel:UIViewController)
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true
         backgroundColor = UIColor.white
         translatesAutoresizingMaskIntoConstraints = false
+        self.viewModel = viewModel
     }
     
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    //MARK: public
-    
-    func viewDidLoad(viewModel:T)
-    {
     }
 }

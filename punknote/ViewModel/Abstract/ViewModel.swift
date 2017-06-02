@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewModel<T:ViewModelProtocol>:UIViewController
+class ViewModel<T:View>:UIViewController
 {
     init()
     {
@@ -14,6 +14,8 @@ class ViewModel<T:ViewModelProtocol>:UIViewController
     
     override func loadView()
     {
+        let view:View = T(viewModel:self)
+        self.view = view
     }
     
     override func viewDidLoad()
