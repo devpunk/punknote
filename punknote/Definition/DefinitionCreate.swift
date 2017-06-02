@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class DefinitionCreate:DefinitionProtocol
 {
@@ -8,5 +8,18 @@ class DefinitionCreate:DefinitionProtocol
         {
             return NSNull()
         }
+    }
+    
+    var view: UIView.Type
+    {
+        get
+        {
+            return VCreate.self
+        }
+    }
+    
+    required init()
+    {
+        
     }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-class CCreate:ViewModel
+class CCreate:ViewModel<DefinitionCreate>
 {
     
 }
