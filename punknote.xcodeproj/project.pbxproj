@@ -36,7 +36,6 @@
 		DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130591EE1A40000DB2FE4 /* MSession.swift */; };
 		DA3130811EE1A61800DB2FE4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130801EE1A61800DB2FE4 /* View.swift */; };
 		DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3130861EE1AEE700DB2FE4 /* MCreate.swift */; };
-		DA3131301EE1ECDA00DB2FE4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131271EE1ECDA00DB2FE4 /* ViewModel.swift */; };
 		DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131291EE1ECDA00DB2FE4 /* CCreate.swift */; };
 		DA3131321EE1ECDA00DB2FE4 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312B1EE1ECDA00DB2FE4 /* CHome.swift */; };
 		DA3131331EE1ECDA00DB2FE4 /* CAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31312D1EE1ECDA00DB2FE4 /* CAppDelegate.swift */; };
@@ -75,7 +74,6 @@
 		DA3130591EE1A40000DB2FE4 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DA3130801EE1A61800DB2FE4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DA3130861EE1AEE700DB2FE4 /* MCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
-		DA3131271EE1ECDA00DB2FE4 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DA3131291EE1ECDA00DB2FE4 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DA31312B1EE1ECDA00DB2FE4 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DA31312D1EE1ECDA00DB2FE4 /* CAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAppDelegate.swift; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 		DA3131261EE1ECDA00DB2FE4 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				DA3131271EE1ECDA00DB2FE4 /* ViewModel.swift */,
 				DA3131361EE1ECE800DB2FE4 /* Controller.swift */,
 			);
 			path = Abstract;
@@ -392,7 +389,6 @@
 				DA31305F1EE1A40000DB2FE4 /* ExtensionNSManagedObject.swift in Sources */,
 				DA31306E1EE1A40000DB2FE4 /* VCollectionFlow.swift in Sources */,
 				DA3131331EE1ECDA00DB2FE4 /* CAppDelegate.swift in Sources */,
-				DA3131301EE1ECDA00DB2FE4 /* ViewModel.swift in Sources */,
 				DA3130681EE1A40000DB2FE4 /* VCreateBar.swift in Sources */,
 				DA31306A1EE1A40000DB2FE4 /* VAlert.swift in Sources */,
 				DA3130631EE1A40000DB2FE4 /* ExtensionUIFont.swift in Sources */,
