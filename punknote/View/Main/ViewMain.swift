@@ -1,8 +1,8 @@
 import UIKit
 
-class ViewMain<T:UIViewController>:UIView, ViewProtocol
+class ViewMain<T:UIViewController>:UIView
 {
-    required init(controller: Controller<ViewMain<UIViewController>>)
+    required init(controller:T)
     {
         super.init(frame:CGRect.zero)
     }
