@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewMain:UIView
+class ViewMain<T:UIViewController>:UIView
 {
     
 }
