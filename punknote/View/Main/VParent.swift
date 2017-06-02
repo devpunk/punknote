@@ -147,7 +147,7 @@ class VParent:UIView
         layoutBarTop.constant = -barTopConstant
     }
     
-    func mainView(view:VView)
+    func mainView(view:VView<UIViewController>)
     {
         addSubview(view)
         
@@ -166,8 +166,8 @@ class VParent:UIView
     }
     
     func slide(
-        currentView:VView,
-        newView:VView,
+        currentView:VView<UIViewController>,
+        newView:VView<UIViewController>,
         left:CGFloat,
         completion:@escaping(() -> ()))
     {
@@ -209,7 +209,7 @@ class VParent:UIView
     }
     
     func push(
-        newView:VView,
+        newView:VView<UIViewController>,
         left:CGFloat,
         top:CGFloat,
         background:Bool,
@@ -284,7 +284,7 @@ class VParent:UIView
     }
     
     func animateOver(
-        newView:VView,
+        newView:VView<UIViewController>,
         completion:@escaping(() -> ()))
     {
         newView.alpha = 0
@@ -317,7 +317,7 @@ class VParent:UIView
     }
     
     func pop(
-        currentView:VView,
+        currentView:VView<UIViewController>,
         left:CGFloat,
         top:CGFloat,
         completion:@escaping(() -> ()))
@@ -343,7 +343,7 @@ class VParent:UIView
     }
     
     func dismissAnimateOver(
-        currentView:VView,
+        currentView:VView<UIViewController>,
         completion:@escaping(() -> ()))
     {
         UIView.animate(

@@ -1,6 +1,6 @@
 import UIKit
 
-class CController<T:VView>:UIViewController
+class CController<T:VView<UIViewController>>:UIViewController
 {
     init()
     {
