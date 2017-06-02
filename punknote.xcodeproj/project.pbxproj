@@ -41,6 +41,8 @@
 		DA75E5121EE0DD1D007F8445 /* VCreateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */; };
 		DABE69D81EE0E8DF00703C5D /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69D71EE0E8DF00703C5D /* Controller.swift */; };
 		DABE69DA1EE0E91100703C5D /* ControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69D91EE0E91100703C5D /* ControllerProtocol.swift */; };
+		DABE69DE1EE0E9DD00703C5D /* ViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69DD1EE0E9DD00703C5D /* ViewMain.swift */; };
+		DABE69E01EE0E9FB00703C5D /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE69DF1EE0E9FB00703C5D /* ViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		DA75E5111EE0DD1D007F8445 /* VCreateBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateBar.swift; sourceTree = "<group>"; };
 		DABE69D71EE0E8DF00703C5D /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DABE69D91EE0E91100703C5D /* ControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerProtocol.swift; sourceTree = "<group>"; };
+		DABE69DD1EE0E9DD00703C5D /* ViewMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMain.swift; sourceTree = "<group>"; };
+		DABE69DF1EE0E9FB00703C5D /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,8 @@
 				DA75E4EB1EE0D5AC007F8445 /* VSpinner.swift */,
 				DA75E4EC1EE0D5AC007F8445 /* VToast.swift */,
 				DA75E4ED1EE0D5AC007F8445 /* VView.swift */,
+				DABE69DD1EE0E9DD00703C5D /* ViewMain.swift */,
+				DABE69DF1EE0E9FB00703C5D /* ViewProtocol.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				DA75E5081EE0D5AC007F8445 /* VSpinner.swift in Sources */,
 				DA75E4F41EE0D5AC007F8445 /* ExtensionFileManager.swift in Sources */,
 				DA75E4F51EE0D5AC007F8445 /* ExtensionNotification.swift in Sources */,
+				DABE69DE1EE0E9DD00703C5D /* ViewMain.swift in Sources */,
 				DA75E5001EE0D5AC007F8445 /* VHome.swift in Sources */,
 				DA75E4FB1EE0D5AC007F8445 /* ExtensionUIFont.swift in Sources */,
 				DA75E4F01EE0D5AC007F8445 /* CAppDelegate.swift in Sources */,
@@ -373,6 +380,7 @@
 				DA75E4F61EE0D5AC007F8445 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA75E4FD1EE0D5AC007F8445 /* MSession.swift in Sources */,
 				DA75E4FC1EE0D5AC007F8445 /* ExtensionURL.swift in Sources */,
+				DABE69E01EE0E9FB00703C5D /* ViewProtocol.swift in Sources */,
 				DA75E50D1EE0D849007F8445 /* CCreate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
