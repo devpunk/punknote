@@ -10,6 +10,7 @@ class VCreateBar:UIView
         clipsToBounds = true
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
+        self.controller = controller
     }
     
     required init?(coder:NSCoder)
