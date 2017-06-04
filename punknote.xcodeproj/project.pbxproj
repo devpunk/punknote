@@ -40,6 +40,7 @@
 		DA31314C1EE1EF6800DB2FE4 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131441EE1EF6800DB2FE4 /* VToast.swift */; };
 		DA3131501EE1EF8400DB2FE4 /* ViewParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31314F1EE1EF8400DB2FE4 /* ViewParent.swift */; };
 		DA3131521EE1F14600DB2FE4 /* VPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131511EE1F14600DB2FE4 /* VPushBackground.swift */; };
+		DA643C741EE3ACD6006295BA /* VCreateTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C731EE3ACD6006295BA /* VCreateTimeline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		DA3131511EE1F14600DB2FE4 /* VPushBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPushBackground.swift; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA643C731EE3ACD6006295BA /* VCreateTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateTimeline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				DA31303D1EE1A40000DB2FE4 /* VCreate.swift */,
 				DA31303E1EE1A40000DB2FE4 /* VCreateBar.swift */,
+				DA643C731EE3ACD6006295BA /* VCreateTimeline.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				DA3131471EE1EF6800DB2FE4 /* VBorder.swift in Sources */,
 				DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */,
 				DA31305E1EE1A40000DB2FE4 /* ExtensionNSLayoutConstraint.swift in Sources */,
+				DA643C741EE3ACD6006295BA /* VCreateTimeline.swift in Sources */,
 				DA3131461EE1EF6800DB2FE4 /* VBlur.swift in Sources */,
 				DA3130691EE1A40000DB2FE4 /* VHome.swift in Sources */,
 				DA3131321EE1ECDA00DB2FE4 /* CHome.swift in Sources */,
