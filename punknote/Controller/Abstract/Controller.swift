@@ -14,7 +14,7 @@ class Controller<T:View>:UIViewController
     
     override func loadView()
     {
-        let view:View = T(viewModel:self)
+        let view:View = T(controller:self)
         self.view = view
     }
     
