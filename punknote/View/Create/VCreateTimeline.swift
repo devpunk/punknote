@@ -44,4 +44,28 @@ class VCreateTimeline:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     {
         return nil
     }
+    
+    //MARK: collectionView delegate
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
+    {
+        let count:Int = controller.model.frames.count
+        
+        return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let cell:VCreateTimelineCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier:
+            VCreateTimelineCell.reusableIdentifier,
+            for:indexPath) as! VCreateTimelineCell
+        
+        return cell
+    }
 }
