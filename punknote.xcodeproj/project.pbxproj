@@ -42,6 +42,7 @@
 		DA3131521EE1F14600DB2FE4 /* VPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131511EE1F14600DB2FE4 /* VPushBackground.swift */; };
 		DA643C741EE3ACD6006295BA /* VCreateTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C731EE3ACD6006295BA /* VCreateTimeline.swift */; };
 		DA643C761EE3AD94006295BA /* VCreateTimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C751EE3AD94006295BA /* VCreateTimelineCell.swift */; };
+		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA643C731EE3ACD6006295BA /* VCreateTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateTimeline.swift; sourceTree = "<group>"; };
 		DA643C751EE3AD94006295BA /* VCreateTimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateTimelineCell.swift; sourceTree = "<group>"; };
+		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3130861EE1AEE700DB2FE4 /* MCreate.swift */,
+				DA643C771EE4C5D8006295BA /* MCreateFrame.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				DA3131501EE1EF8400DB2FE4 /* ViewParent.swift in Sources */,
 				DA3130811EE1A61800DB2FE4 /* View.swift in Sources */,
 				DA3131451EE1EF6800DB2FE4 /* VAlert.swift in Sources */,
+				DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */,
 				DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */,
 				DA31314C1EE1EF6800DB2FE4 /* VToast.swift in Sources */,
 				DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */,
