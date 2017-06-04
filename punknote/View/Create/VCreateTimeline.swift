@@ -1,8 +1,9 @@
 import UIKit
 
-class VCreateTimeline:UIView
+class VCreateTimeline:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var controller:CCreate!
+    private weak var collectionView:VCollection!
     
     init(controller:CCreate)
     {
