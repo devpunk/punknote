@@ -5,7 +5,7 @@ class VCreateCellTimelineCellSelected:UIView
     weak var timer:Timer?
     private weak var controller:CCreate?
     private let kCircleMargin:CGFloat = 7
-    private let kLineWidth:CGFloat = 3
+    private let kLineWidth:CGFloat = 4
     private let kTimerInterval:TimeInterval = 0.03
     
     init()
@@ -65,15 +65,36 @@ class VCreateCellTimelineCellSelected:UIView
     
     func actionTimer(sender timer:Timer)
     {
-        if controller == nil
-        {
-            timer.invalidate()
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.asyncTimer()
         }
-        
-        setNeedsDisplay()
     }
     
     //MARK: private
+    
+    private func asyncTimer()
+    {
+        guard
+            
+            let model:MCreateSelected = controller?.model.selected
+            
+        else
+        {
+            timer?.invalidate()
+            
+            return
+        }
+        
+        model.rotate()
+        
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.setNeedsDisplay()
+        }
+    }
     
     private func refreshModel()
     {

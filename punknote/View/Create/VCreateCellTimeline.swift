@@ -171,9 +171,5 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             return
         }
         
-        if controller.model.selectedFrame != indexPath.item
-        {
-            
-        }
     }
 }

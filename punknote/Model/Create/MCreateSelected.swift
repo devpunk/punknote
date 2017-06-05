@@ -8,7 +8,7 @@ class MCreateSelected
     private let kRandomRange:UInt32 = 157
     private let kRandomRangeDivider:CGFloat = 100
     private let kSeparationRad:CGFloat = 0.174533
-    private let kRotationAmount:CGFloat = 0.0872665
+    private let kRotationAmount:CGFloat = 0.0174533
     
     init()
     {
@@ -40,7 +40,7 @@ class MCreateSelected
         var items:[MCreateSelectedItem] = []
         var startingRad:CGFloat = 0
         
-        while startingRad < maxRad
+        while startingRad < pi2
         {
             let radians:CGFloat = randomRadians(fromRadian:startingRad)
             
@@ -52,7 +52,7 @@ class MCreateSelected
                     endingRad:endingRad)
                 items.append(item)
                 
-                startingRad += endingRad + kSeparationRad
+                startingRad = endingRad + kSeparationRad
             }
         }
         
