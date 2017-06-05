@@ -25,8 +25,8 @@ class VCreateCellTimelineCell:UICollectionViewCell
         self.viewSelected = viewSelected
         
         let viewGradient:VGradient = VGradient.diagonal(
-            colorLeftBottom:UIColor.punkOrange,
-            colorTopRight:UIColor.punkPurple)
+            colorLeftBottom:UIColor.punkPurple,
+            colorTopRight:UIColor.punkOrange)
         viewGradient.mask = viewSelected
         
         addSubview(viewGradient)
@@ -69,18 +69,16 @@ class VCreateCellTimelineCell:UICollectionViewCell
         }
     }
     
-    //MARK: private
-    
-    private func hover()
-    {
-        viewSelected.selected(isSelected:isSelected)
-        viewSelected.isHidden = !isSelected
-    }
-    
     //MARK: public
     
     func config(controller:CCreate?, model:MCreateFrame)
     {
         viewSelected.config(controller:controller)
+    }
+    
+    func hover()
+    {
+        viewSelected.selected(isSelected:isSelected)
+        viewSelected.isHidden = !isSelected
     }
 }

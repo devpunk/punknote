@@ -69,6 +69,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     {
         super.config(controller:controller, model:model)
         collectionView.reloadData()
+        
         selectCurrent()
     }
     
@@ -94,10 +95,14 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         
         let selected:Int = controller.model.selectedFrame
         let indexPath:IndexPath = IndexPath(item:selected, section:0)
+        
         collectionView.selectItem(
             at:indexPath,
             animated:true,
             scrollPosition:UICollectionViewScrollPosition.left)
+        
+        let cell:VCreateCellTimelineCell = collectionView.cellForItem(at:indexPath) as! VCreateCellTimelineCell
+        cell.hover()
     }
     
     //MARK: collectionView delegate
