@@ -2,7 +2,7 @@ import UIKit
 
 class VCreateCellTimelineCellSelected:UIView
 {
-    private weak var timer:Timer?
+    weak var timer:Timer?
     private weak var controller:CCreate?
     private let kCircleMargin:CGFloat = 3
     private let kTimerInterval:TimeInterval = 0.03
@@ -86,7 +86,7 @@ class VCreateCellTimelineCellSelected:UIView
         self.controller = controller
     }
     
-    func selected(animate:Bool)
+    func selected(isSelected:Bool)
     {
         timer?.invalidate()
         
