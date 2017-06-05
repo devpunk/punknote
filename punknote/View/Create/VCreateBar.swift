@@ -4,6 +4,8 @@ class VCreateBar:UIView
 {
     private weak var controller:CCreate!
     private let kBorderHeight:CGFloat = 1
+    private let kCancelWidth:CGFloat = 100
+    private let kDoneWidth:CGFloat = 100
     
     init(controller:CCreate)
     {
@@ -17,8 +19,16 @@ class VCreateBar:UIView
         
         let buttonCancel:UIButton = UIButton()
         buttonCancel.translatesAutoresizingMaskIntoConstraints = false
+        buttonCancel.setTitle(
+            NSLocalizedString("VCreateBar_buttonCancel", comment:""),
+            for:UIControlState.normal)
         buttonCancel.setTitleColor(
-            <#T##color: UIColor?##UIColor?#>, for: <#T##UIControlState#>)
+            UIColor.punkOrange,
+            for:UIControlState.normal)
+        buttonCancel.setTitleColor(
+            UIColor.black,
+            for:UIControlState.highlighted)
+        buttonCancel.titleLabel!.font = UIFont.bold(size:14)
         
         addSubview(border)
         addSubview(buttonCancel)
@@ -32,6 +42,16 @@ class VCreateBar:UIView
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:buttonCancel,
+            toView:self)
+        NSLayoutConstraint.leftToLeft(
+            view:buttonCancel,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:buttonCancel,
+            constant:kCancelWidth)
     }
     
     required init?(coder:NSCoder)
