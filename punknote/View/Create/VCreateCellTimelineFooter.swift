@@ -47,7 +47,7 @@ class VCreateCellTimelineFooter:UICollectionReusableView
     
     //MARK: public
     
-    func config(controller:CCreate)
+    func config(controller:CCreate?)
     {
         self.controller = controller
     }

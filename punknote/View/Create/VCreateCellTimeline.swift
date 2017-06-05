@@ -5,6 +5,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     private weak var collectionView:VCollection!
     private let interItem2:CGFloat
     private let kInterItem:CGFloat = 2
+    private let kFooterWidth:CGFloat = 50
     private let kBorderHeight:CGFloat = 1
     
     override init(frame:CGRect)
@@ -21,11 +22,13 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerCell(cell:VCreateCellTimelineCell.self)
+        collectionView.registerFooter(footer:VCreateCellTimelineFooter.self)
         self.collectionView = collectionView
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
+            flow.footerReferenceSize = CGSize(width:kFooterWidth, height:0)
             flow.minimumInteritemSpacing = kInterItem
             flow.minimumLineSpacing = kInterItem
             flow.sectionInset = UIEdgeInsets(
@@ -129,6 +132,18 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         }
         
         return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, viewForSupplementaryElementOfKind kind:String, at indexPath:IndexPath) -> UICollectionReusableView
+    {
+        let footer:VCreateCellTimelineFooter = collectionView.dequeueReusableSupplementaryView(
+            ofKind:kind,
+            withReuseIdentifier:
+            VCreateCellTimelineFooter.reusableIdentifier,
+            for:indexPath) as! VCreateCellTimelineFooter
+        footer.config(controller:controller)
+        
+        return footer
     }
     
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
