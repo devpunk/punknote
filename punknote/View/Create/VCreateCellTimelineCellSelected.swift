@@ -13,7 +13,6 @@ class VCreateCellTimelineCellSelected:UIView
         super.init(frame:CGRect.zero)
         clipsToBounds = true
         isUserInteractionEnabled = false
-        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.clear
     }
     

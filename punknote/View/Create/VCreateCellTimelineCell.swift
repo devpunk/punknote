@@ -24,17 +24,22 @@ class VCreateCellTimelineCell:UICollectionViewCell
         let viewSelected:VCreateCellTimelineCellSelected = VCreateCellTimelineCellSelected()
         self.viewSelected = viewSelected
         
-        addSubview(viewSelected)
-        addSubview(circle)
+        let viewGradient:VGradient = VGradient.diagonal(
+            colorLeftBottom:UIColor.punkOrange,
+            colorTopRight:UIColor.punkPurple)
+        viewGradient.mask = viewSelected
         
-        NSLayoutConstraint.equals(
-            view:viewSelected,
-            toView:self)
+        addSubview(viewGradient)
+        addSubview(circle)
         
         NSLayoutConstraint.equals(
             view:circle,
             toView:self,
             margin:kCircleMargin)
+        
+        NSLayoutConstraint.equals(
+            view:viewGradient,
+            toView:self)
         
         hover()
     }
@@ -47,6 +52,13 @@ class VCreateCellTimelineCell:UICollectionViewCell
     deinit
     {
         viewSelected.timer?.invalidate()
+    }
+    
+    override func layoutSubviews()
+    {
+        viewSelected.frame = bounds
+        
+        super.layoutSubviews()
     }
     
     override var isSelected:Bool
