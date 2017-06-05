@@ -66,4 +66,61 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         
         super.layoutSubviews()
     }
+    
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> MCreateContentProtocol
+    {
+        let controller:CCreate = self.controller as! CCreate
+        let item:MCreateContentProtocol = controller.model.content[index.item]
+        
+        return item
+    }
+    
+    //MARK: collectionView delegate
+    
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
+    {
+        let item:MCreateContentProtocol = modelAtIndex(index:indexPath)
+        let width:CGFloat = collectionView.bounds.maxX
+        let size:CGSize = CGSize(width:width, height:item.cellHeight)
+        
+        return size
+    }
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
+    {
+        let controller:CCreate = self.controller as! CCreate
+        let count:Int = controller.model.content.count
+        
+        return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let controller:CCreate = self.controller as! CCreate
+        let item:MCreateContentProtocol = modelAtIndex(index:indexPath)
+        let cell:VCreateCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier:
+            item.reusableIdentifier,
+            for:indexPath) as! VCreateCell
+        cell.config(controller:controller, model:item)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
+    }
+    
+    func collectionView(_ collectionView:UICollectionView,shouldHighlightItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
+    }
 }

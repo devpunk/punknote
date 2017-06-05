@@ -2,6 +2,8 @@ import UIKit
 
 class VCreateCell:UICollectionViewCell
 {
+    private(set) weak var controller:CCreate?
+    
     override init(frame:CGRect)
     {
         super.init(frame:CGRect.zero)
@@ -12,5 +14,12 @@ class VCreateCell:UICollectionViewCell
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: public
+    
+    func config(controller:CCreate, model:MCreateContentProtocol)
+    {
+        self.controller = controller
     }
 }
