@@ -43,7 +43,7 @@ class VCreateCellTimelineCellSelected:UIView
         let width_2_margin:CGFloat = width_2 - kCircleMargin
         let centerPoint:CGPoint = CGPoint(x:width_2, y:width_2)
         
-        context.setLineCap(CGLineCap.round)
+        context.setLineCap(CGLineCap.square)
         context.setLineWidth(kLineWidth)
         context.setStrokeColor(UIColor.punkPurple.cgColor)
         
