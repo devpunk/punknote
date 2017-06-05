@@ -1,9 +1,16 @@
-//
-//  MCreateContentTimeline.swift
-//  punknote
-//
-//  Created by zero on 6/5/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class MCreateContentTimeline:MCreateContentProtocol
+{
+    private let kCellHeight:CGFloat = 80
+    
+    var cellHeight:CGFloat
+    {
+        get
+        {
+            return kCellHeight
+        }
+    }
+    
+    
+}
