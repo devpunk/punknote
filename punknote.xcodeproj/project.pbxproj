@@ -50,6 +50,7 @@
 		DA3D97BF1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */; };
 		DA3D97C11EE6189600E8EB33 /* VGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97C01EE6189600E8EB33 /* VGradient.swift */; };
 		DA3D97C31EE6206600E8EB33 /* VCreateCellTimelineFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97C21EE6206600E8EB33 /* VCreateCellTimelineFooter.swift */; };
+		DA3D97C51EE623C700E8EB33 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3D97C41EE623C700E8EB33 /* generic.xcassets */; };
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateSelectedItem.swift; sourceTree = "<group>"; };
 		DA3D97C01EE6189600E8EB33 /* VGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGradient.swift; sourceTree = "<group>"; };
 		DA3D97C21EE6206600E8EB33 /* VCreateCellTimelineFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellTimelineFooter.swift; sourceTree = "<group>"; };
+		DA3D97C41EE623C700E8EB33 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */,
+				DA3D97C41EE623C700E8EB33 /* generic.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA31305A1EE1A40000DB2FE4 /* LaunchScreen.storyboard in Resources */,
+				DA3D97C51EE623C700E8EB33 /* generic.xcassets in Resources */,
 				DA3130651EE1A40000DB2FE4 /* Localizable.strings in Resources */,
 				DA3130661EE1A40000DB2FE4 /* ResourceURL.plist in Resources */,
 			);

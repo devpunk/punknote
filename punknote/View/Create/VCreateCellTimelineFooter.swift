@@ -14,10 +14,10 @@ class VCreateCellTimelineFooter:UICollectionReusableView
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
         button.setImage(
-            self,
+            #imageLiteral(resourceName: "assetGenericCreateAdd").withRenderingMode(UIImageRenderingMode.alwaysOriginal),
             for:UIControlState.normal)
         button.setImage(
-            <#T##image: UIImage?##UIImage?#>,
+            #imageLiteral(resourceName: "assetGenericCreateAdd").withRenderingMode(UIImageRenderingMode.alwaysOriginal),
             for:UIControlState.highlighted)
         button.imageView!.clipsToBounds = true
         button.imageView!.contentMode = UIViewContentMode.center
