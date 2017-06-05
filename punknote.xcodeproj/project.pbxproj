@@ -48,6 +48,7 @@
 		DA3D97BB1EE5EC2B00E8EB33 /* VCreateCellTimelineCellSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97BA1EE5EC2B00E8EB33 /* VCreateCellTimelineCellSelected.swift */; };
 		DA3D97BD1EE5FDE300E8EB33 /* MCreateSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97BC1EE5FDE300E8EB33 /* MCreateSelected.swift */; };
 		DA3D97BF1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */; };
+		DA3D97C11EE6189600E8EB33 /* VGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97C01EE6189600E8EB33 /* VGradient.swift */; };
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		DA3D97BA1EE5EC2B00E8EB33 /* VCreateCellTimelineCellSelected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellTimelineCellSelected.swift; sourceTree = "<group>"; };
 		DA3D97BC1EE5FDE300E8EB33 /* MCreateSelected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateSelected.swift; sourceTree = "<group>"; };
 		DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateSelectedItem.swift; sourceTree = "<group>"; };
+		DA3D97C01EE6189600E8EB33 /* VGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGradient.swift; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				DA3131511EE1F14600DB2FE4 /* VPushBackground.swift */,
 				DA3131431EE1EF6800DB2FE4 /* VSpinner.swift */,
 				DA3131441EE1EF6800DB2FE4 /* VToast.swift */,
+				DA3D97C01EE6189600E8EB33 /* VGradient.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				DA3130811EE1A61800DB2FE4 /* View.swift in Sources */,
 				DA3131451EE1EF6800DB2FE4 /* VAlert.swift in Sources */,
 				DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */,
+				DA3D97C11EE6189600E8EB33 /* VGradient.swift in Sources */,
 				DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */,
 				DA31314C1EE1EF6800DB2FE4 /* VToast.swift in Sources */,
 				DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */,
