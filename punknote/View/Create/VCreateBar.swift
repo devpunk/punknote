@@ -13,9 +13,15 @@ class VCreateBar:UIView
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
-        let border:VBorder = VBorder(color:UIColor.black)
+        let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.2))
+        
+        let buttonCancel:UIButton = UIButton()
+        buttonCancel.translatesAutoresizingMaskIntoConstraints = false
+        buttonCancel.setTitleColor(
+            <#T##color: UIColor?##UIColor?#>, for: <#T##UIControlState#>)
         
         addSubview(border)
+        addSubview(buttonCancel)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
