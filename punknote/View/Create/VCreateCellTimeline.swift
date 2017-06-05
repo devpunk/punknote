@@ -69,13 +69,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     {
         super.config(controller:controller, model:model)
         collectionView.reloadData()
-        
-        let selected:Int = controller.model.selectedFrame
-        let indexPath:IndexPath = IndexPath(item:selected, section:0)
-        collectionView.selectItem(
-            at:indexPath,
-            animated:true,
-            scrollPosition:UICollectionViewScrollPosition.left)
+        selectCurrent()
     }
     
     //MARK: private
@@ -85,6 +79,25 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         let item:MCreateFrame = controller!.model.frames[index.item]
         
         return item
+    }
+    
+    private func selectCurrent()
+    {
+        guard
+            
+            let controller:CCreate = self.controller
+        
+        else
+        {
+            return
+        }
+        
+        let selected:Int = controller.model.selectedFrame
+        let indexPath:IndexPath = IndexPath(item:selected, section:0)
+        collectionView.selectItem(
+            at:indexPath,
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition.left)
     }
     
     //MARK: collectionView delegate
@@ -130,6 +143,18 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
     {
-        let item:MCreateFrame = modelAtIndex(index:indexPath)
+        guard
+            
+            let controller:CCreate = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        if controller.model.selectedFrame != indexPath.item
+        {
+            
+        }
     }
 }
