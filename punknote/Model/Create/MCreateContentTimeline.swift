@@ -12,5 +12,11 @@ class MCreateContentTimeline:MCreateContentProtocol
         }
     }
     
-    
+    var reusableIdentifier:String
+    {
+        get
+        {
+            return VCreateCellTimeline.reusableIdentifier
+        }
+    }
 }
