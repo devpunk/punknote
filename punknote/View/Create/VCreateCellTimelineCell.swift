@@ -69,16 +69,19 @@ class VCreateCellTimelineCell:UICollectionViewCell
         }
     }
     
+    //MARK: private
+    
+    private func hover()
+    {
+        viewSelected.selected(isSelected:isSelected)
+        viewSelected.isHidden = !isSelected
+    }
+    
     //MARK: public
     
     func config(controller:CCreate?, model:MCreateFrame)
     {
         viewSelected.config(controller:controller)
-    }
-    
-    func hover()
-    {
-        viewSelected.selected(isSelected:isSelected)
-        viewSelected.isHidden = !isSelected
+        hover()
     }
 }

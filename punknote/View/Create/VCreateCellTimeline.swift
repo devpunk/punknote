@@ -100,9 +100,6 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             at:indexPath,
             animated:true,
             scrollPosition:UICollectionViewScrollPosition.left)
-        
-        let cell:VCreateCellTimelineCell = collectionView.cellForItem(at:indexPath) as! VCreateCellTimelineCell
-        cell.hover()
     }
     
     //MARK: collectionView delegate
