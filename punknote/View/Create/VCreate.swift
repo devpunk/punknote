@@ -1,9 +1,10 @@
 import UIKit
 
-class VCreate:View
+class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    private weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 70
-    private let kTimelineHeight:CGFloat = 80
+    private let kCollectionBottom:CGFloat = 20
     
     required init(controller:UIViewController)
     {
@@ -20,10 +21,24 @@ class VCreate:View
         
         let viewBar:VCreateBar = VCreateBar(controller:cCreate)
         
-        let viewTimeline:VCreateTimeline = VCreateTimeline(controller:cCreate)
+        let collectionView:VCollection = VCollection()
+        collectionView.alwaysBounceVertical = true
+        collectionView.registerCell(cell:VCreateTimelineCell.self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        self.collectionView = collectionView
         
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.sectionInset = UIEdgeInsets(
+                top:kBarHeight,
+                left:0,
+                bottom:kCollectionBottom,
+                right:0)
+        }
+        
+        addSubview(collectionView)
         addSubview(viewBar)
-        addSubview(viewTimeline)
         
         NSLayoutConstraint.topToTop(
             view:viewBar,
@@ -35,19 +50,20 @@ class VCreate:View
             view:viewBar,
             toView:self)
         
-        NSLayoutConstraint.topToBottom(
-            view:viewTimeline,
-            toView:viewBar)
-        NSLayoutConstraint.height(
-            view:viewTimeline,
-            constant:kTimelineHeight)
-        NSLayoutConstraint.equalsHorizontal(
-            view:viewTimeline,
+        NSLayoutConstraint.equals(
+            view:collectionView,
             toView:self)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func layoutSubviews()
+    {
+        collectionView.collectionViewLayout.invalidateLayout()
+        
+        super.layoutSubviews()
     }
 }
