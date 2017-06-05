@@ -2,8 +2,8 @@ import UIKit
 
 class MCreateSelectedItem
 {
-    let startingRad:CGFloat
-    let endingRad:CGFloat
+    var startingRad:CGFloat
+    var endingRad:CGFloat
     
     init(startingRad:CGFloat, endingRad:CGFloat)
     {

@@ -8,6 +8,7 @@ class MCreateSelected
     private let kRandomRange:UInt32 = 157
     private let kRandomRangeDivider:CGFloat = 100
     private let kSeparationRad:CGFloat = 0.174533
+    private let kRotationAmount:CGFloat = 0.0872665
     
     init()
     {
@@ -56,5 +57,20 @@ class MCreateSelected
         }
         
         self.items = items
+    }
+    
+    func rotate()
+    {
+        for item:MCreateSelectedItem in items
+        {
+            item.startingRad += kRotationAmount
+            item.endingRad += kRotationAmount
+            
+            if item.startingRad > pi2
+            {
+                item.startingRad = item.startingRad.truncatingRemainder(dividingBy:pi2)
+                item.endingRad = item.endingRad.truncatingRemainder(dividingBy:pi2)
+            }
+        }
     }
 }
