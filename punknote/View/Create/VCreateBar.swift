@@ -4,7 +4,8 @@ class VCreateBar:UIView
 {
     private weak var controller:CCreate!
     private let kBorderHeight:CGFloat = 1
-    private let kCancelWidth:CGFloat = 100
+    private let kContentTop:CGFloat = 20
+    private let kCancelWidth:CGFloat = 90
     private let kDoneWidth:CGFloat = 100
     
     init(controller:CCreate)
@@ -17,6 +18,15 @@ class VCreateBar:UIView
         
         let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.2))
         
+        let labelTitle:UILabel = UILabel()
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.backgroundColor = UIColor.clear
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.font = UIFont.bold(size:18)
+        labelTitle.textColor = UIColor.punkPurple
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.text = NSLocalizedString("VCreateBar_labelTitle", comment:"")
+        
         let buttonCancel:UIButton = UIButton()
         buttonCancel.translatesAutoresizingMaskIntoConstraints = false
         buttonCancel.setTitle(
@@ -28,9 +38,10 @@ class VCreateBar:UIView
         buttonCancel.setTitleColor(
             UIColor.black,
             for:UIControlState.highlighted)
-        buttonCancel.titleLabel!.font = UIFont.bold(size:14)
+        buttonCancel.titleLabel!.font = UIFont.bold(size:16)
         
         addSubview(border)
+        addSubview(labelTitle)
         addSubview(buttonCancel)
         
         NSLayoutConstraint.bottomToBottom(
@@ -43,7 +54,11 @@ class VCreateBar:UIView
             view:border,
             toView:self)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
+            view:buttonCancel,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
             view:buttonCancel,
             toView:self)
         NSLayoutConstraint.leftToLeft(
@@ -52,6 +67,17 @@ class VCreateBar:UIView
         NSLayoutConstraint.width(
             view:buttonCancel,
             constant:kCancelWidth)
+        
+        NSLayoutConstraint.topToTop(
+            view:labelTitle,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:labelTitle,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:labelTitle,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
