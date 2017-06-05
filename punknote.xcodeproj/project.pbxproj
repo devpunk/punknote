@@ -41,6 +41,8 @@
 		DA3131501EE1EF8400DB2FE4 /* ViewParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31314F1EE1EF8400DB2FE4 /* ViewParent.swift */; };
 		DA3131521EE1F14600DB2FE4 /* VPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3131511EE1F14600DB2FE4 /* VPushBackground.swift */; };
 		DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97AE1EE5A68600E8EB33 /* VCreateCell.swift */; };
+		DA3D97B11EE5A7AE00E8EB33 /* MCreateContentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */; };
+		DA3D97B31EE5A7BC00E8EB33 /* MCreateContentTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */; };
 		DA643C741EE3ACD6006295BA /* VCreateTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C731EE3ACD6006295BA /* VCreateTimeline.swift */; };
 		DA643C761EE3AD94006295BA /* VCreateTimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C751EE3AD94006295BA /* VCreateTimelineCell.swift */; };
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
@@ -81,6 +83,8 @@
 		DA31314F1EE1EF8400DB2FE4 /* ViewParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParent.swift; sourceTree = "<group>"; };
 		DA3131511EE1F14600DB2FE4 /* VPushBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPushBackground.swift; sourceTree = "<group>"; };
 		DA3D97AE1EE5A68600E8EB33 /* VCreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCell.swift; sourceTree = "<group>"; };
+		DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentProtocol.swift; sourceTree = "<group>"; };
+		DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentTimeline.swift; sourceTree = "<group>"; };
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA643C731EE3ACD6006295BA /* VCreateTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateTimeline.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 			children = (
 				DA3130861EE1AEE700DB2FE4 /* MCreate.swift */,
 				DA643C771EE4C5D8006295BA /* MCreateFrame.swift */,
+				DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */,
+				DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				DA31314C1EE1EF6800DB2FE4 /* VToast.swift in Sources */,
 				DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */,
 				DA3130601EE1A40000DB2FE4 /* ExtensionString.swift in Sources */,
+				DA3D97B31EE5A7BC00E8EB33 /* MCreateContentTimeline.swift in Sources */,
 				DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */,
 				DA3130621EE1A40000DB2FE4 /* ExtensionUIColor.swift in Sources */,
 				DA31305D1EE1A40000DB2FE4 /* ExtensionNotification.swift in Sources */,
@@ -406,6 +413,7 @@
 				DA3131521EE1F14600DB2FE4 /* VPushBackground.swift in Sources */,
 				DA3131371EE1ECE800DB2FE4 /* Controller.swift in Sources */,
 				DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */,
+				DA3D97B11EE5A7AE00E8EB33 /* MCreateContentProtocol.swift in Sources */,
 				DA3130611EE1A40000DB2FE4 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA3130671EE1A40000DB2FE4 /* VCreate.swift in Sources */,
 				DA31314B1EE1EF6800DB2FE4 /* VSpinner.swift in Sources */,
