@@ -136,9 +136,28 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             withReuseIdentifier:
             VCreateCellTimelineCell.reusableIdentifier,
             for:indexPath) as! VCreateCellTimelineCell
-        cell.config(model:item)
+        cell.config(controller:controller, model:item)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        guard
+            
+            let controller:CCreate = self.controller
+            
+        else
+        {
+            return false
+        }
+        
+        if controller.model.selectedFrame == indexPath.item
+        {
+            return false
+        }
+        
+        return true
     }
     
     func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)

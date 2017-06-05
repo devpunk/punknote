@@ -67,7 +67,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     
     //MARK: public
     
-    func config(controller:CCreate, model:MCreateFrame)
+    func config(controller:CCreate?, model:MCreateFrame)
     {
         viewSelected.config(controller:controller)
     }
