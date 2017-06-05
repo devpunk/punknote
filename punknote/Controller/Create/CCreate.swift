@@ -14,4 +14,25 @@ class CCreate:Controller<VCreate>
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func cancel()
+    {
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        parent.pop(horizontal:ControllerParent.Horizontal.right)
+    }
+    
+    func done()
+    {
+        
+    }
 }

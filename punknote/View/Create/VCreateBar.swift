@@ -38,7 +38,11 @@ class VCreateBar:UIView
         buttonCancel.setTitleColor(
             UIColor.black,
             for:UIControlState.highlighted)
-        buttonCancel.titleLabel!.font = UIFont.bold(size:16)
+        buttonCancel.titleLabel!.font = UIFont.bold(size:15)
+        buttonCancel.addTarget(
+            self,
+            action:#selector(actionCancel(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         let buttonDone:UIButton = UIButton()
         buttonDone.translatesAutoresizingMaskIntoConstraints = false
@@ -51,7 +55,11 @@ class VCreateBar:UIView
         buttonDone.setTitleColor(
             UIColor.black,
             for:UIControlState.highlighted)
-        buttonDone.titleLabel!.font = UIFont.bold(size:16)
+        buttonDone.titleLabel!.font = UIFont.bold(size:15)
+        buttonDone.addTarget(
+            self,
+            action:#selector(actionDone(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         addSubview(border)
         addSubview(labelTitle)
@@ -93,7 +101,7 @@ class VCreateBar:UIView
             view:buttonDone,
             toView:self)
         NSLayoutConstraint.width(
-            view:buttonCancel,
+            view:buttonDone,
             constant:kDoneWidth)
         
         NSLayoutConstraint.topToTop(
@@ -111,5 +119,17 @@ class VCreateBar:UIView
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: actions
+    
+    func actionCancel(sender button:UIButton)
+    {
+        controller.cancel()
+    }
+    
+    func actionDone(sender button:UIButton)
+    {
+        controller.done()
     }
 }
