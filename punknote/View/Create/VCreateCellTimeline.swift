@@ -102,4 +102,9 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         
         return cell
     }
+    
+    func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
+    {
+        let item:MCreateFrame = modelAtIndex(index:indexPath)
+    }
 }
