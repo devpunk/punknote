@@ -6,7 +6,7 @@ class VCreateBar:UIView
     private let kBorderHeight:CGFloat = 1
     private let kContentTop:CGFloat = 20
     private let kCancelWidth:CGFloat = 90
-    private let kDoneWidth:CGFloat = 100
+    private let kDoneWidth:CGFloat = 80
     
     init(controller:CCreate)
     {
@@ -22,8 +22,8 @@ class VCreateBar:UIView
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.bold(size:18)
-        labelTitle.textColor = UIColor.punkPurple
+        labelTitle.font = UIFont.regular(size:16)
+        labelTitle.textColor = UIColor.black
         labelTitle.isUserInteractionEnabled = false
         labelTitle.text = NSLocalizedString("VCreateBar_labelTitle", comment:"")
         
@@ -40,9 +40,23 @@ class VCreateBar:UIView
             for:UIControlState.highlighted)
         buttonCancel.titleLabel!.font = UIFont.bold(size:16)
         
+        let buttonDone:UIButton = UIButton()
+        buttonDone.translatesAutoresizingMaskIntoConstraints = false
+        buttonDone.setTitle(
+            NSLocalizedString("VCreateBar_buttonDone", comment:""),
+            for:UIControlState.normal)
+        buttonDone.setTitleColor(
+            UIColor.punkPurple,
+            for:UIControlState.normal)
+        buttonDone.setTitleColor(
+            UIColor.black,
+            for:UIControlState.highlighted)
+        buttonDone.titleLabel!.font = UIFont.bold(size:16)
+        
         addSubview(border)
         addSubview(labelTitle)
         addSubview(buttonCancel)
+        addSubview(buttonDone)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -67,6 +81,20 @@ class VCreateBar:UIView
         NSLayoutConstraint.width(
             view:buttonCancel,
             constant:kCancelWidth)
+        
+        NSLayoutConstraint.topToTop(
+            view:buttonDone,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:buttonDone,
+            toView:self)
+        NSLayoutConstraint.rightToRight(
+            view:buttonDone,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:buttonCancel,
+            constant:kDoneWidth)
         
         NSLayoutConstraint.topToTop(
             view:labelTitle,
