@@ -3,11 +3,14 @@ import UIKit
 class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
+    private let interItem2:CGFloat
     private let kInterItem:CGFloat = 2
     private let kBorderHeight:CGFloat = 1
     
     override init(frame:CGRect)
     {
+        interItem2 = kInterItem + kInterItem
+        
         super.init(frame:frame)
         backgroundColor = UIColor(white:0, alpha:0.02)
         
@@ -26,9 +29,9 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             flow.minimumInteritemSpacing = kInterItem
             flow.minimumLineSpacing = kInterItem
             flow.sectionInset = UIEdgeInsets(
-                top:0,
+                top:kInterItem,
                 left:kInterItem,
-                bottom:0,
+                bottom:kInterItem,
                 right:kInterItem)
         }
         
@@ -88,7 +91,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = collectionView.bounds.maxY
+        let height:CGFloat = collectionView.bounds.maxY - interItem2
         let size:CGSize = CGSize(width:height, height:height)
         
         return size
