@@ -2,7 +2,7 @@ import UIKit
 
 class MCreateContentTimeline:MCreateContentProtocol
 {
-    private let kCellHeight:CGFloat = 80
+    private let kCellHeight:CGFloat = 70
     
     var cellHeight:CGFloat
     {

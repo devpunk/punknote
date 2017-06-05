@@ -66,6 +66,13 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     {
         super.config(controller:controller, model:model)
         collectionView.reloadData()
+        
+        let selected:Int = controller.model.selectedFrame
+        let indexPath:IndexPath = IndexPath(item:selected, section:0)
+        collectionView.selectItem(
+            at:indexPath,
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition.left)
     }
     
     //MARK: private
