@@ -13,7 +13,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         collectionView.alwaysBounceHorizontal = true
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.registerCell(cell:VCreateTimelineCell.self)
+        collectionView.registerCell(cell:VCreateCellTimelineCell.self)
         self.collectionView = collectionView
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
@@ -53,6 +53,15 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         collectionView.reloadData()
     }
     
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> MCreateFrame
+    {
+        let item:MCreateFrame = controller!.model.frames[index.item]
+        
+        return item
+    }
+    
     //MARK: collectionView delegate
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
@@ -84,10 +93,12 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let cell:VCreateTimelineCell = collectionView.dequeueReusableCell(
+        let item:MCreateFrame = modelAtIndex(index:indexPath)
+        let cell:VCreateCellTimelineCell = collectionView.dequeueReusableCell(
             withReuseIdentifier:
-            VCreateTimelineCell.reusableIdentifier,
-            for:indexPath) as! VCreateTimelineCell
+            VCreateCellTimelineCell.reusableIdentifier,
+            for:indexPath) as! VCreateCellTimelineCell
+        cell.config(model:item)
         
         return cell
     }
