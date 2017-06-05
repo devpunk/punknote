@@ -4,10 +4,14 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
 {
     private weak var collectionView:VCollection!
     private let kInterItem:CGFloat = 2
+    private let kBorderHeight:CGFloat = 1
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
+        backgroundColor = UIColor(white:0, alpha:0.02)
+        
+        let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.1))
         
         let collectionView:VCollection = VCollection()
         collectionView.alwaysBounceHorizontal = true
@@ -29,9 +33,20 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         }
         
         addSubview(collectionView)
+        addSubview(border)
         
         NSLayoutConstraint.equals(
             view:collectionView,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:border,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:border,
+            constant:kBorderHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:border,
             toView:self)
     }
     
