@@ -95,27 +95,6 @@ class VCreateCellTimelineCellSelected:UIView
         }
     }
     
-    private func refreshModel()
-    {
-        controller?.model.selected.refresh()
-        
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.startTimer()
-        }
-    }
-    
-    private func startTimer()
-    {
-        timer = Timer.scheduledTimer(
-            timeInterval:kTimerInterval,
-            target:self,
-            selector:#selector(actionTimer(sender:)),
-            userInfo:nil,
-            repeats:true)
-    }
-    
     //MARK: public
 
     func config(controller:CCreate?)
@@ -129,11 +108,14 @@ class VCreateCellTimelineCellSelected:UIView
         
         if isSelected
         {
-            DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-            { [weak self] in
-                
-                self?.refreshModel()
-            }
+            controller?.model.selected.refresh()
+            
+            timer = Timer.scheduledTimer(
+                timeInterval:kTimerInterval,
+                target:self,
+                selector:#selector(actionTimer(sender:)),
+                userInfo:nil,
+                repeats:true)
         }
     }
 }

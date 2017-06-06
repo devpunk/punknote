@@ -2,7 +2,7 @@ import UIKit
 
 class VCreateCellTimelineFooter:UICollectionReusableView
 {
-    private weak var controller:CCreate?
+    private weak var viewTimeline:VCreateCellTimeline?
     
     override init(frame:CGRect)
     {
@@ -17,7 +17,7 @@ class VCreateCellTimelineFooter:UICollectionReusableView
             #imageLiteral(resourceName: "assetGenericCreateAdd").withRenderingMode(UIImageRenderingMode.alwaysOriginal),
             for:UIControlState.normal)
         button.setImage(
-            #imageLiteral(resourceName: "assetGenericCreateAdd").withRenderingMode(UIImageRenderingMode.alwaysOriginal),
+            #imageLiteral(resourceName: "assetGenericCreateAddHover").withRenderingMode(UIImageRenderingMode.alwaysOriginal),
             for:UIControlState.highlighted)
         button.imageView!.clipsToBounds = true
         button.imageView!.contentMode = UIViewContentMode.center
@@ -42,13 +42,13 @@ class VCreateCellTimelineFooter:UICollectionReusableView
     
     func actionAdd(sender button:UIButton)
     {
-        controller?.addFrame()
+        viewTimeline?.addFrame()
     }
     
     //MARK: public
     
-    func config(controller:CCreate?)
+    func config(viewTimeline:VCreateCellTimeline)
     {
-        self.controller = controller
+        self.viewTimeline = viewTimeline
     }
 }

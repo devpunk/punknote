@@ -9,13 +9,22 @@ class MCreate
     
     init()
     {
-        let startingFrame:MCreateFrame = MCreateFrame()
         let contentTimeline:MCreateContentTimeline = MCreateContentTimeline()
         
-        frames = [startingFrame]
+        frames = []
         selected = MCreateSelected()
         selectedFrame = 0
         content = [
             contentTimeline]
+        
+        addFrame()
+    }
+    
+    //MARK: public
+    
+    func addFrame()
+    {
+        let newFrame:MCreateFrame = MCreateFrame()
+        frames.append(newFrame)
     }
 }

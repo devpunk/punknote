@@ -5,7 +5,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     private weak var collectionView:VCollection!
     private let interItem2:CGFloat
     private let kInterItem:CGFloat = 2
-    private let kFooterWidth:CGFloat = 50
+    private let kFooterWidth:CGFloat = 70
     private let kBorderHeight:CGFloat = 1
     
     override init(frame:CGRect)
@@ -13,7 +13,6 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         interItem2 = kInterItem + kInterItem
         
         super.init(frame:frame)
-        backgroundColor = UIColor(white:0, alpha:0.02)
         
         let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.1))
         
@@ -35,7 +34,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
                 top:kInterItem,
                 left:kInterItem,
                 bottom:kInterItem,
-                right:kInterItem)
+                right:0)
         }
         
         addSubview(collectionView)
@@ -101,8 +100,29 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         
         collectionView.selectItem(
             at:indexPath,
-            animated:true,
+            animated:false,
             scrollPosition:UICollectionViewScrollPosition.left)
+    }
+    
+    //MARK: public
+    
+    func addFrame()
+    {
+        guard
+        
+            let controller:CCreate = self.controller
+        
+        else
+        {
+            return
+        }
+        
+        let item:Int = controller.model.frames.count
+        let index:IndexPath = IndexPath(item:item, section:0)
+        let indexes:[IndexPath] = [index]
+        
+        controller.addFrame()
+        collectionView.insertItems(at:indexes)
     }
     
     //MARK: collectionView delegate
@@ -141,7 +161,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             withReuseIdentifier:
             VCreateCellTimelineFooter.reusableIdentifier,
             for:indexPath) as! VCreateCellTimelineFooter
-        footer.config(controller:controller)
+        footer.config(viewTimeline:self)
         
         return footer
     }
@@ -188,5 +208,6 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             return
         }
         
+        controller.model.selectedFrame = indexPath.item
     }
 }

@@ -38,5 +38,6 @@ class CCreate:Controller<VCreate>
     
     func addFrame()
     {
+        model.addFrame()
     }
 }
