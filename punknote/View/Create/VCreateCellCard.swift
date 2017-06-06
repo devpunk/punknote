@@ -3,8 +3,9 @@ import UIKit
 class VCreateCellCard:VCreateCell
 {
     private weak var viewText:VCreateCellCardText!
-    private weak var viewGradient:VGradient?
+    private weak var viewGradient:UIView?
     private let kBorderHeight:CGFloat = 1
+    private let kAnimationDuration:TimeInterval = 0.5
     
     override init(frame:CGRect)
     {
@@ -65,7 +66,7 @@ class VCreateCellCard:VCreateCell
     
     private func addGradient()
     {
-        viewGradient?.removeFromSuperview()
+        self.viewGradient?.removeFromSuperview()
      
         guard
         
@@ -76,11 +77,20 @@ class VCreateCellCard:VCreateCell
             return
         }
         
-        let view:UIView = backgroundModel.view()
-        insertSubview(view, at:0)
+        let viewGradient:UIView = backgroundModel.view()
+        viewGradient.alpha = 0
+        self.viewGradient = viewGradient
+        
+        insertSubview(viewGradient, at:0)
         
         NSLayoutConstraint.equals(
-            view:view,
+            view:viewGradient,
             toView:self)
+        
+        UIView.animate(withDuration:kAnimationDuration)
+        { [weak self] in
+            
+            self?.viewGradient?.alpha = 1
+        }
     }
 }
