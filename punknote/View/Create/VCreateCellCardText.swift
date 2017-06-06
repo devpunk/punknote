@@ -43,7 +43,7 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
         let width:CGFloat = bounds.maxX
         let height:CGFloat = bounds.maxY
         let usableWidth:CGFloat = width - insetsHorizontal3
-        let usableHeight:CGFloat = height - kInsetsHorizontal
+        let usableHeight:CGFloat = height
         let usableSize:CGSize = CGSize(width:usableWidth, height:usableHeight)
         let boundingRect:CGRect = attributedText.boundingRect(
             with:usableSize,
