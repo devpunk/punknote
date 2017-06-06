@@ -24,6 +24,7 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         let collectionView:VCollection = VCollection()
         collectionView.alwaysBounceVertical = true
         collectionView.registerCell(cell:VCreateCellTimeline.self)
+        collectionView.registerCell(cell:VCreateCellCard.self)
         collectionView.delegate = self
         collectionView.dataSource = self
         self.collectionView = collectionView
