@@ -4,18 +4,20 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
 {
     private weak var model:MCreateFrame?
     private let drawingOptions:NSStringDrawingOptions
-    private let insetsHorizontal3:CGFloat
+    private let insetsHorizontal2:CGFloat
     private let kInsetsHorizontal:CGFloat = 30
+    private let kEmpty:String = ""
     
     init()
     {
         let color:UIColor = UIColor.white
-        insetsHorizontal3 = kInsetsHorizontal + kInsetsHorizontal + kInsetsHorizontal
+        insetsHorizontal2 = kInsetsHorizontal + kInsetsHorizontal
         drawingOptions = NSStringDrawingOptions([
             NSStringDrawingOptions.usesLineFragmentOrigin,
             NSStringDrawingOptions.usesFontLeading])
         
         super.init(frame:CGRect.zero, textContainer:nil)
+        text = kEmpty
         clipsToBounds = true
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +51,7 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
     {
         let width:CGFloat = bounds.maxX
         let height:CGFloat = bounds.maxY
-        let usableWidth:CGFloat = width - insetsHorizontal3
+        let usableWidth:CGFloat = width - insetsHorizontal2
         let usableHeight:CGFloat = height
         let usableSize:CGSize = CGSize(width:usableWidth, height:usableHeight)
         let boundingRect:CGRect = attributedText.boundingRect(
@@ -87,23 +89,9 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
             object:model)
     }
     
-    //MARK: public
-    
-    func config(model:MCreate)
+    private func textChanged()
     {
-        let selectedFrame:MCreateFrame = model.selectedFrameModel()
-        self.model = selectedFrame
-        text = selectedFrame.text
-        font = model.font.selectedFontObject()
-        
-        updateInsets()
-    }
-    
-    //MARK: textView delegate
-    
-    func textViewDidChange(_ textView:UITextView)
-    {
-        model?.text = textView.text
+        model?.text = text
         updateInsets()
         
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
@@ -111,5 +99,30 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
             
             self?.notifyChanges()
         }
+    }
+    
+    //MARK: public
+    
+    func config(model:MCreate)
+    {
+        let selectedFrame:MCreateFrame = model.selectedFrameModel()
+        text = selectedFrame.text
+        font = model.font.selectedFontObject()
+        self.model = selectedFrame
+        
+        updateInsets()
+    }
+    
+    func clear()
+    {
+        text = kEmpty
+        textChanged()
+    }
+    
+    //MARK: textView delegate
+    
+    func textViewDidChange(_ textView:UITextView)
+    {
+        textChanged()
     }
 }

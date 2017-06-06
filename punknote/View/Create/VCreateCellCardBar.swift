@@ -2,6 +2,7 @@ import UIKit
 
 class VCreateCellCardBar:UIView
 {
+    private weak var viewText:VCreateCellCardText?
     private let kButtonHorizontalMargin:CGFloat = 7
     private let kButtonWidth:CGFloat = 90
     private let kButtonVerticalMargin:CGFloat = 7
@@ -10,14 +11,15 @@ class VCreateCellCardBar:UIView
     private let kHeight:CGFloat = 40
     private let kBorderHeight:CGFloat = 1
     
-    init()
+    init(viewText:VCreateCellCardText)
     {
         let rect:CGRect = CGRect(x:0, y:0, width:0, height:kHeight)
         
         super.init(frame:rect)
         clipsToBounds = true
         backgroundColor = UIColor.clear
-        
+        self.viewText = viewText
+
         let blur:VBlur = VBlur.light()
         
         let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.1))
@@ -52,14 +54,14 @@ class VCreateCellCardBar:UIView
             NSLocalizedString("VCreateCellCardBar_titleButtonClear", comment:""),
             for:UIControlState.normal)
         buttonClear.setTitleColor(
-            UIColor.punkPurple,
+            UIColor.punkOrange,
             for:UIControlState.normal)
         buttonClear.setTitleColor(
-            UIColor.punkPurple.withAlphaComponent(0.2),
+            UIColor.punkOrange.withAlphaComponent(0.2),
             for:UIControlState.highlighted)
         buttonClear.titleLabel!.font = UIFont.bold(size:13)
         buttonClear.layer.cornerRadius = kButtonCornerRadius
-        buttonClear.layer.borderColor = UIColor.punkPurple.cgColor
+        buttonClear.layer.borderColor = UIColor.punkOrange.cgColor
         buttonClear.layer.borderWidth = kButtonBorderWidth
         buttonClear.addTarget(
             self,
@@ -124,6 +126,6 @@ class VCreateCellCardBar:UIView
     
     func actionButtonClear(sender button:UIButton)
     {
-        
+        viewText?.clear()
     }
 }
