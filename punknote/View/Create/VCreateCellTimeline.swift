@@ -71,7 +71,6 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     {
         super.config(controller:controller, model:model)
         collectionView.reloadData()
-        
         selectCurrent()
     }
     

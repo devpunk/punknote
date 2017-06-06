@@ -7,7 +7,7 @@ class MCreateSelected
     private let maxRad:CGFloat
     private let kRandomRange:UInt32 = 157
     private let kRandomRangeDivider:CGFloat = 100
-    private let kSeparationRad:CGFloat = 0.174533
+    private let kSeparationRad:CGFloat = 0.349066
     private let kRotationAmount:CGFloat = 0.0174533
     
     init()

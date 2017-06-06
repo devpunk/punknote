@@ -40,8 +40,6 @@ class VCreateCellTimelineCell:UICollectionViewCell
         NSLayoutConstraint.equals(
             view:viewGradient,
             toView:self)
-        
-        hover()
     }
     
     required init?(coder:NSCoder)

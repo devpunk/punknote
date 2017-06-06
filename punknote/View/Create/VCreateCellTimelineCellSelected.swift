@@ -31,7 +31,7 @@ class VCreateCellTimelineCellSelected:UIView
     {
         guard
         
-            let model:MCreateSelected = controller?.model.selected,
+            let model:MCreateSelected = model?.selected,
             let context:CGContext = UIGraphicsGetCurrentContext()
         
         else
@@ -78,7 +78,7 @@ class VCreateCellTimelineCellSelected:UIView
     {
         guard
             
-            let model:MCreateSelected = controller?.model.selected
+            let model:MCreateSelected = model?.selected
             
         else
         {
