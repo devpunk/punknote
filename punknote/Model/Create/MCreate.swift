@@ -13,6 +13,7 @@ class MCreate
     {
         let contentTimeline:MCreateContentTimeline = MCreateContentTimeline()
         let contentCard:MCreateContentCard = MCreateContentCard()
+        let contentBackground:MCreateContentBackground = MCreateContentBackground()
         
         let backgroundPurpleOrange:MCreateBackgroundPurpleOrange = MCreateBackgroundPurpleOrange()
         let backgroundPurpleGreen:MCreateBackgroundPurpleGreen = MCreateBackgroundPurpleGreen()
@@ -20,9 +21,12 @@ class MCreate
         selectedFrame = 0
         selectedBackground = 0
         frames = []
+        
         content = [
             contentTimeline,
-            contentCard]
+            contentCard,
+            contentBackground]
+        
         backgrounds = [
             backgroundPurpleOrange,
             backgroundPurpleGreen]
