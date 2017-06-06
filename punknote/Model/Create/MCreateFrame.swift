@@ -11,5 +11,6 @@ class MCreateFrame
     {
         title = ""
         duration = kDefaultDuration
+        selected = MCreateSelected()
     }
 }

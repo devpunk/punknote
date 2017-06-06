@@ -11,7 +11,6 @@ class MCreate
         let contentTimeline:MCreateContentTimeline = MCreateContentTimeline()
         
         frames = []
-        selected = MCreateSelected()
         selectedFrame = 0
         content = [
             contentTimeline]

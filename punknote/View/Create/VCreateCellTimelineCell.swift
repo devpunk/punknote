@@ -97,7 +97,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     
     func config(controller:CCreate?, model:MCreateFrame)
     {
-        viewSelected.config(controller:controller)
+        viewSelected.config(controller:controller, model:model)
         hover()
     }
 }
