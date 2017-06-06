@@ -1,6 +1,6 @@
 import Foundation
 
-class MCreateFontName
+class MCreateFontItem
 {
     let displayName:String
     let fontName:String

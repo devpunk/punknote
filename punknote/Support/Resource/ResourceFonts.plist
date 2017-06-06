@@ -20,5 +20,11 @@
         <key>font</key>
         <string>AppleSDGothicNeo-Medium</string>
     </dict>
+    <dict>
+        <key>name</key>
+        <string>Helvetica</string>
+        <key>font</key>
+        <string>HelveticaNeue-Thin</string>
+    </dict>
 </array>
 </plist>

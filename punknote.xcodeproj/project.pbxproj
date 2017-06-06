@@ -11,8 +11,8 @@
 		DA1E05E01EE6FB1800DDAC9B /* VCreateCellCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05DF1EE6FB1800DDAC9B /* VCreateCellCard.swift */; };
 		DA1E05E21EE7003100DDAC9B /* VCreateCellCardText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05E11EE7003100DDAC9B /* VCreateCellCardText.swift */; };
 		DA1E05E41EE706D500DDAC9B /* MCreateFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05E31EE706D500DDAC9B /* MCreateFont.swift */; };
-		DA1E05E61EE707F600DDAC9B /* MCreateFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05E51EE707F600DDAC9B /* MCreateFontName.swift */; };
 		DA1E05E81EE708EE00DDAC9B /* ResourceFonts.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA1E05E71EE708EE00DDAC9B /* ResourceFonts.plist */; };
+		DA1E05EA1EE710AE00DDAC9B /* MCreateFontItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05E91EE710AE00DDAC9B /* MCreateFontItem.swift */; };
 		DA31305A1EE1A40000DB2FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */; };
 		DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31302D1EE1A40000DB2FE4 /* ExtensionDictionary.swift */; };
 		DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31302E1EE1A40000DB2FE4 /* ExtensionFileManager.swift */; };
@@ -65,8 +65,8 @@
 		DA1E05DF1EE6FB1800DDAC9B /* VCreateCellCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellCard.swift; sourceTree = "<group>"; };
 		DA1E05E11EE7003100DDAC9B /* VCreateCellCardText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellCardText.swift; sourceTree = "<group>"; };
 		DA1E05E31EE706D500DDAC9B /* MCreateFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFont.swift; sourceTree = "<group>"; };
-		DA1E05E51EE707F600DDAC9B /* MCreateFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFontName.swift; sourceTree = "<group>"; };
 		DA1E05E71EE708EE00DDAC9B /* ResourceFonts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ResourceFonts.plist; sourceTree = "<group>"; };
+		DA1E05E91EE710AE00DDAC9B /* MCreateFontItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFontItem.swift; sourceTree = "<group>"; };
 		DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA31302D1EE1A40000DB2FE4 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		DA31302E1EE1A40000DB2FE4 /* ExtensionFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFileManager.swift; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 				DA3D97BC1EE5FDE300E8EB33 /* MCreateSelected.swift */,
 				DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */,
 				DA1E05E31EE706D500DDAC9B /* MCreateFont.swift */,
-				DA1E05E51EE707F600DDAC9B /* MCreateFontName.swift */,
+				DA1E05E91EE710AE00DDAC9B /* MCreateFontItem.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -421,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3131391EE1ED4800DB2FE4 /* AppDelegate.swift in Sources */,
+				DA1E05EA1EE710AE00DDAC9B /* MCreateFontItem.swift in Sources */,
 				DA31313B1EE1EE4A00DB2FE4 /* ControllerParent.swift in Sources */,
 				DA3131501EE1EF8400DB2FE4 /* ViewParent.swift in Sources */,
 				DA3130811EE1A61800DB2FE4 /* View.swift in Sources */,
@@ -461,7 +462,6 @@
 				DA3D97B11EE5A7AE00E8EB33 /* MCreateContentProtocol.swift in Sources */,
 				DA3130611EE1A40000DB2FE4 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA3130671EE1A40000DB2FE4 /* VCreate.swift in Sources */,
-				DA1E05E61EE707F600DDAC9B /* MCreateFontName.swift in Sources */,
 				DA3D97BB1EE5EC2B00E8EB33 /* VCreateCellTimelineCellSelected.swift in Sources */,
 				DA31314B1EE1EF6800DB2FE4 /* VSpinner.swift in Sources */,
 				DA3D97C31EE6206600E8EB33 /* VCreateCellTimelineFooter.swift in Sources */,
