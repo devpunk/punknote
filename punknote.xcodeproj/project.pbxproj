@@ -17,6 +17,7 @@
 		DA1E05F01EE7521200DDAC9B /* MCreateBackgroundProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05EF1EE7521200DDAC9B /* MCreateBackgroundProtocol.swift */; };
 		DA1E05F21EE752D400DDAC9B /* MCreateBackgroundPurpleOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05F11EE752D400DDAC9B /* MCreateBackgroundPurpleOrange.swift */; };
 		DA1E05F41EE7567300DDAC9B /* MCreateBackgroundPurpleGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05F31EE7567300DDAC9B /* MCreateBackgroundPurpleGreen.swift */; };
+		DA1E05F61EE7622900DDAC9B /* MCreateContentBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05F51EE7622900DDAC9B /* MCreateContentBackground.swift */; };
 		DA31305A1EE1A40000DB2FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */; };
 		DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31302D1EE1A40000DB2FE4 /* ExtensionDictionary.swift */; };
 		DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31302E1EE1A40000DB2FE4 /* ExtensionFileManager.swift */; };
@@ -75,6 +76,7 @@
 		DA1E05EF1EE7521200DDAC9B /* MCreateBackgroundProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundProtocol.swift; sourceTree = "<group>"; };
 		DA1E05F11EE752D400DDAC9B /* MCreateBackgroundPurpleOrange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundPurpleOrange.swift; sourceTree = "<group>"; };
 		DA1E05F31EE7567300DDAC9B /* MCreateBackgroundPurpleGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundPurpleGreen.swift; sourceTree = "<group>"; };
+		DA1E05F51EE7622900DDAC9B /* MCreateContentBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentBackground.swift; sourceTree = "<group>"; };
 		DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA31302D1EE1A40000DB2FE4 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		DA31302E1EE1A40000DB2FE4 /* ExtensionFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFileManager.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */,
 				DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */,
 				DA1E05DD1EE6FAC900DDAC9B /* MCreateContentCard.swift */,
+				DA1E05F51EE7622900DDAC9B /* MCreateContentBackground.swift */,
 				DA3D97BC1EE5FDE300E8EB33 /* MCreateSelected.swift */,
 				DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */,
 				DA1E05E31EE706D500DDAC9B /* MCreateFont.swift */,
@@ -476,6 +479,7 @@
 				DA3131371EE1ECE800DB2FE4 /* Controller.swift in Sources */,
 				DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */,
 				DA3D97B11EE5A7AE00E8EB33 /* MCreateContentProtocol.swift in Sources */,
+				DA1E05F61EE7622900DDAC9B /* MCreateContentBackground.swift in Sources */,
 				DA3130611EE1A40000DB2FE4 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA3130671EE1A40000DB2FE4 /* VCreate.swift in Sources */,
 				DA3D97BB1EE5EC2B00E8EB33 /* VCreateCellTimelineCellSelected.swift in Sources */,
