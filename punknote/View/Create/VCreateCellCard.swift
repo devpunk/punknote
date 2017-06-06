@@ -3,6 +3,7 @@ import UIKit
 class VCreateCellCard:VCreateCell
 {
     private weak var viewText:VCreateCellCardText!
+    private var viewBar:VCreateCellCardBar!
     private let kBorderHeight:CGFloat = 1
     
     override init(frame:CGRect)
@@ -14,6 +15,7 @@ class VCreateCellCard:VCreateCell
         let borderBottom:VBorder = VBorder(color:UIColor.black)
         
         let viewBar:VCreateCellCardBar = VCreateCellCardBar()
+        self.viewBar = viewBar
         
         let viewText:VCreateCellCardText = VCreateCellCardText()
         viewText.inputAccessoryView = viewBar
