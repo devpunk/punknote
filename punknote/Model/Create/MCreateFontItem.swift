@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MCreateFontItem
 {
@@ -9,5 +9,14 @@ class MCreateFontItem
     {
         self.displayName = displayName
         self.fontName = fontName
+    }
+    
+    //MARK: public
+    
+    func font(size:CGFloat) -> UIFont
+    {
+        let font:UIFont = UIFont(name:fontName, size:size)!
+        
+        return font
     }
 }

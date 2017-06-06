@@ -3,6 +3,7 @@ import Foundation
 class MCreate
 {
     let content:[MCreateContentProtocol]
+    let font:MCreateFont
     var frames:[MCreateFrame]
     var selectedFrame:Int
     
@@ -16,7 +17,8 @@ class MCreate
         content = [
             contentTimeline,
             contentCard]
-        
+      
+        font = MCreateFont()
         addFrame()
     }
     

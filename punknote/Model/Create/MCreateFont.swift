@@ -1,16 +1,21 @@
-import Foundation
+import UIKit
 
 class MCreateFont
 {
     let fonts:[MCreateFontItem]
+    var selectedFont:Int
+    var fontSize:CGFloat
     private let kResourceName:String = "ResourceFonts"
     private let kResourceExtension:String = "plist"
     private let kKeyName:String = "name"
     private let kKeyFont:String = "font"
+    private let kDefaultFontSize:CGFloat = 30
     
     init()
     {
         var fonts:[MCreateFontItem] = []
+        selectedFont = 0
+        fontSize = kDefaultFontSize
         
         guard
             
@@ -67,5 +72,37 @@ class MCreateFont
         }
         
         self.fonts = fonts
+    }
+    
+    //MARK: public
+    
+    func selectedFontModel() -> MCreateFontItem?
+    {
+        if fonts.count < 1
+        {
+            return nil
+        }
+        
+        let fontItem:MCreateFontItem = fonts[selectedFont]
+        
+        return fontItem
+    }
+    
+    func selectedFontObject() -> UIFont
+    {
+        guard
+        
+            let selected:MCreateFontItem = selectedFontModel()
+        
+        else
+        {
+            let defaultFont:UIFont = UIFont.regular(size:fontSize)
+            
+            return defaultFont
+        }
+        
+        let font:UIFont = selected.font(size:fontSize)
+        
+        return font
     }
 }
