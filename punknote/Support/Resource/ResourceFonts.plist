@@ -16,7 +16,7 @@
     </dict>
     <dict>
         <key>name</key>
-        <string>Apple Gothic Neo</string>
+        <string>Gothic Neo</string>
         <key>font</key>
         <string>AppleSDGothicNeo-Medium</string>
     </dict>
@@ -25,6 +25,12 @@
         <string>Helvetica</string>
         <key>font</key>
         <string>HelveticaNeue-Thin</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Arial</string>
+        <key>font</key>
+        <string>Arial-BoldMT</string>
     </dict>
 </array>
 </plist>

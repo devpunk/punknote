@@ -13,7 +13,10 @@ class VCreateCellCard:VCreateCell
         let borderTop:VBorder = VBorder(color:UIColor.black)
         let borderBottom:VBorder = VBorder(color:UIColor.black)
         
+        let viewBar:VCreateCellCardBar = VCreateCellCardBar()
+        
         let viewText:VCreateCellCardText = VCreateCellCardText()
+        viewText.inputAccessoryView = viewBar
         self.viewText = viewText
         
         addSubview(borderTop)

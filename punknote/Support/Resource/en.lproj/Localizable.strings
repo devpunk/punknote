@@ -1,5 +1,6 @@
 "VCreateBar_buttonCancel"="Cancel";
 "VCreateBar_buttonDone"="Done";
 "VCreateBar_labelTitle"="New note";
+"VCreateCellCardBar_titleButton"="Done";
 
 "MCreateFrame_defaultText"="Text";
