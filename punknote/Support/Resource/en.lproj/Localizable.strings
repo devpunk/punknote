@@ -2,4 +2,4 @@
 "VCreateBar_buttonDone"="Done";
 "VCreateBar_labelTitle"="New note";
 
-"MCreateFrame_defaultTitle"="Text";
+"MCreateFrame_defaultText"="Text";

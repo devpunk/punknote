@@ -27,4 +27,11 @@ class MCreate
         let newFrame:MCreateFrame = MCreateFrame()
         frames.append(newFrame)
     }
+    
+    func selectedFrameModel() -> MCreateFrame
+    {
+        let item:MCreateFrame = frames[selectedFrame]
+        
+        return item
+    }
 }
