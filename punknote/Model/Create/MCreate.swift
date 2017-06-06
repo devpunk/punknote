@@ -4,6 +4,7 @@ class MCreate
 {
     let content:[MCreateContentProtocol]
     let font:MCreateFont
+    let background:MCreateBackground
     var frames:[MCreateFrame]
     var selectedFrame:Int
     
@@ -19,6 +20,7 @@ class MCreate
             contentCard]
       
         font = MCreateFont()
+        background = MCreateBackground()
         addFrame()
     }
     
