@@ -4,9 +4,10 @@ class MCreate
 {
     let content:[MCreateContentProtocol]
     let font:MCreateFont
-    let background:MCreateBackground
+    let backgrounds:[MCreateBackgroundProtocol]
     var frames:[MCreateFrame]
     var selectedFrame:Int
+    var selectedBackground:Int
     
     init()
     {
