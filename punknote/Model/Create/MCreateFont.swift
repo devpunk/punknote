@@ -2,7 +2,7 @@ import Foundation
 
 class MCreateFont
 {
-    let fonts:[MCreateFontName]
+    let fonts:[MCreateFontItem]
     private let kResourceName:String = "ResourceFonts"
     private let kResourceExtension:String = "plist"
     private let kKeyName:String = "name"
@@ -10,7 +10,7 @@ class MCreateFont
     
     init()
     {
-        var fonts:[MCreateFontName] = []
+        var fonts:[MCreateFontItem] = []
         
         guard
             
@@ -33,15 +33,37 @@ class MCreateFont
             guard
             
                 let fontMap:[String:String] = font as? [String:String],
-                let itemFont:String = fontMap[kKeyFont],
-                let itemName:String = fontMap[kKeyName]
+                let itemName:String = fontMap[kKeyName],
+                let itemFont:String = fontMap[kKeyFont]
             
             else
             {
                 continue
             }
             
-            let item:MCreateFontName = mcare
+            let item:MCreateFontItem = MCreateFontItem(
+                displayName:itemName,
+                fontName:itemFont)
+            
+            fonts.append(item)
+        }
+        
+        fonts.sort
+        { (itemA:MCreateFontItem, itemB:MCreateFontItem) -> Bool in
+            
+            let comparisonResult:ComparisonResult = itemA.displayName.compare(itemB.displayName)
+            
+            switch comparisonResult
+            {
+            case ComparisonResult.orderedAscending,
+                 ComparisonResult.orderedSame:
+                
+                return true
+                
+            case ComparisonResult.orderedDescending:
+                
+                return false
+            }
         }
         
         self.fonts = fonts
