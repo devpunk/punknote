@@ -122,6 +122,10 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         
         controller.addFrame()
         collectionView.insertItems(at:indexes)
+        collectionView.selectItem(
+            at:index,
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition.left)
     }
     
     //MARK: collectionView delegate
@@ -208,5 +212,9 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         }
         
         controller.model.selectedFrame = indexPath.item
+        collectionView.scrollToItem(
+            at:indexPath,
+            at:UICollectionViewScrollPosition.centeredHorizontally,
+            animated:true)
     }
 }
