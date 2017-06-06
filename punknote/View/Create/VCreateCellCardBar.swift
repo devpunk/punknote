@@ -26,6 +26,10 @@ class VCreateCellCardBar:UIView
             UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
         button.titleLabel!.font = UIFont.bold(size:14)
+        button.addTarget(
+            self,
+            action:#selector(actionButton(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         addSubview(button)
         
@@ -44,5 +48,12 @@ class VCreateCellCardBar:UIView
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: actions
+    
+    func actionButton(sender button:UIButton)
+    {
+        UIApplication.shared.keyWindow!.endEditing(true)
     }
 }
