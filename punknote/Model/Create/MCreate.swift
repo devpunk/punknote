@@ -9,11 +9,13 @@ class MCreate
     init()
     {
         let contentTimeline:MCreateContentTimeline = MCreateContentTimeline()
+        let contentCard:MCreateContentCard = MCreateContentCard()
         
         frames = []
         selectedFrame = 0
         content = [
-            contentTimeline]
+            contentTimeline,
+            contentCard]
         
         addFrame()
     }

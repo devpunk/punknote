@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA1E05DE1EE6FAC900DDAC9B /* MCreateContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05DD1EE6FAC900DDAC9B /* MCreateContentCard.swift */; };
+		DA1E05E01EE6FB1800DDAC9B /* VCreateCellCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05DF1EE6FB1800DDAC9B /* VCreateCellCard.swift */; };
 		DA31305A1EE1A40000DB2FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */; };
 		DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31302D1EE1A40000DB2FE4 /* ExtensionDictionary.swift */; };
 		DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31302E1EE1A40000DB2FE4 /* ExtensionFileManager.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		DA1E05DD1EE6FAC900DDAC9B /* MCreateContentCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentCard.swift; sourceTree = "<group>"; };
+		DA1E05DF1EE6FB1800DDAC9B /* VCreateCellCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellCard.swift; sourceTree = "<group>"; };
 		DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA31302D1EE1A40000DB2FE4 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		DA31302E1EE1A40000DB2FE4 /* ExtensionFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFileManager.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				DA3D97C21EE6206600E8EB33 /* VCreateCellTimelineFooter.swift */,
 				DA3D97B81EE5B3E600E8EB33 /* VCreateCellTimelineCell.swift */,
 				DA3D97BA1EE5EC2B00E8EB33 /* VCreateCellTimelineCellSelected.swift */,
+				DA1E05DF1EE6FB1800DDAC9B /* VCreateCellCard.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */,
 				DA3130601EE1A40000DB2FE4 /* ExtensionString.swift in Sources */,
 				DA3D97B31EE5A7BC00E8EB33 /* MCreateContentTimeline.swift in Sources */,
+				DA1E05E01EE6FB1800DDAC9B /* VCreateCellCard.swift in Sources */,
 				DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */,
 				DA3D97BD1EE5FDE300E8EB33 /* MCreateSelected.swift in Sources */,
 				DA3130621EE1A40000DB2FE4 /* ExtensionUIColor.swift in Sources */,
