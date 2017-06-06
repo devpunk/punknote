@@ -3,7 +3,6 @@ import Foundation
 class MCreate
 {
     let content:[MCreateContentProtocol]
-    let selected:MCreateSelected
     var frames:[MCreateFrame]
     var selectedFrame:Int
     

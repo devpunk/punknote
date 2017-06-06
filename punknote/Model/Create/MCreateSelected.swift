@@ -16,7 +16,11 @@ class MCreateSelected
         maxRad = pi2 - kSeparationRad
         items = []
         
-        refresh()
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.refresh()
+        }
     }
     
     //MARK: private
@@ -35,9 +39,7 @@ class MCreateSelected
         return randomDivided
     }
     
-    //MARK: public
-    
-    func refresh()
+    private func refresh()
     {
         var items:[MCreateSelectedItem] = []
         var startingRad:CGFloat = 0
@@ -60,6 +62,8 @@ class MCreateSelected
         
         self.items = items
     }
+    
+    //MARK: public
     
     func rotate()
     {
