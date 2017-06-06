@@ -2,7 +2,7 @@ import UIKit
 
 class VCreateCellTimelineCell:UICollectionViewCell
 {
-    private weak var circle:UIView!
+    private weak var viewCircle:UIView!
     private weak var viewSelected:VCreateCellTimelineCellSelected!
     private weak var model:MCreateFrame?
     private let kCircleMargin:CGFloat = 10
@@ -14,13 +14,13 @@ class VCreateCellTimelineCell:UICollectionViewCell
         clipsToBounds = true
         backgroundColor = UIColor.clear
         
-        let circle:UIView = UIView()
-        circle.isUserInteractionEnabled = false
-        circle.translatesAutoresizingMaskIntoConstraints = false
-        circle.backgroundColor = UIColor.clear
-        circle.layer.borderWidth = kBorderWidth
-        circle.layer.borderColor = UIColor(white:0, alpha:0.1).cgColor
-        circle.layer.cornerRadius = (frame.size.width / 2) - kCircleMargin
+        let viewCircle:UIView = UIView()
+        viewCircle.isUserInteractionEnabled = false
+        viewCircle.translatesAutoresizingMaskIntoConstraints = false
+        viewCircle.backgroundColor = UIColor.clear
+        viewCircle.layer.borderWidth = kBorderWidth
+        viewCircle.layer.cornerRadius = (frame.size.width / 2) - kCircleMargin
+        self.viewCircle = viewCircle
         
         let viewSelected:VCreateCellTimelineCellSelected = VCreateCellTimelineCellSelected()
         self.viewSelected = viewSelected
@@ -31,10 +31,10 @@ class VCreateCellTimelineCell:UICollectionViewCell
         viewGradient.mask = viewSelected
         
         addSubview(viewGradient)
-        addSubview(circle)
+        addSubview(viewCircle)
         
         NSLayoutConstraint.equals(
-            view:circle,
+            view:viewCircle,
             toView:self,
             margin:kCircleMargin)
         
@@ -85,11 +85,13 @@ class VCreateCellTimelineCell:UICollectionViewCell
         {
             viewSelected.selected(isSelected:true, model:model)
             viewSelected.isHidden = false
+            viewCircle.layer.borderColor = UIColor.punkPurple.cgColor
         }
         else
         {
             viewSelected.selected(isSelected:false, model:model)
             viewSelected.isHidden = true
+            viewCircle.layer.borderColor = UIColor(white:0, alpha:0.1).cgColor
         }
     }
     
@@ -99,6 +101,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     {
         viewSelected.timer?.invalidate()
         self.model = model
+        
         hover()
     }
 }
