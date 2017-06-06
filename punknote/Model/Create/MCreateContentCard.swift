@@ -2,7 +2,7 @@ import UIKit
 
 class MCreateContentCard:MCreateContentProtocol
 {
-    private let kCellHeight:CGFloat = 300
+    private let kCellHeight:CGFloat = 250
     
     var cellHeight:CGFloat
     {

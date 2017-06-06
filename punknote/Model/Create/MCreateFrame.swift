@@ -9,7 +9,7 @@ class MCreateFrame
     
     init()
     {
-        title = ""
+        title = NSLocalizedString("MCreateFrame_defaultTitle", comment:"")
         duration = kDefaultDuration
         selected = MCreateSelected()
     }
