@@ -71,6 +71,22 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
             right:kInsetsHorizontal)
     }
     
+    private func notifyChanges()
+    {
+        guard
+            
+            let model:MCreateFrame = self.model
+        
+        else
+        {
+            return
+        }
+        
+        NotificationCenter.default.post(
+            name:Notification.frameTextChanged,
+            object:model)
+    }
+    
     //MARK: public
     
     func config(model:MCreate)
@@ -79,6 +95,7 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
         self.model = selectedFrame
         text = selectedFrame.text
         font = model.font.selectedFontObject()
+        
         updateInsets()
     }
     
@@ -88,5 +105,11 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
     {
         model?.text = textView.text
         updateInsets()
+        
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.notifyChanges()
+        }
     }
 }

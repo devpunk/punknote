@@ -5,7 +5,9 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private weak var viewCircle:UIView!
     private weak var viewSelected:VCreateCellTimelineCellSelected!
     private weak var model:MCreateFrame?
+    private weak var labelText:UILabel!
     private let kCircleMargin:CGFloat = 10
+    private let kLabelMargin:CGFloat = 4
     private let kBorderWidth:CGFloat = 1
     
     override init(frame:CGRect)
@@ -14,12 +16,16 @@ class VCreateCellTimelineCell:UICollectionViewCell
         clipsToBounds = true
         backgroundColor = UIColor.clear
         
+        let circleCornerRadius:CGFloat = (frame.size.width / 2) - kCircleMargin
+        let labelCornerRadius:CGFloat = circleCornerRadius - kLabelMargin
+        
         let viewCircle:UIView = UIView()
+        viewCircle.clipsToBounds = true
         viewCircle.isUserInteractionEnabled = false
         viewCircle.translatesAutoresizingMaskIntoConstraints = false
         viewCircle.backgroundColor = UIColor.clear
         viewCircle.layer.borderWidth = kBorderWidth
-        viewCircle.layer.cornerRadius = (frame.size.width / 2) - kCircleMargin
+        viewCircle.layer.cornerRadius = circleCornerRadius
         self.viewCircle = viewCircle
         
         let viewSelected:VCreateCellTimelineCellSelected = VCreateCellTimelineCellSelected()
@@ -30,6 +36,19 @@ class VCreateCellTimelineCell:UICollectionViewCell
             colorTopRight:UIColor.punkOrange)
         viewGradient.mask = viewSelected
         
+        let labelText:UILabel = UILabel()
+        labelText.translatesAutoresizingMaskIntoConstraints = false
+        labelText.isUserInteractionEnabled = false
+        labelText.backgroundColor = UIColor.clear
+        labelText.textAlignment = NSTextAlignment.center
+        labelText.numberOfLines = 0
+        labelText.textColor = UIColor.black
+        labelText.font = UIFont.regular(size:12)
+        labelText.clipsToBounds = true
+        labelText.layer.cornerRadius = labelCornerRadius
+        self.labelText = labelText
+        
+        addSubview(labelText)
         addSubview(viewGradient)
         addSubview(viewCircle)
         
@@ -41,6 +60,17 @@ class VCreateCellTimelineCell:UICollectionViewCell
         NSLayoutConstraint.equals(
             view:viewGradient,
             toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:labelText,
+            toView:viewCircle,
+            margin:kLabelMargin)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedTextChanged(sender:)),
+            name:Notification.frameTextChanged,
+            object:nil)
     }
     
     required init?(coder:NSCoder)
@@ -51,6 +81,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     deinit
     {
         viewSelected.timer?.invalidate()
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func layoutSubviews()
@@ -73,6 +104,30 @@ class VCreateCellTimelineCell:UICollectionViewCell
         didSet
         {
             hover()
+        }
+    }
+    
+    //MARK: notifications
+    
+    func notifiedTextChanged(sender notification:Notification)
+    {
+        guard
+        
+            let model:MCreateFrame = self.model,
+            let notificationFrame:MCreateFrame = notification.object as? MCreateFrame
+        
+        else
+        {
+            return
+        }
+        
+        if model === notificationFrame
+        {
+            DispatchQueue.main.async
+            { [weak self] in
+                
+                self?.updateText()
+            }
         }
     }
     
@@ -103,6 +158,20 @@ class VCreateCellTimelineCell:UICollectionViewCell
         }
     }
     
+    private func updateText()
+    {
+        guard
+        
+            let model:MCreateFrame = self.model
+        
+        else
+        {
+            return
+        }
+        
+        labelText.text = model.text
+    }
+    
     //MARK: public
     
     func config(model:MCreateFrame)
@@ -111,5 +180,6 @@ class VCreateCellTimelineCell:UICollectionViewCell
         self.model = model
         
         hover()
+        updateText()
     }
 }

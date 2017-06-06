@@ -16,7 +16,7 @@ class MCreateContentBackground:MCreateContentProtocol
     {
         get
         {
-            return VCreateCellCard.reusableIdentifier
+            return VCreateCellBackground.reusableIdentifier
         }
     }
 }
