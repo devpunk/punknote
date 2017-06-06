@@ -5,7 +5,7 @@ class VCreateCellCard:VCreateCell
     private weak var viewText:VCreateCellCardText!
     private weak var viewGradient:UIView?
     private let kBorderHeight:CGFloat = 1
-    private let kAnimationDuration:TimeInterval = 0.5
+    private let kAnimationDuration:TimeInterval = 0.4
     
     override init(frame:CGRect)
     {

@@ -7,7 +7,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     private let kInterItem:CGFloat = 2
     private let kFooterWidth:CGFloat = 70
     private let kBorderHeight:CGFloat = 1
-    private let kAfterAddRefresh:TimeInterval = 0.3
+    private let kAfterAddRefresh:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
