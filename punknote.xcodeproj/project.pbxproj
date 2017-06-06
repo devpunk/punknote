@@ -14,6 +14,7 @@
 		DA1E05E81EE708EE00DDAC9B /* ResourceFonts.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA1E05E71EE708EE00DDAC9B /* ResourceFonts.plist */; };
 		DA1E05EA1EE710AE00DDAC9B /* MCreateFontItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05E91EE710AE00DDAC9B /* MCreateFontItem.swift */; };
 		DA1E05EC1EE7200700DDAC9B /* VCreateCellCardBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05EB1EE7200600DDAC9B /* VCreateCellCardBar.swift */; };
+		DA1E05EE1EE74D9E00DDAC9B /* MCreateBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E05ED1EE74D9E00DDAC9B /* MCreateBackground.swift */; };
 		DA31305A1EE1A40000DB2FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */; };
 		DA31305B1EE1A40000DB2FE4 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31302D1EE1A40000DB2FE4 /* ExtensionDictionary.swift */; };
 		DA31305C1EE1A40000DB2FE4 /* ExtensionFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA31302E1EE1A40000DB2FE4 /* ExtensionFileManager.swift */; };
@@ -69,6 +70,7 @@
 		DA1E05E71EE708EE00DDAC9B /* ResourceFonts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ResourceFonts.plist; sourceTree = "<group>"; };
 		DA1E05E91EE710AE00DDAC9B /* MCreateFontItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFontItem.swift; sourceTree = "<group>"; };
 		DA1E05EB1EE7200600DDAC9B /* VCreateCellCardBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellCardBar.swift; sourceTree = "<group>"; };
+		DA1E05ED1EE74D9E00DDAC9B /* MCreateBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackground.swift; sourceTree = "<group>"; };
 		DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA31302D1EE1A40000DB2FE4 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		DA31302E1EE1A40000DB2FE4 /* ExtensionFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFileManager.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */,
 				DA1E05E31EE706D500DDAC9B /* MCreateFont.swift */,
 				DA1E05E91EE710AE00DDAC9B /* MCreateFontItem.swift */,
+				DA1E05ED1EE74D9E00DDAC9B /* MCreateBackground.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */,
 				DA3D97BF1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift in Sources */,
 				DA3131491EE1EF6800DB2FE4 /* VCollectionFlow.swift in Sources */,
+				DA1E05EE1EE74D9E00DDAC9B /* MCreateBackground.swift in Sources */,
 				DA1E05E21EE7003100DDAC9B /* VCreateCellCardText.swift in Sources */,
 				DA1E05E41EE706D500DDAC9B /* MCreateFont.swift in Sources */,
 				DA3131521EE1F14600DB2FE4 /* VPushBackground.swift in Sources */,

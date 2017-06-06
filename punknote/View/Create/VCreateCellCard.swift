@@ -3,19 +3,17 @@ import UIKit
 class VCreateCellCard:VCreateCell
 {
     private weak var viewText:VCreateCellCardText!
-    private var viewBar:VCreateCellCardBar!
+    private weak var viewGradient:VGradient?
     private let kBorderHeight:CGFloat = 1
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        backgroundColor = UIColor.punkPurple
         
         let borderTop:VBorder = VBorder(color:UIColor.black)
         let borderBottom:VBorder = VBorder(color:UIColor.black)
         
         let viewBar:VCreateCellCardBar = VCreateCellCardBar()
-        self.viewBar = viewBar
         
         let viewText:VCreateCellCardText = VCreateCellCardText()
         viewText.inputAccessoryView = viewBar
@@ -59,5 +57,16 @@ class VCreateCellCard:VCreateCell
     {
         super.config(controller:controller, model:model)
         viewText.config(model:controller.model)
+        
+        addGradient()
+    }
+    
+    //MARK: private
+    
+    private func addGradient()
+    {
+        viewGradient?.removeFromSuperview()
+        
+        let view
     }
 }

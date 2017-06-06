@@ -7,7 +7,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     private let kInterItem:CGFloat = 2
     private let kFooterWidth:CGFloat = 70
     private let kBorderHeight:CGFloat = 1
-    private let kAfterAddRefresh:TimeInterval = 1
+    private let kAfterAddRefresh:TimeInterval = 0.3
     
     override init(frame:CGRect)
     {
@@ -84,6 +84,16 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         return item
     }
     
+    private func refreshFrame()
+    {
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kAfterAddRefresh)
+        { [weak controller] in
+            
+            controller?.refreshFrame()
+        }
+    }
+    
     private func selectCurrent()
     {
         guard
@@ -100,8 +110,8 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         
         collectionView.selectItem(
             at:indexPath,
-            animated:false,
-            scrollPosition:UICollectionViewScrollPosition.left)
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition.centeredHorizontally)
     }
     
     //MARK: public
@@ -220,11 +230,6 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         }
         
         controller.model.selectedFrame = indexPath.item
-        collectionView.scrollToItem(
-            at:indexPath,
-            at:UICollectionViewScrollPosition.centeredHorizontally,
-            animated:true)
-        
-        controller.refreshFrame()
+        refreshFrame()
     }
 }
