@@ -176,7 +176,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             withReuseIdentifier:
             VCreateCellTimelineCell.reusableIdentifier,
             for:indexPath) as! VCreateCellTimelineCell
-        cell.config(controller:controller, model:item)
+        cell.config(model:item)
         
         return cell
     }

@@ -3,7 +3,6 @@ import UIKit
 class VCreateCellTimelineCellSelected:UIView
 {
     weak var timer:Timer?
-    private weak var controller:CCreate?
     private weak var model:MCreateFrame?
     private let kCircleMargin:CGFloat = 8
     private let kLineWidth:CGFloat = 3
@@ -46,7 +45,7 @@ class VCreateCellTimelineCellSelected:UIView
         
         context.setLineCap(CGLineCap.square)
         context.setLineWidth(kLineWidth)
-        context.setStrokeColor(UIColor.punkPurple.cgColor)
+        context.setStrokeColor(UIColor.black.cgColor)
         
         for item:MCreateSelectedItem in model.items
         {
@@ -97,16 +96,11 @@ class VCreateCellTimelineCellSelected:UIView
     }
     
     //MARK: public
-
-    func config(controller:CCreate?, model:MCreateFrame)
-    {
-        self.controller = controller
-        self.model = model
-    }
     
-    func selected(isSelected:Bool)
+    func selected(isSelected:Bool, model:MCreateFrame)
     {
         timer?.invalidate()
+        self.model = model
         
         if isSelected
         {

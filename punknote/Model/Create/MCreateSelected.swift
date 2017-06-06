@@ -44,7 +44,7 @@ class MCreateSelected
         var items:[MCreateSelectedItem] = []
         var startingRad:CGFloat = 0
         
-        while startingRad < pi2
+        while startingRad < maxRad
         {
             let radians:CGFloat = randomRadians(fromRadian:startingRad)
             
