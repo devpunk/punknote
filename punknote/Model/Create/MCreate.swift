@@ -26,8 +26,10 @@ class MCreate
     
     func addFrame()
     {
+        let count:Int = frames.count
         let newFrame:MCreateFrame = MCreateFrame()
         frames.append(newFrame)
+        selectedFrame = count
     }
     
     func selectedFrameModel() -> MCreateFrame

@@ -7,6 +7,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     private let kInterItem:CGFloat = 2
     private let kFooterWidth:CGFloat = 70
     private let kBorderHeight:CGFloat = 1
+    private let kAfterAddRefresh:TimeInterval = 1
     
     override init(frame:CGRect)
     {
@@ -126,7 +127,13 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             at:index,
             animated:true,
             scrollPosition:UICollectionViewScrollPosition.left)
-        controller.refreshFrame()
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kAfterAddRefresh)
+        { [weak controller] in
+            
+            controller?.refreshFrame()
+        }
     }
     
     //MARK: collectionView delegate
@@ -180,6 +187,25 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         cell.config(model:item)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        guard
+            
+            let controller:CCreate = self.controller
+            
+        else
+        {
+            return false
+        }
+        
+        if controller.model.selectedFrame == indexPath.item
+        {
+            return false
+        }
+        
+        return true
     }
     
     func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)

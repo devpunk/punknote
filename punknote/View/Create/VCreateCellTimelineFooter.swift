@@ -42,6 +42,8 @@ class VCreateCellTimelineFooter:UICollectionReusableView
     
     func actionAdd(sender button:UIButton)
     {
+        UIApplication.shared.keyWindow!.endEditing(true)
+        
         viewTimeline?.addFrame()
     }
     
