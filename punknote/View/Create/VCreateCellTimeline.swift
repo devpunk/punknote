@@ -126,6 +126,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             at:index,
             animated:true,
             scrollPosition:UICollectionViewScrollPosition.left)
+        controller.refreshFrame()
     }
     
     //MARK: collectionView delegate
@@ -181,25 +182,6 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
-    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
-    {
-        guard
-            
-            let controller:CCreate = self.controller
-            
-        else
-        {
-            return false
-        }
-        
-        if controller.model.selectedFrame == indexPath.item
-        {
-            return false
-        }
-        
-        return true
-    }
-    
     func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
     {
         guard
@@ -216,5 +198,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             at:indexPath,
             at:UICollectionViewScrollPosition.centeredHorizontally,
             animated:true)
+        
+        controller.refreshFrame()
     }
 }

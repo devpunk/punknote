@@ -2,6 +2,7 @@ import UIKit
 
 class VCreateCellCardText:UITextView, UITextViewDelegate
 {
+    private weak var model:MCreateFrame?
     private let drawingOptions:NSStringDrawingOptions
     private let insetsHorizontal3:CGFloat
     private let kInsetsHorizontal:CGFloat = 30
@@ -21,6 +22,12 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
         textColor = color
         tintColor = color
         textAlignment = NSTextAlignment.center
+        isScrollEnabled = false
+        showsVerticalScrollIndicator = false
+        showsHorizontalScrollIndicator = false
+        keyboardType = UIKeyboardType.alphabet
+        keyboardAppearance = UIKeyboardAppearance.light
+        keyboardDismissMode = UIScrollViewKeyboardDismissMode.interactive
         delegate = self
     }
     
@@ -69,6 +76,7 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
     func config(model:MCreate)
     {
         let selectedFrame:MCreateFrame = model.selectedFrameModel()
+        self.model = selectedFrame
         text = selectedFrame.text
         font = model.font.selectedFontObject()
         updateInsets()
@@ -78,6 +86,7 @@ class VCreateCellCardText:UITextView, UITextViewDelegate
     
     func textViewDidChange(_ textView:UITextView)
     {
+        model?.text = textView.text
         updateInsets()
     }
 }

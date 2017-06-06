@@ -2,7 +2,7 @@ import UIKit
 
 class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    private weak var collectionView:VCollection!
+    private(set) weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 64
     private let kCollectionBottom:CGFloat = 20
     

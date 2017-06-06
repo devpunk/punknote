@@ -17,6 +17,22 @@ class CCreate:Controller<VCreate>
     
     //MARK: public
     
+    func refreshFrame()
+    {
+        UIApplication.shared.keyWindow!.endEditing(true)
+        
+        guard
+        
+            let view:VCreate = self.view as? VCreate
+        
+        else
+        {
+            return
+        }
+        
+        view.collectionView.reloadData()
+    }
+    
     func cancel()
     {
         guard
