@@ -14,14 +14,20 @@ class MCreate
         let contentTimeline:MCreateContentTimeline = MCreateContentTimeline()
         let contentCard:MCreateContentCard = MCreateContentCard()
         
-        frames = []
+        let backgroundPurpleOrange:MCreateBackgroundPurpleOrange = MCreateBackgroundPurpleOrange()
+        let backgroundPurpleGreen:MCreateBackgroundPurpleGreen = MCreateBackgroundPurpleGreen()
+        
         selectedFrame = 0
+        selectedBackground = 0
+        frames = []
         content = [
             contentTimeline,
             contentCard]
+        backgrounds = [
+            backgroundPurpleOrange,
+            backgroundPurpleGreen]
       
         font = MCreateFont()
-        background = MCreateBackground()
         addFrame()
     }
     
@@ -40,5 +46,12 @@ class MCreate
         let item:MCreateFrame = frames[selectedFrame]
         
         return item
+    }
+    
+    func selectedBackgroundModel() -> MCreateBackgroundProtocol
+    {
+        let background:MCreateBackgroundProtocol = backgrounds[selectedBackground]
+        
+        return background
     }
 }

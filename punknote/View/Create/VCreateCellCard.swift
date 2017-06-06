@@ -66,7 +66,21 @@ class VCreateCellCard:VCreateCell
     private func addGradient()
     {
         viewGradient?.removeFromSuperview()
+     
+        guard
         
-        let view
+            let backgroundModel:MCreateBackgroundProtocol = controller?.model.selectedBackgroundModel()
+        
+        else
+        {
+            return
+        }
+        
+        let view:UIView = backgroundModel.view()
+        insertSubview(view, at:0)
+        
+        NSLayoutConstraint.equals(
+            view:view,
+            toView:self)
     }
 }
