@@ -69,12 +69,28 @@ class VCreateCellTimelineCell:UICollectionViewCell
         }
     }
     
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
     //MARK: private
     
     private func hover()
     {
-        viewSelected.selected(isSelected:isSelected)
-        viewSelected.isHidden = !isSelected
+        if isSelected || isHighlighted
+        {
+            viewSelected.selected(isSelected:true)
+            viewSelected.isHidden = false
+        }
+        else
+        {
+            viewSelected.selected(isSelected:false)
+            viewSelected.isHidden = true
+        }
     }
     
     //MARK: public

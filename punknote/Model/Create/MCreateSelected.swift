@@ -15,6 +15,8 @@ class MCreateSelected
         pi2 = CGFloat.pi + CGFloat.pi
         maxRad = pi2 - kSeparationRad
         items = []
+        
+        refresh()
     }
     
     //MARK: private

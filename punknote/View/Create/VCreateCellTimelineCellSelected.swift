@@ -108,8 +108,6 @@ class VCreateCellTimelineCellSelected:UIView
         
         if isSelected
         {
-            controller?.model.selected.refresh()
-            
             timer = Timer.scheduledTimer(
                 timeInterval:kTimerInterval,
                 target:self,
