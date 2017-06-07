@@ -37,6 +37,8 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
     override func config(controller:CCreate, model:MCreateContentProtocol)
     {
         super.config(controller:controller, model:model)
+        collectionView.reloadData()
+        selectCurrentItem()
     }
     
     //MARK: private
@@ -46,6 +48,24 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
         let item:MCreateBackgroundProtocol = controller!.model.backgrounds[index.item]
         
         return item
+    }
+    
+    private func selectCurrentItem()
+    {
+        guard
+        
+            let selectedBackground:Int = controller?.model.selectedBackground
+        
+        else
+        {
+            return
+        }
+        
+        let index:IndexPath = IndexPath(item:selectedBackground, section:0)
+        collectionView.selectItem(
+            at:index,
+            animated:false,
+            scrollPosition:UICollectionViewScrollPosition.centeredHorizontally)
     }
     
     //MARK: collectionView delegate
