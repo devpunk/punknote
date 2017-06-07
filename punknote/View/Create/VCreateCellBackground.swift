@@ -4,7 +4,7 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
 {
     private weak var collectionView:VCollection!
     private let interItem2:CGFloat
-    private let kCellWidth:CGFloat = 100
+    private let kCellWidth:CGFloat = 80
     private let kInterItem:CGFloat = 2
     private let kAfterAddRefresh:TimeInterval = 0.2
     
