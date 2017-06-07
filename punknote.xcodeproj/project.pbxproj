@@ -62,6 +62,7 @@
 		DA33DFFE1EE8A9B90096FF9D /* MCreateBackgroundShades.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFFD1EE8A9B90096FF9D /* MCreateBackgroundShades.swift */; };
 		DA33E0001EE8AAA80096FF9D /* MCreateBackgroundBlueNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFFF1EE8AAA80096FF9D /* MCreateBackgroundBlueNight.swift */; };
 		DA33E0021EE8AF8B0096FF9D /* MCreateContentDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33E0011EE8AF8B0096FF9D /* MCreateContentDuration.swift */; };
+		DA33E0041EE8B25C0096FF9D /* VCreateCellDurationSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33E0031EE8B25C0096FF9D /* VCreateCellDurationSlider.swift */; };
 		DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97AE1EE5A68600E8EB33 /* VCreateCell.swift */; };
 		DA3D97B11EE5A7AE00E8EB33 /* MCreateContentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */; };
 		DA3D97B31EE5A7BC00E8EB33 /* MCreateContentTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */; };
@@ -132,6 +133,7 @@
 		DA33DFFD1EE8A9B90096FF9D /* MCreateBackgroundShades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundShades.swift; sourceTree = "<group>"; };
 		DA33DFFF1EE8AAA80096FF9D /* MCreateBackgroundBlueNight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundBlueNight.swift; sourceTree = "<group>"; };
 		DA33E0011EE8AF8B0096FF9D /* MCreateContentDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentDuration.swift; sourceTree = "<group>"; };
+		DA33E0031EE8B25C0096FF9D /* VCreateCellDurationSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellDurationSlider.swift; sourceTree = "<group>"; };
 		DA3D97AE1EE5A68600E8EB33 /* VCreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCell.swift; sourceTree = "<group>"; };
 		DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentProtocol.swift; sourceTree = "<group>"; };
 		DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentTimeline.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				DA1E05E11EE7003100DDAC9B /* VCreateCellCardText.swift */,
 				DA1E05EB1EE7200600DDAC9B /* VCreateCellCardBar.swift */,
 				DA33DFF71EE8A3FD0096FF9D /* VCreateCellDuration.swift */,
+				DA33E0031EE8B25C0096FF9D /* VCreateCellDurationSlider.swift */,
 				DA1E05F71EE7625B00DDAC9B /* VCreateCellBackground.swift */,
 				DA1E05F91EE77C6500DDAC9B /* VCreateCellBackgroundCell.swift */,
 			);
@@ -504,6 +507,7 @@
 				DA3D97B71EE5A87200E8EB33 /* VCreateCellTimeline.swift in Sources */,
 				DA31305E1EE1A40000DB2FE4 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA33DFFE1EE8A9B90096FF9D /* MCreateBackgroundShades.swift in Sources */,
+				DA33E0041EE8B25C0096FF9D /* VCreateCellDurationSlider.swift in Sources */,
 				DA33DFFA1EE8A63E0096FF9D /* MCreateBackgroundSweetDreams.swift in Sources */,
 				DA33DFEC1EE892C80096FF9D /* MCreateBackgroundYellowGreen.swift in Sources */,
 				DA3131461EE1EF6800DB2FE4 /* VBlur.swift in Sources */,

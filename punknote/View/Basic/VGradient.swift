@@ -2,8 +2,8 @@ import UIKit
 
 class VGradient:UIView
 {
-    private static let kLocationTop:NSNumber = 0
-    private static let kLocationBottom:NSNumber = 1
+    private static let kLocationStart:NSNumber = 0
+    private static let kLocationEnd:NSNumber = 1
     
     class func diagonal(colorLeftBottom:UIColor, colorTopRight:UIColor) -> VGradient
     {
@@ -11,10 +11,30 @@ class VGradient:UIView
             colorLeftBottom.cgColor,
             colorTopRight.cgColor]
         let locations:[NSNumber] = [
-            kLocationTop,
-            kLocationBottom]
+            kLocationStart,
+            kLocationEnd]
         let startPoint:CGPoint = CGPoint(x:0, y:1)
         let endPoint:CGPoint = CGPoint(x:1, y:0)
+        
+        let gradient:VGradient = VGradient(
+            colors:colors,
+            locations:locations,
+            startPoint:startPoint,
+            endPoint:endPoint)
+        
+        return gradient
+    }
+    
+    class func horizontal(colorLeft:UIColor, colorRight:UIColor) -> VGradient
+    {
+        let colors:[CGColor] = [
+            colorLeft.cgColor,
+            colorRight.cgColor]
+        let locations:[NSNumber] = [
+            kLocationStart,
+            kLocationEnd]
+        let startPoint:CGPoint = CGPoint(x:0, y:0.5)
+        let endPoint:CGPoint = CGPoint(x:1, y:0.5)
         
         let gradient:VGradient = VGradient(
             colors:colors,
