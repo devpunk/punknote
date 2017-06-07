@@ -22,7 +22,7 @@ class VCreateBar:UIView
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.regular(size:16)
+        labelTitle.font = UIFont.regular(size:15)
         labelTitle.textColor = UIColor.black
         labelTitle.isUserInteractionEnabled = false
         labelTitle.text = NSLocalizedString("VCreateBar_labelTitle", comment:"")

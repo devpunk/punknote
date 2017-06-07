@@ -61,6 +61,7 @@
 		DA33DFF21EE8A1730096FF9D /* MCreateBackgroundGreenOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFF11EE8A1730096FF9D /* MCreateBackgroundGreenOrange.swift */; };
 		DA33DFF41EE8A1BA0096FF9D /* MCreateBackgroundGreenYellow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFF31EE8A1BA0096FF9D /* MCreateBackgroundGreenYellow.swift */; };
 		DA33DFF61EE8A1DC0096FF9D /* MCreateBackgroundOrangeYellow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFF51EE8A1DC0096FF9D /* MCreateBackgroundOrangeYellow.swift */; };
+		DA33DFF81EE8A3FD0096FF9D /* VCreateCellDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFF71EE8A3FD0096FF9D /* VCreateCellDuration.swift */; };
 		DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97AE1EE5A68600E8EB33 /* VCreateCell.swift */; };
 		DA3D97B11EE5A7AE00E8EB33 /* MCreateContentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */; };
 		DA3D97B31EE5A7BC00E8EB33 /* MCreateContentTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */; };
@@ -130,6 +131,7 @@
 		DA33DFF11EE8A1730096FF9D /* MCreateBackgroundGreenOrange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundGreenOrange.swift; sourceTree = "<group>"; };
 		DA33DFF31EE8A1BA0096FF9D /* MCreateBackgroundGreenYellow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundGreenYellow.swift; sourceTree = "<group>"; };
 		DA33DFF51EE8A1DC0096FF9D /* MCreateBackgroundOrangeYellow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundOrangeYellow.swift; sourceTree = "<group>"; };
+		DA33DFF71EE8A3FD0096FF9D /* VCreateCellDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellDuration.swift; sourceTree = "<group>"; };
 		DA3D97AE1EE5A68600E8EB33 /* VCreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCell.swift; sourceTree = "<group>"; };
 		DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentProtocol.swift; sourceTree = "<group>"; };
 		DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentTimeline.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				DA1E05DF1EE6FB1800DDAC9B /* VCreateCellCard.swift */,
 				DA1E05E11EE7003100DDAC9B /* VCreateCellCardText.swift */,
 				DA1E05EB1EE7200600DDAC9B /* VCreateCellCardBar.swift */,
+				DA33DFF71EE8A3FD0096FF9D /* VCreateCellDuration.swift */,
 				DA1E05F71EE7625B00DDAC9B /* VCreateCellBackground.swift */,
 				DA1E05F91EE77C6500DDAC9B /* VCreateCellBackgroundCell.swift */,
 			);
@@ -511,6 +514,7 @@
 				DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */,
 				DA3D97BF1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift in Sources */,
 				DA3131491EE1EF6800DB2FE4 /* VCollectionFlow.swift in Sources */,
+				DA33DFF81EE8A3FD0096FF9D /* VCreateCellDuration.swift in Sources */,
 				DA1E05E21EE7003100DDAC9B /* VCreateCellCardText.swift in Sources */,
 				DA1E05E41EE706D500DDAC9B /* MCreateFont.swift in Sources */,
 				DA3131521EE1F14600DB2FE4 /* VPushBackground.swift in Sources */,
