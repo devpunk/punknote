@@ -50,9 +50,12 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
     
     //MARK: collectionView delegate
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = 
+        let height:CGFloat = bounds.size.height
+        let size:CGSize = CGSize(width:kCellWidth, height:height)
+        
+        return size
     }
     
     func numberOfSections(in collectionView:UICollectionView) -> Int
