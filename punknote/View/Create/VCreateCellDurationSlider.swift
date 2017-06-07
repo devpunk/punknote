@@ -73,10 +73,23 @@ class VCreateCellDurationSlider:UIView
         NSLayoutConstraint.width(
             view:labelDuration,
             constant:kLabelWidth)
+        
+        let gesture:UIPanGestureRecognizer = UIPanGestureRecognizer(
+            target:self,
+            action:#selector(actionPanning(sender:)))
+        
+        addGestureRecognizer(gesture)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: actions
+    
+    func actionPanning(sender gesture:UIPanGestureRecognizer)
+    {
+        
     }
 }
