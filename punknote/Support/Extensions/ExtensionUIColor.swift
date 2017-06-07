@@ -43,8 +43,8 @@ extension UIColor
         get
         {
             return UIColor(
-                red:0.8,
-                green:0.85,
+                red:0.9,
+                green:0.9,
                 blue:0,
                 alpha:1)
         }

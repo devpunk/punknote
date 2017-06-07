@@ -56,6 +56,7 @@
 		DA33DFE81EE88E500096FF9D /* MCreateBackgroundOrangeGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFE71EE88E500096FF9D /* MCreateBackgroundOrangeGreen.swift */; };
 		DA33DFEA1EE892610096FF9D /* MCreateBackgroundYellowOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFE91EE892610096FF9D /* MCreateBackgroundYellowOrange.swift */; };
 		DA33DFEC1EE892C80096FF9D /* MCreateBackgroundYellowGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFEB1EE892C80096FF9D /* MCreateBackgroundYellowGreen.swift */; };
+		DA33DFEE1EE89C900096FF9D /* MCreateBackgroundOrangePurple.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33DFED1EE89C900096FF9D /* MCreateBackgroundOrangePurple.swift */; };
 		DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97AE1EE5A68600E8EB33 /* VCreateCell.swift */; };
 		DA3D97B11EE5A7AE00E8EB33 /* MCreateContentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */; };
 		DA3D97B31EE5A7BC00E8EB33 /* MCreateContentTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */; };
@@ -120,6 +121,7 @@
 		DA33DFE71EE88E500096FF9D /* MCreateBackgroundOrangeGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundOrangeGreen.swift; sourceTree = "<group>"; };
 		DA33DFE91EE892610096FF9D /* MCreateBackgroundYellowOrange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundYellowOrange.swift; sourceTree = "<group>"; };
 		DA33DFEB1EE892C80096FF9D /* MCreateBackgroundYellowGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundYellowGreen.swift; sourceTree = "<group>"; };
+		DA33DFED1EE89C900096FF9D /* MCreateBackgroundOrangePurple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateBackgroundOrangePurple.swift; sourceTree = "<group>"; };
 		DA3D97AE1EE5A68600E8EB33 /* VCreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCell.swift; sourceTree = "<group>"; };
 		DA3D97B01EE5A7AE00E8EB33 /* MCreateContentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentProtocol.swift; sourceTree = "<group>"; };
 		DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentTimeline.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				DA1E05E91EE710AE00DDAC9B /* MCreateFontItem.swift */,
 				DA1E05EF1EE7521200DDAC9B /* MCreateBackgroundProtocol.swift */,
 				DA1E05F11EE752D400DDAC9B /* MCreateBackgroundPurpleOrange.swift */,
+				DA33DFED1EE89C900096FF9D /* MCreateBackgroundOrangePurple.swift */,
 				DA1E05F31EE7567300DDAC9B /* MCreateBackgroundPurpleGreen.swift */,
 				DA33DFE71EE88E500096FF9D /* MCreateBackgroundOrangeGreen.swift */,
 				DA33DFEB1EE892C80096FF9D /* MCreateBackgroundYellowGreen.swift */,
@@ -471,6 +474,7 @@
 				DA3D97BD1EE5FDE300E8EB33 /* MCreateSelected.swift in Sources */,
 				DA3130621EE1A40000DB2FE4 /* ExtensionUIColor.swift in Sources */,
 				DA1E05F41EE7567300DDAC9B /* MCreateBackgroundPurpleGreen.swift in Sources */,
+				DA33DFEE1EE89C900096FF9D /* MCreateBackgroundOrangePurple.swift in Sources */,
 				DA31305D1EE1A40000DB2FE4 /* ExtensionNotification.swift in Sources */,
 				DA3131481EE1EF6800DB2FE4 /* VCollection.swift in Sources */,
 				DA31305F1EE1A40000DB2FE4 /* ExtensionNSManagedObject.swift in Sources */,
