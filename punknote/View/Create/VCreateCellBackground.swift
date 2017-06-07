@@ -3,12 +3,15 @@ import UIKit
 class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
+    private let interItem2:CGFloat
     private let kCellWidth:CGFloat = 100
     private let kInterItem:CGFloat = 2
     private let kAfterAddRefresh:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
+        interItem2 = kInterItem + kInterItem
+        
         super.init(frame:frame)
         
         let collectionView:VCollection = VCollection()
@@ -21,6 +24,13 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
+            flow.minimumLineSpacing = kInterItem
+            flow.minimumInteritemSpacing = kInterItem
+            flow.sectionInset = UIEdgeInsets(
+                top:kInterItem,
+                left:kInterItem,
+                bottom:kInterItem,
+                right:kInterItem)
         }
         
         addSubview(collectionView)
@@ -83,7 +93,7 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = bounds.size.height
+        let height:CGFloat = bounds.size.height - interItem2
         let size:CGSize = CGSize(width:kCellWidth, height:height)
         
         return size
