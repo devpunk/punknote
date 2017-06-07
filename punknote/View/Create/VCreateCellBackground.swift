@@ -3,6 +3,8 @@ import UIKit
 class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
+    private let kCellWidth:CGFloat = 100
+    private let kInterItem:CGFloat = 2
     
     override init(frame:CGRect)
     {
@@ -47,6 +49,11 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
     }
     
     //MARK: collectionView delegate
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let height:CGFloat = 
+    }
     
     func numberOfSections(in collectionView:UICollectionView) -> Int
     {
