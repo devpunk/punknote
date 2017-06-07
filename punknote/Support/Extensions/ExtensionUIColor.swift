@@ -37,16 +37,4 @@ extension UIColor
                 alpha:1)
         }
     }
-    
-    open class var punkYellow:UIColor
-    {
-        get
-        {
-            return UIColor(
-                red:0.9,
-                green:0.9,
-                blue:0,
-                alpha:1)
-        }
-    }
 }

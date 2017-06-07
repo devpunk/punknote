@@ -17,18 +17,11 @@ class MCreate
         
         let backgroundSweetDreams:MCreateBackgroundSweetDreams = MCreateBackgroundSweetDreams()
         let backgroundSevenSeas:MCreateBackgroundSevenSeas = MCreateBackgroundSevenSeas()
-        
         let backgroundPurpleOrange:MCreateBackgroundPurpleOrange = MCreateBackgroundPurpleOrange()
-        let backgroundOrangePurple:MCreateBackgroundOrangePurple = MCreateBackgroundOrangePurple()
         let backgroundPurpleGreen:MCreateBackgroundPurpleGreen = MCreateBackgroundPurpleGreen()
-        let backgroundGreenPurple:MCreateBackgroundGreenPurple = MCreateBackgroundGreenPurple()
-        let backgroundOrangeGreen:MCreateBackgroundOrangeGreen = MCreateBackgroundOrangeGreen()
         let backgroundGreenOrange:MCreateBackgroundGreenOrange = MCreateBackgroundGreenOrange()
         let backgroundYellowGreen:MCreateBackgroundYellowGreen = MCreateBackgroundYellowGreen()
-        let backgroundGreenYellow:MCreateBackgroundGreenYellow = MCreateBackgroundGreenYellow()
         let backgroundYellowOrange:MCreateBackgroundYellowOrange = MCreateBackgroundYellowOrange()
-        let backgroundOrangeYellow:MCreateBackgroundOrangeYellow = MCreateBackgroundOrangeYellow()
-        
         let backgroundBlueNight:MCreateBackgroundBlueNight = MCreateBackgroundBlueNight()
         let backgroundShades:MCreateBackgroundShades = MCreateBackgroundShades()
         
@@ -45,15 +38,10 @@ class MCreate
             backgroundSweetDreams,
             backgroundSevenSeas,
             backgroundPurpleOrange,
-            backgroundOrangePurple,
             backgroundPurpleGreen,
-            backgroundGreenPurple,
-            backgroundOrangeGreen,
             backgroundGreenOrange,
             backgroundYellowGreen,
-            backgroundGreenYellow,
             backgroundYellowOrange,
-            backgroundOrangeYellow,
             backgroundBlueNight,
             backgroundShades]
       

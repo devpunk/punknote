@@ -11,8 +11,8 @@ class MCreateBackgroundSevenSeas:MCreateBackgroundProtocol
             alpha:1)
         
         let gradient:VGradient = VGradient.diagonal(
-            colorLeftBottom:UIColor.punkPurple,
-            colorTopRight:seaGreen)
+            colorLeftBottom:seaGreen,
+            colorTopRight:UIColor.punkPurple)
         
         return gradient
     }
