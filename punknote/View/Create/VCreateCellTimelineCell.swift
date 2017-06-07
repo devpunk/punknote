@@ -4,7 +4,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
 {
     private weak var viewCircle:UIView!
     private weak var viewSelected:VCreateCellTimelineCellSelected!
-    private weak var model:MCreateFrame?
+    private weak var modelFrame:MCreateFrame?
     private weak var labelText:UILabel!
     private let kCircleMargin:CGFloat = 10
     private let kLabelMargin:CGFloat = 4
@@ -113,7 +113,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     {
         guard
         
-            let model:MCreateFrame = self.model,
+            let modelFrame:MCreateFrame = self.modelFrame,
             let notificationFrame:MCreateFrame = notification.object as? MCreateFrame
         
         else
@@ -121,7 +121,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
             return
         }
         
-        if model === notificationFrame
+        if modelFrame === notificationFrame
         {
             DispatchQueue.main.async
             { [weak self] in
@@ -137,7 +137,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     {
         guard
         
-            let model:MCreateFrame = self.model
+            let modelFrame:MCreateFrame = self.modelFrame
         
         else
         {
@@ -146,13 +146,13 @@ class VCreateCellTimelineCell:UICollectionViewCell
         
         if isSelected || isHighlighted
         {
-            viewSelected.selected(isSelected:true, model:model)
+            viewSelected.selected(isSelected:true, model:modelFrame)
             viewSelected.isHidden = false
             viewCircle.layer.borderColor = UIColor.punkPurple.cgColor
         }
         else
         {
-            viewSelected.selected(isSelected:false, model:model)
+            viewSelected.selected(isSelected:false, model:modelFrame)
             viewSelected.isHidden = true
             viewCircle.layer.borderColor = UIColor(white:0, alpha:0.1).cgColor
         }
@@ -162,14 +162,14 @@ class VCreateCellTimelineCell:UICollectionViewCell
     {
         guard
         
-            let model:MCreateFrame = self.model
+            let modelFrame:MCreateFrame = self.modelFrame
         
         else
         {
             return
         }
         
-        labelText.text = model.text
+        labelText.text = modelFrame.text
     }
     
     //MARK: public
@@ -177,7 +177,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     func config(model:MCreateFrame)
     {
         viewSelected.timer?.invalidate()
-        self.model = model
+        self.modelFrame = model
         
         hover()
         updateText()

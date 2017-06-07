@@ -32,5 +32,39 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
         return nil
     }
     
+    override func config(controller:CCreate, model:MCreateContentProtocol)
+    {
+        super.config(controller:controller, model:model)
+    }
     
+    //MARK: collectionView delegate
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        guard
+        
+            let count:Int = controller?.model.backgrounds.count
+        
+        else
+        {
+            return 0
+        }
+        
+        return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let cell:VCreateCellBackgroundCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier:
+            VCreateCellBackgroundCell.reusableIdentifier,
+            for:indexPath) as! VCreateCellBackgroundCell
+        
+        return cell
+    }
 }
