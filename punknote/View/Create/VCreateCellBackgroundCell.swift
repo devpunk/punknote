@@ -11,4 +11,11 @@ class VCreateCellBackgroundCell:UICollectionViewCell
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func config(model:MCreateBackgroundProtocol)
+    {
+        
+    }
 }

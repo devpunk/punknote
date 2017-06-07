@@ -37,6 +37,15 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
         super.config(controller:controller, model:model)
     }
     
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> MCreateBackgroundProtocol
+    {
+        let item:MCreateBackgroundProtocol = controller!.model.backgrounds[index.item]
+        
+        return item
+    }
+    
     //MARK: collectionView delegate
     
     func numberOfSections(in collectionView:UICollectionView) -> Int
@@ -60,10 +69,12 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
+        let item:MCreateBackgroundProtocol = modelAtIndex(index:indexPath)
         let cell:VCreateCellBackgroundCell = collectionView.dequeueReusableCell(
             withReuseIdentifier:
             VCreateCellBackgroundCell.reusableIdentifier,
             for:indexPath) as! VCreateCellBackgroundCell
+        cell.config(model:item)
         
         return cell
     }
