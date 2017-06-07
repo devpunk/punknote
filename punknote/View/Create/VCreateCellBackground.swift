@@ -108,4 +108,9 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool
+    {
+        
+    }
 }
