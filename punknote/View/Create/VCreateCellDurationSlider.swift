@@ -3,6 +3,7 @@ import UIKit
 class VCreateCellDurationSlider:UIView
 {
     private weak var layoutGradientWidth:NSLayoutConstraint!
+    private let kCornerRadius:CGFloat = 10
     
     init()
     {
@@ -10,8 +11,20 @@ class VCreateCellDurationSlider:UIView
         clipsToBounds = true
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = kCornerRadius
         
-        let viewGradient:VGradient = VGradient.diagonal(colorLeftBottom: <#T##UIColor#>, colorTopRight: <#T##UIColor#>)
+        let colorStart:UIColor = UIColor(white:0, alpha:0.2)
+        let colorEnd:UIColor = UIColor(white:0, alpha:0.95)
+        
+        let viewGradient:VGradient = VGradient.horizontal(
+            colorLeft:colorStart,
+            colorRight:colorEnd)
+        
+        addSubview(viewGradient)
+        
+        NSLayoutConstraint.equals(
+            view:viewGradient,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
