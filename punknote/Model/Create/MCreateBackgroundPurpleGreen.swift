@@ -6,7 +6,7 @@ class MCreateBackgroundPurpleGreen:MCreateBackgroundProtocol
     {
         let gradient:VGradient = VGradient.diagonal(
             colorLeftBottom:UIColor.punkPurple,
-            colorTopRight:UIColor.punkOrange)
+            colorTopRight:UIColor.punkGreen)
         
         return gradient
     }
