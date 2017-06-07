@@ -5,7 +5,7 @@ class VCreateCellTimelineCellSelected:UIView
     weak var timer:Timer?
     private weak var model:MCreateFrame?
     private let kCircleMargin:CGFloat = 8
-    private let kLineWidth:CGFloat = 3
+    private let kLineWidth:CGFloat = 6
     private let kTimerInterval:TimeInterval = 0.03
     
     init()

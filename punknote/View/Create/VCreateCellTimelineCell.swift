@@ -8,7 +8,6 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private weak var labelText:UILabel!
     private let kCircleMargin:CGFloat = 10
     private let kLabelMargin:CGFloat = 4
-    private let kBorderWidth:CGFloat = 1
     
     override init(frame:CGRect)
     {
@@ -24,8 +23,8 @@ class VCreateCellTimelineCell:UICollectionViewCell
         viewCircle.isUserInteractionEnabled = false
         viewCircle.translatesAutoresizingMaskIntoConstraints = false
         viewCircle.backgroundColor = UIColor.clear
-        viewCircle.layer.borderWidth = kBorderWidth
         viewCircle.layer.cornerRadius = circleCornerRadius
+        viewCircle.layer.borderColor = UIColor(white:0, alpha:0.1).cgColor
         self.viewCircle = viewCircle
         
         let viewSelected:VCreateCellTimelineCellSelected = VCreateCellTimelineCellSelected()
@@ -148,13 +147,13 @@ class VCreateCellTimelineCell:UICollectionViewCell
         {
             viewSelected.selected(isSelected:true, model:modelFrame)
             viewSelected.isHidden = false
-            viewCircle.layer.borderColor = UIColor.punkPurple.cgColor
+            viewCircle.layer.borderWidth = 0
         }
         else
         {
             viewSelected.selected(isSelected:false, model:modelFrame)
             viewSelected.isHidden = true
-            viewCircle.layer.borderColor = UIColor(white:0, alpha:0.1).cgColor
+            viewCircle.layer.borderWidth = 1
         }
     }
     

@@ -18,6 +18,7 @@ class MCreate
         let backgroundPurpleOrange:MCreateBackgroundPurpleOrange = MCreateBackgroundPurpleOrange()
         let backgroundOrangePurple:MCreateBackgroundOrangePurple = MCreateBackgroundOrangePurple()
         let backgroundPurpleGreen:MCreateBackgroundPurpleGreen = MCreateBackgroundPurpleGreen()
+        let backgroundGreenPurple:MCreateBackgroundGreenPurple = MCreateBackgroundGreenPurple()
         let backgroundOrangeGreen:MCreateBackgroundOrangeGreen = MCreateBackgroundOrangeGreen()
         let backgroundYellowGreen:MCreateBackgroundYellowGreen = MCreateBackgroundYellowGreen()
         let backgroundYellowOrange:MCreateBackgroundYellowOrange = MCreateBackgroundYellowOrange()
@@ -35,6 +36,7 @@ class MCreate
             backgroundPurpleOrange,
             backgroundOrangePurple,
             backgroundPurpleGreen,
+            backgroundGreenPurple,
             backgroundOrangeGreen,
             backgroundYellowGreen,
             backgroundYellowOrange]

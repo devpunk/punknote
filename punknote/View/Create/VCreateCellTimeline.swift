@@ -218,25 +218,6 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         return true
     }
     
-    func collectionView(_ collectionView:UICollectionView, shouldHighlightItemAt indexPath:IndexPath) -> Bool
-    {
-        guard
-            
-            let controller:CCreate = self.controller
-            
-        else
-        {
-            return false
-        }
-        
-        if controller.model.selectedFrame == indexPath.item
-        {
-            return false
-        }
-        
-        return true
-    }
-    
     func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
     {
         guard

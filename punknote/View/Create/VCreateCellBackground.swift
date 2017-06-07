@@ -150,25 +150,6 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
         return true
     }
     
-    func collectionView(_ collectionView:UICollectionView, shouldHighlightItemAt indexPath:IndexPath) -> Bool
-    {
-        guard
-            
-            let controller:CCreate = self.controller
-            
-        else
-        {
-            return false
-        }
-        
-        if controller.model.selectedBackground == indexPath.item
-        {
-            return false
-        }
-        
-        return true
-    }
-    
     func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
     {
         guard
