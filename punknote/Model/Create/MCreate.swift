@@ -16,6 +16,7 @@ class MCreate
         let contentBackground:MCreateContentBackground = MCreateContentBackground()
         
         let backgroundSweetDreams:MCreateBackgroundSweetDreams = MCreateBackgroundSweetDreams()
+        let backgroundSevenSeas:MCreateBackgroundSevenSeas = MCreateBackgroundSevenSeas()
         
         let backgroundPurpleOrange:MCreateBackgroundPurpleOrange = MCreateBackgroundPurpleOrange()
         let backgroundOrangePurple:MCreateBackgroundOrangePurple = MCreateBackgroundOrangePurple()
@@ -28,6 +29,9 @@ class MCreate
         let backgroundYellowOrange:MCreateBackgroundYellowOrange = MCreateBackgroundYellowOrange()
         let backgroundOrangeYellow:MCreateBackgroundOrangeYellow = MCreateBackgroundOrangeYellow()
         
+        let backgroundBlueNight:MCreateBackgroundBlueNight = MCreateBackgroundBlueNight()
+        let backgroundShades:MCreateBackgroundShades = MCreateBackgroundShades()
+        
         selectedFrame = 0
         selectedBackground = 0
         frames = []
@@ -39,6 +43,7 @@ class MCreate
         
         backgrounds = [
             backgroundSweetDreams,
+            backgroundSevenSeas,
             backgroundPurpleOrange,
             backgroundOrangePurple,
             backgroundPurpleGreen,
@@ -48,7 +53,9 @@ class MCreate
             backgroundYellowGreen,
             backgroundGreenYellow,
             backgroundYellowOrange,
-            backgroundOrangeYellow]
+            backgroundOrangeYellow,
+            backgroundBlueNight,
+            backgroundShades]
       
         font = MCreateFont()
         addFrame()
