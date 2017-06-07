@@ -20,8 +20,11 @@ class MCreate
         let backgroundPurpleGreen:MCreateBackgroundPurpleGreen = MCreateBackgroundPurpleGreen()
         let backgroundGreenPurple:MCreateBackgroundGreenPurple = MCreateBackgroundGreenPurple()
         let backgroundOrangeGreen:MCreateBackgroundOrangeGreen = MCreateBackgroundOrangeGreen()
+        let backgroundGreenOrange:MCreateBackgroundGreenOrange = MCreateBackgroundGreenOrange()
         let backgroundYellowGreen:MCreateBackgroundYellowGreen = MCreateBackgroundYellowGreen()
+        let backgroundGreenYellow:MCreateBackgroundGreenYellow = MCreateBackgroundGreenYellow()
         let backgroundYellowOrange:MCreateBackgroundYellowOrange = MCreateBackgroundYellowOrange()
+        let backgroundOrangeYellow:MCreateBackgroundOrangeYellow = MCreateBackgroundOrangeYellow()
         
         selectedFrame = 0
         selectedBackground = 0
@@ -38,8 +41,11 @@ class MCreate
             backgroundPurpleGreen,
             backgroundGreenPurple,
             backgroundOrangeGreen,
+            backgroundGreenOrange,
             backgroundYellowGreen,
-            backgroundYellowOrange]
+            backgroundGreenYellow,
+            backgroundYellowOrange,
+            backgroundOrangeYellow]
       
         font = MCreateFont()
         addFrame()

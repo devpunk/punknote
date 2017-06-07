@@ -76,7 +76,7 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
         let index:IndexPath = IndexPath(item:selectedBackground, section:0)
         collectionView.selectItem(
             at:index,
-            animated:false,
+            animated:true,
             scrollPosition:UICollectionViewScrollPosition.centeredHorizontally)
     }
     
