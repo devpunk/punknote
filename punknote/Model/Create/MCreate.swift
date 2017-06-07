@@ -15,6 +15,8 @@ class MCreate
         let contentCard:MCreateContentCard = MCreateContentCard()
         let contentBackground:MCreateContentBackground = MCreateContentBackground()
         
+        let backgroundSweetDreams:MCreateBackgroundSweetDreams = MCreateBackgroundSweetDreams()
+        
         let backgroundPurpleOrange:MCreateBackgroundPurpleOrange = MCreateBackgroundPurpleOrange()
         let backgroundOrangePurple:MCreateBackgroundOrangePurple = MCreateBackgroundOrangePurple()
         let backgroundPurpleGreen:MCreateBackgroundPurpleGreen = MCreateBackgroundPurpleGreen()
@@ -36,6 +38,7 @@ class MCreate
             contentBackground]
         
         backgrounds = [
+            backgroundSweetDreams,
             backgroundPurpleOrange,
             backgroundOrangePurple,
             backgroundPurpleGreen,
