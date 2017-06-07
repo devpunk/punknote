@@ -5,6 +5,7 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
     private weak var collectionView:VCollection!
     private let kCellWidth:CGFloat = 100
     private let kInterItem:CGFloat = 2
+    private let kAfterAddRefresh:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
@@ -66,6 +67,16 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
             at:index,
             animated:false,
             scrollPosition:UICollectionViewScrollPosition.centeredHorizontally)
+    }
+    
+    private func refreshFrame()
+    {
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kAfterAddRefresh)
+        { [weak controller] in
+            
+            controller?.refreshFrame()
+        }
     }
     
     //MARK: collectionView delegate
@@ -145,5 +156,20 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
         }
         
         return true
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
+    {
+        guard
+            
+            let controller:CCreate = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        controller.model.selectedBackground = indexPath.item
+        refreshFrame()
     }
 }
