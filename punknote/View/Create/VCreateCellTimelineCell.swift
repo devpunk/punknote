@@ -6,7 +6,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private weak var viewSelected:VCreateCellTimelineCellSelected!
     private weak var modelFrame:MCreateFrame?
     private weak var labelText:UILabel!
-    private let kCircleMargin:CGFloat = 10
+    private let kCircleMargin:CGFloat = 15
     private let kLabelMargin:CGFloat = 4
     
     override init(frame:CGRect)

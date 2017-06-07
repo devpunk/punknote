@@ -9,12 +9,24 @@ class MCreate
     var selectedFrame:Int
     var selectedBackground:Int
     
-    init()
+    private class func factoryContent() -> [MCreateContentProtocol]
     {
         let contentTimeline:MCreateContentTimeline = MCreateContentTimeline()
         let contentCard:MCreateContentCard = MCreateContentCard()
+        let contentDuration:MCreateContentDuration = MCreateContentDuration()
         let contentBackground:MCreateContentBackground = MCreateContentBackground()
         
+        let content:[MCreateContentProtocol] = [
+            contentTimeline,
+            contentCard,
+            contentDuration,
+            contentBackground]
+        
+        return content
+    }
+    
+    private class func factoryBackground() -> [MCreateBackgroundProtocol]
+    {
         let backgroundSweetDreams:MCreateBackgroundSweetDreams = MCreateBackgroundSweetDreams()
         let backgroundSevenSeas:MCreateBackgroundSevenSeas = MCreateBackgroundSevenSeas()
         let backgroundPurpleOrange:MCreateBackgroundPurpleOrange = MCreateBackgroundPurpleOrange()
@@ -25,16 +37,7 @@ class MCreate
         let backgroundBlueNight:MCreateBackgroundBlueNight = MCreateBackgroundBlueNight()
         let backgroundShades:MCreateBackgroundShades = MCreateBackgroundShades()
         
-        selectedFrame = 0
-        selectedBackground = 0
-        frames = []
-        
-        content = [
-            contentTimeline,
-            contentCard,
-            contentBackground]
-        
-        backgrounds = [
+        let background:[MCreateBackgroundProtocol] = [
             backgroundSweetDreams,
             backgroundSevenSeas,
             backgroundPurpleOrange,
@@ -44,7 +47,17 @@ class MCreate
             backgroundYellowOrange,
             backgroundBlueNight,
             backgroundShades]
-      
+        
+        return background
+    }
+    
+    init()
+    {
+        selectedFrame = 0
+        selectedBackground = 0
+        frames = []
+        content = MCreate.factoryContent()
+        backgrounds = MCreate.factoryBackground()
         font = MCreateFont()
         addFrame()
     }
