@@ -2,7 +2,7 @@ import UIKit
 
 class MCreateContentBackground:MCreateContentProtocol
 {
-    private let kCellHeight:CGFloat = 50
+    private let kCellHeight:CGFloat = 60
     
     var cellHeight:CGFloat
     {

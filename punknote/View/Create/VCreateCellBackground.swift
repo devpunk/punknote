@@ -3,14 +3,15 @@ import UIKit
 class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
-    private let interItem2:CGFloat
+    private let verticalSpace2:CGFloat
     private let kCellWidth:CGFloat = 80
     private let kInterItem:CGFloat = 2
+    private let kVerticalSpace:CGFloat = 10
     private let kAfterAddRefresh:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
-        interItem2 = kInterItem + kInterItem
+        verticalSpace2 = kVerticalSpace + kVerticalSpace
         
         super.init(frame:frame)
         
@@ -27,9 +28,9 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
             flow.minimumLineSpacing = kInterItem
             flow.minimumInteritemSpacing = kInterItem
             flow.sectionInset = UIEdgeInsets(
-                top:kInterItem,
+                top:kVerticalSpace,
                 left:kInterItem,
-                bottom:kInterItem,
+                bottom:kVerticalSpace,
                 right:kInterItem)
         }
         
@@ -93,7 +94,7 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = bounds.size.height - interItem2
+        let height:CGFloat = bounds.size.height - verticalSpace2
         let size:CGSize = CGSize(width:kCellWidth, height:height)
         
         return size
