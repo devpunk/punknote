@@ -2,6 +2,8 @@ import UIKit
 
 class VCreateCellDurationSliderBar:UIView
 {
+    private let kBorderWidth:CGFloat = 1
+    
     init()
     {
         super.init(frame:CGRect.zero)
@@ -10,10 +12,12 @@ class VCreateCellDurationSliderBar:UIView
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
         
+        let border:VBorder = VBorder(color:UIColor.black)
+        
         let blur:VBlur = VBlur.light()
         blur.alpha = 1
         
-        let colorStart:UIColor = UIColor(white:1, alpha:0.1)
+        let colorStart:UIColor = UIColor(white:1, alpha:0.6)
         let colorEnd:UIColor = UIColor.white
         
         let viewGradient:VGradient = VGradient.horizontal(
@@ -22,12 +26,24 @@ class VCreateCellDurationSliderBar:UIView
         
         addSubview(viewGradient)
         addSubview(blur)
+        addSubview(border)
         
         NSLayoutConstraint.equals(
             view:viewGradient,
             toView:self)
+        
         NSLayoutConstraint.equals(
             view:blur,
+            toView:self)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:border,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:border,
+            constant:kBorderWidth)
+        NSLayoutConstraint.rightToRight(
+            view:border,
             toView:self)
     }
     

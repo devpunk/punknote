@@ -2,7 +2,7 @@ import UIKit
 
 class MCreateContentDuration:MCreateContentProtocol
 {
-    private let kCellHeight:CGFloat = 80
+    private let kCellHeight:CGFloat = 90
     
     var cellHeight:CGFloat
     {
