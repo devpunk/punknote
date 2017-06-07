@@ -11,9 +11,21 @@ class VCreateCellDurationSliderBar:UIView
         isUserInteractionEnabled = false
         
         let blur:VBlur = VBlur.light()
+        blur.alpha = 1
         
+        let colorStart:UIColor = UIColor(white:1, alpha:0.1)
+        let colorEnd:UIColor = UIColor.white
+        
+        let viewGradient:VGradient = VGradient.horizontal(
+            colorLeft:colorStart,
+            colorRight:colorEnd)
+        
+        addSubview(viewGradient)
         addSubview(blur)
         
+        NSLayoutConstraint.equals(
+            view:viewGradient,
+            toView:self)
         NSLayoutConstraint.equals(
             view:blur,
             toView:self)

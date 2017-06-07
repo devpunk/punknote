@@ -3,7 +3,7 @@ import UIKit
 class VCreateCellDuration:VCreateCell
 {
     private weak var viewSlider:VCreateCellDurationSlider!
-    private let kVerticalMargin:CGFloat = 15
+    private let kVerticalMargin:CGFloat = 22
     private let kHorizontalMargin:CGFloat = 10
     
     override init(frame:CGRect)
