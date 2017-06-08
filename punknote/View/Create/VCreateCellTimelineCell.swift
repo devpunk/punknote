@@ -4,6 +4,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
 {
     private weak var viewCircle:UIView!
     private weak var viewSelected:VCreateCellTimelineCellSelected!
+    private weak var viewBorder:VBorder!
     private weak var layoutCircleLeft:NSLayoutConstraint!
     private weak var modelFrame:MCreateFrame?
     private weak var labelText:UILabel!
@@ -13,6 +14,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private let kSelectedMargin:CGFloat = 5
     private let kLabelMargin:CGFloat = 4
     private let kRibbonHeight:CGFloat = 5
+    private let kBorderWidth:CGFloat = 5
     
     override init(frame:CGRect)
     {
@@ -22,7 +24,10 @@ class VCreateCellTimelineCell:UICollectionViewCell
         clipsToBounds = true
         backgroundColor = UIColor.clear
         
-        let viewRibbon:VBorder = VBorder(color:UIColor.punkPurple.withAlphaComponent(0.3))
+        let bordersColor:UIColor = UIColor.punkPurple.withAlphaComponent(0.3)
+        let viewRibbon:VBorder = VBorder(color:bordersColor)
+        let viewBorder:VBorder = VBorder(color:bordersColor)
+        self.viewBorder = viewBorder
         
         let circleCornerRadius:CGFloat = kCircleSize / 2.0
         let labelCornerRadius:CGFloat = circleCornerRadius - kLabelMargin
@@ -56,6 +61,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
         labelText.layer.cornerRadius = labelCornerRadius
         self.labelText = labelText
         
+        addSubview(viewBorder)
         addSubview(viewRibbon)
         addSubview(labelText)
         addSubview(viewGradient)
@@ -90,6 +96,19 @@ class VCreateCellTimelineCell:UICollectionViewCell
         NSLayoutConstraint.equalsHorizontal(
             view:viewRibbon,
             toView:self)
+        
+        NSLayoutConstraint.topToBottom(
+            view:viewBorder,
+            toView:viewCircle)
+        NSLayoutConstraint.bottomToTop(
+            view:viewBorder,
+            toView:viewRibbon)
+        NSLayoutConstraint.rightToRight(
+            view:viewBorder,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:viewBorder,
+            constant:kBorderWidth)
         
         NotificationCenter.default.addObserver(
             self,
@@ -209,6 +228,16 @@ class VCreateCellTimelineCell:UICollectionViewCell
         labelText.text = modelFrame.text
     }
     
+    private func lastCell()
+    {
+        viewBorder.isHidden = false
+    }
+    
+    private func notLastCell()
+    {
+        viewBorder.isHidden = true
+    }
+    
     //MARK: public
     
     func config(controller:CCreate?, model:MCreateFrame, index:IndexPath)
@@ -218,5 +247,26 @@ class VCreateCellTimelineCell:UICollectionViewCell
         
         hover()
         updateText()
+        
+        guard
+        
+            let controller:CCreate = controller
+        
+        else
+        {
+            return
+        }
+        
+        let countFrames:Int = controller.model.frames.count
+        let currentFrame:Int = index.item + 1
+        
+        if countFrames == currentFrame
+        {
+            lastCell()
+        }
+        else
+        {
+            notLastCell()
+        }
     }
 }
