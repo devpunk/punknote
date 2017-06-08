@@ -37,7 +37,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
         clipsToBounds = true
         backgroundColor = UIColor.clear
         
-        let bordersColor:UIColor = UIColor.punkPurple.withAlphaComponent(0.3)
+        let bordersColor:UIColor = UIColor.punkPurple.withAlphaComponent(0.6)
         let viewRibbon:VBorder = VBorder(color:bordersColor)
         let viewBorder:VBorder = VBorder(color:bordersColor)
         self.viewBorder = viewBorder
@@ -120,9 +120,9 @@ class VCreateCellTimelineCell:UICollectionViewCell
             view:viewRibbon,
             toView:self)
         
-        NSLayoutConstraint.topToBottom(
+        NSLayoutConstraint.height(
             view:viewBorder,
-            toView:viewCircle)
+            constant:kDurationHeight)
         NSLayoutConstraint.bottomToTop(
             view:viewBorder,
             toView:viewRibbon)
