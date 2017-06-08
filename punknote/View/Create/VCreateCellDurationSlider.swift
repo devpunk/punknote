@@ -2,6 +2,7 @@ import UIKit
 
 class VCreateCellDurationSlider:UIView
 {
+    private weak var controller:CCreate?
     private weak var model:MCreateFrame?
     private weak var viewBase:UIView!
     private weak var viewBar:VCreateCellDurationSliderBar!
@@ -19,6 +20,7 @@ class VCreateCellDurationSlider:UIView
     private let kMinDuration:TimeInterval = 1
     private let kMaxDecimals:Int = 0
     private let kMinIntergers:Int = 1
+    private let kAfterUpdated:TimeInterval = 0.2
     
     init()
     {
@@ -248,12 +250,20 @@ class VCreateCellDurationSlider:UIView
     private func gestureEnded(gesture:UIPanGestureRecognizer)
     {
         panInitialWidth = nil
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kAfterUpdated)
+        { [weak self] in
+            
+            self?.controller?.refreshFrame()
+        }
     }
     
     //MARK: public
     
-    func config(model:MCreateFrame)
+    func config(controller:CCreate, model:MCreateFrame)
     {
+        self.controller = controller
         self.model = model
         layoutDuration()
         printDuration()

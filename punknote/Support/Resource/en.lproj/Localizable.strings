@@ -4,5 +4,6 @@
 "VCreateCellCardBar_titleButtonDone"="Done";
 "VCreateCellCardBar_titleButtonClear"="Clear";
 "VCreateCellDurationSlider_secondsSuffix"=" secs";
+"VCreateCellTimelineCell_secondsSuffix"="secs";
 
 "MCreateFrame_defaultText"="Text";

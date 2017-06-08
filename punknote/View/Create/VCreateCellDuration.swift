@@ -31,6 +31,6 @@ class VCreateCellDuration:VCreateCell
     override func config(controller:CCreate, model:MCreateContentProtocol)
     {
         let modelFrame:MCreateFrame = controller.model.selectedFrameModel()
-        viewSlider.config(model:modelFrame)
+        viewSlider.config(controller:controller, model:modelFrame)
     }
 }

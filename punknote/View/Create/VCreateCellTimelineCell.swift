@@ -5,9 +5,13 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private weak var viewCircle:UIView!
     private weak var viewSelected:VCreateCellTimelineCellSelected!
     private weak var viewBorder:VBorder!
+    private weak var labelDuration:UILabel!
     private weak var layoutCircleLeft:NSLayoutConstraint!
     private weak var modelFrame:MCreateFrame?
+    private weak var controller:CCreate?
     private weak var labelText:UILabel!
+    private var index:IndexPath?
+    private let numberFormatter:NumberFormatter
     private let selectedSize:CGFloat
     private let kCircleTop:CGFloat = 10
     private let kCircleSize:CGFloat = 60
@@ -15,10 +19,19 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private let kLabelMargin:CGFloat = 4
     private let kRibbonHeight:CGFloat = 5
     private let kBorderWidth:CGFloat = 5
+    private let kDurationRight:CGFloat = -5
+    private let kDurationWidth:CGFloat = 150
+    private let kDurationHeight:CGFloat = 20
+    private let kMaxDecimals:Int = 0
+    private let KMinIntegers:Int = 1
     
     override init(frame:CGRect)
     {
         selectedSize = kCircleSize + kSelectedMargin + kSelectedMargin
+        numberFormatter = NumberFormatter()
+        numberFormatter.maximumFractionDigits = kMaxDecimals
+        numberFormatter.minimumIntegerDigits = KMinIntegers
+        numberFormatter.positiveSuffix = NSLocalizedString("VCreateCellTimelineCell_secondsSuffix", comment:"")
         
         super.init(frame:frame)
         clipsToBounds = true
@@ -44,6 +57,15 @@ class VCreateCellTimelineCell:UICollectionViewCell
         let viewSelected:VCreateCellTimelineCellSelected = VCreateCellTimelineCellSelected()
         self.viewSelected = viewSelected
         
+        let labelDuration:UILabel = UILabel()
+        labelDuration.translatesAutoresizingMaskIntoConstraints = false
+        labelDuration.isUserInteractionEnabled = false
+        labelDuration.font = UIFont.regular(size:12)
+        labelDuration.textColor = UIColor.black
+        labelDuration.backgroundColor = UIColor.clear
+        labelDuration.textAlignment = NSTextAlignment.right
+        self.labelDuration = labelDuration
+        
         let viewGradient:VGradient = VGradient.diagonal(
             colorLeftBottom:UIColor.punkPurple,
             colorTopRight:UIColor.punkOrange)
@@ -61,6 +83,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
         labelText.layer.cornerRadius = labelCornerRadius
         self.labelText = labelText
         
+        addSubview(labelDuration)
         addSubview(viewBorder)
         addSubview(viewRibbon)
         addSubview(labelText)
@@ -109,6 +132,20 @@ class VCreateCellTimelineCell:UICollectionViewCell
         NSLayoutConstraint.width(
             view:viewBorder,
             constant:kBorderWidth)
+        
+        NSLayoutConstraint.bottomToTop(
+            view:labelDuration,
+            toView:viewRibbon)
+        NSLayoutConstraint.height(
+            view:labelDuration,
+            constant:kDurationHeight)
+        NSLayoutConstraint.rightToLeft(
+            view:labelDuration,
+            toView:viewBorder,
+            constant:kDurationRight)
+        NSLayoutConstraint.width(
+            view:labelDuration,
+            constant:kDurationWidth)
         
         NotificationCenter.default.addObserver(
             self,
@@ -212,6 +249,8 @@ class VCreateCellTimelineCell:UICollectionViewCell
             viewSelected.isHidden = true
             viewCircle.layer.borderWidth = 1
         }
+        
+        checkLast()
     }
     
     private func updateText()
@@ -228,30 +267,13 @@ class VCreateCellTimelineCell:UICollectionViewCell
         labelText.text = modelFrame.text
     }
     
-    private func lastCell()
+    private func checkLast()
     {
-        viewBorder.isHidden = false
-    }
-    
-    private func notLastCell()
-    {
-        viewBorder.isHidden = true
-    }
-    
-    //MARK: public
-    
-    func config(controller:CCreate?, model:MCreateFrame, index:IndexPath)
-    {
-        viewSelected.timer?.invalidate()
-        self.modelFrame = model
-        
-        hover()
-        updateText()
-        
         guard
-        
-            let controller:CCreate = controller
-        
+            
+            let controller:CCreate = self.controller,
+            let index:IndexPath = self.index
+            
         else
         {
             return
@@ -268,5 +290,50 @@ class VCreateCellTimelineCell:UICollectionViewCell
         {
             notLastCell()
         }
+    }
+    
+    private func lastCell()
+    {
+        guard
+            
+            let frames:[MCreateFrame] = controller?.model.frames
+        
+        else
+        {
+            return
+        }
+        
+        var duration:TimeInterval = 0
+        
+        for frame:MCreateFrame in frames
+        {
+            duration += frame.duration
+        }
+        
+        let numberDuration:NSNumber = duration as NSNumber
+        let stringDuration:String? = numberFormatter.string(from:numberDuration)
+        
+        viewBorder.isHidden = false
+        labelDuration.isHidden = false
+        labelDuration.text = stringDuration
+    }
+    
+    private func notLastCell()
+    {
+        viewBorder.isHidden = true
+        labelDuration.isHidden = true
+    }
+    
+    //MARK: public
+    
+    func config(controller:CCreate?, model:MCreateFrame, index:IndexPath)
+    {
+        viewSelected.timer?.invalidate()
+        self.modelFrame = model
+        self.controller = controller
+        self.index = index
+        
+        hover()
+        updateText()
     }
 }
