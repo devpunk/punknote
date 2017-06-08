@@ -36,4 +36,41 @@ class VCreateCellFontNameCell:UICollectionViewCell
     {
         return nil
     }
+    
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    //MARK: private
+    
+    private func hover()
+    {
+        if isSelected || isHighlighted
+        {
+            viewBorder.backgroundColor = colorSelected
+        }
+        else
+        {
+            viewBorder.backgroundColor = colorNotSelected
+        }
+    }
+    
+    //MARK: public
+    
+    func config(model:MCreateContentFontName)
+    {
+        hover()
+    }
 }
