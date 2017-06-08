@@ -4,18 +4,24 @@ class VCreateCellTimelineCell:UICollectionViewCell
 {
     private weak var viewCircle:UIView!
     private weak var viewSelected:VCreateCellTimelineCellSelected!
+    private weak var layoutCircleLeft:NSLayoutConstraint!
     private weak var modelFrame:MCreateFrame?
     private weak var labelText:UILabel!
-    private let kCircleMargin:CGFloat = 15
+    private let selectedSize:CGFloat
+    private let kCircleTop:CGFloat = 10
+    private let kCircleSize:CGFloat = 50
+    private let kSelectedMargin:CGFloat = 5
     private let kLabelMargin:CGFloat = 4
     
     override init(frame:CGRect)
     {
+        selectedSize = kCircleSize + kSelectedMargin + kSelectedMargin
+        
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
         
-        let circleCornerRadius:CGFloat = (frame.size.width / 2) - kCircleMargin
+        let circleCornerRadius:CGFloat = kCircleSize / 2.0
         let labelCornerRadius:CGFloat = circleCornerRadius - kLabelMargin
         
         let viewCircle:UIView = UIView()
@@ -51,10 +57,16 @@ class VCreateCellTimelineCell:UICollectionViewCell
         addSubview(viewGradient)
         addSubview(viewCircle)
         
-        NSLayoutConstraint.equals(
+        NSLayoutConstraint.topToTop(
             view:viewCircle,
             toView:self,
-            margin:kCircleMargin)
+            constant:kCircleTop)
+        NSLayoutConstraint.size(
+            view:viewCircle,
+            constant:kCircleSize)
+        layoutCircleLeft = NSLayoutConstraint.leftToLeft(
+            view:viewCircle,
+            toView:self)
         
         NSLayoutConstraint.equals(
             view:viewGradient,
@@ -85,7 +97,19 @@ class VCreateCellTimelineCell:UICollectionViewCell
     
     override func layoutSubviews()
     {
-        viewSelected.frame = bounds
+        let width:CGFloat = bounds.maxX
+        let remainCircle:CGFloat = width - kCircleSize
+        let marginLeft:CGFloat = remainCircle / 2.0
+        layoutCircleLeft.constant = marginLeft
+        
+        let selectedLeft:CGFloat = marginLeft - kSelectedMargin
+        let selectedTop:CGFloat = kCircleTop - kSelectedMargin
+        
+        viewSelected.frame = CGRect(
+            x:selectedLeft,
+            y:selectedTop,
+            width:selectedSize,
+            height:selectedSize)
         
         super.layoutSubviews()
     }

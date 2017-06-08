@@ -15,7 +15,7 @@ class VCreateCellDurationSlider:UIView
     private let kBorderWidth:CGFloat = 1
     private let kImageWidth:CGFloat = 45
     private let kLabelWidth:CGFloat = 200
-    private let kMaxDuration:TimeInterval = 10
+    private let kMaxDuration:TimeInterval = 15
     private let kMinDuration:TimeInterval = 1
     private let kMaxDecimals:Int = 0
     private let kMinIntergers:Int = 1
