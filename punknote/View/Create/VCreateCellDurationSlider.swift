@@ -7,7 +7,7 @@ class VCreateCellDurationSlider:UIView
     private weak var viewBar:VCreateCellDurationSliderBar!
     private weak var labelDuration:UILabel!
     private weak var layoutBarWidth:NSLayoutConstraint!
-    private var panOriginX:CGFloat?
+    private var panInitialWidth:CGFloat?
     private let deltaDuration:TimeInterval
     private let kHorizontalMargin:CGFloat = 10
     private let kCornerRadius:CGFloat = 10
@@ -164,14 +164,14 @@ class VCreateCellDurationSlider:UIView
     
     private func gestureBegan(gesture:UIPanGestureRecognizer)
     {
-        
+        panInitialWidth = layoutBarWidth.constant
     }
     
     private func gestureChanged(gesture:UIPanGestureRecognizer)
     {
         guard
         
-            let panOriginX:CGFloat = self.panOriginX
+            let panInitialWidth:CGFloat = self.panInitialWidth
         
         else
         {
@@ -180,11 +180,23 @@ class VCreateCellDurationSlider:UIView
         
         let width:CGFloat = bounds.maxX
         let translationX:CGFloat = gesture.translation(in:self).x
+        var newWidth:CGFloat = panInitialWidth + translationX
+        
+        if newWidth < 0
+        {
+            newWidth = 0
+        }
+        else if newWidth > width
+        {
+            newWidth = width
+        }
+        
+        layoutBarWidth.constant = newWidth
     }
     
     private func gestureEnded(gesture:UIPanGestureRecognizer)
     {
-        
+        panInitialWidth = nil
     }
     
     //MARK: public
