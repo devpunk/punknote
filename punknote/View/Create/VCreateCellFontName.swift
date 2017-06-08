@@ -4,12 +4,15 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
 {
     private weak var collectionView:VCollection!
     private let interItem2:CGFloat
-    private let kInterItem:CGFloat = 3
-    private let kCellWidth:CGFloat = 100
+    private let verticalSpace2:CGFloat
+    private let kInterItem:CGFloat = 4
+    private let kVerticalSpace:CGFloat = 10
+    private let kCellWidth:CGFloat = 140
     
     override init(frame:CGRect)
     {
         interItem2 = kInterItem + kInterItem
+        verticalSpace2 = kVerticalSpace + kVerticalSpace
         super.init(frame:frame)
         
         let collectionView:VCollection = VCollection()

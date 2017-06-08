@@ -3,22 +3,42 @@ import UIKit
 class VCreateCellFontNameCell:UICollectionViewCell
 {
     private weak var viewBorder:VBorder!
+    private weak var labelType:UILabel!
+    private weak var labelName:UILabel!
+    private weak var model:MCreateFontItem?
     private let colorSelected:UIColor
     private let colorNotSelected:UIColor
-    private let kBorderHeight:CGFloat = 20
+    private let kAlphaSelected:CGFloat = 1
+    private let kAlphaNotSelected:CGFloat = 0.3
+    private let kBorderHeight:CGFloat = 25
+    private let kFontSizeType:CGFloat = 50
+    private let kBorderWidth:CGFloat = 1
     
     override init(frame:CGRect)
     {
         colorSelected = UIColor.punkPurple
-        colorNotSelected = UIColor(white:0.7, alpha:1)
+        colorNotSelected = UIColor(white:0.8, alpha:1)
         
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
+        layer.borderWidth = kBorderWidth
         
         let viewBorder:VBorder = VBorder(color:colorNotSelected)
         self.viewBorder = viewBorder
         
+        let labelType:UILabel = UILabel()
+        labelType.translatesAutoresizingMaskIntoConstraints = false
+        labelType.backgroundColor = UIColor.clear
+        labelType.isUserInteractionEnabled = false
+        labelType.textColor = UIColor.black
+        labelType.textAlignment = NSTextAlignment.center
+        labelType.text = NSLocalizedString("VCreateCellFontNameCell_labelType", comment:"")
+        self.labelType = labelType
+        
+        let labelName
+        
+        addSubview(labelType)
         addSubview(viewBorder)
         
         NSLayoutConstraint.bottomToBottom(
@@ -29,6 +49,10 @@ class VCreateCellFontNameCell:UICollectionViewCell
             constant:kBorderHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBorder,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:labelType,
             toView:self)
     }
     
@@ -60,17 +84,23 @@ class VCreateCellFontNameCell:UICollectionViewCell
         if isSelected || isHighlighted
         {
             viewBorder.backgroundColor = colorSelected
+            layer.borderColor = UIColor(white:0, alpha:1).cgColor
+            labelType.alpha = kAlphaSelected
         }
         else
         {
             viewBorder.backgroundColor = colorNotSelected
+            layer.borderColor = UIColor(white:0, alpha:0.2).cgColor
+            labelType.alpha = kAlphaNotSelected
         }
     }
     
     //MARK: public
     
-    func config(model:MCreateContentFontName)
+    func config(model:MCreateFontItem)
     {
+        self.model = model
+        labelType.font = model.font(size:kFontSizeType)
         hover()
     }
 }
