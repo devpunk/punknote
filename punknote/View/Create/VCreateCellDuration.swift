@@ -4,7 +4,6 @@ class VCreateCellDuration:VCreateCell
 {
     private weak var viewSlider:VCreateCellDurationSlider!
     private let kVerticalMargin:CGFloat = 22
-    private let kHorizontalMargin:CGFloat = 10
     
     override init(frame:CGRect)
     {
@@ -21,8 +20,7 @@ class VCreateCellDuration:VCreateCell
             margin:kVerticalMargin)
         NSLayoutConstraint.equalsHorizontal(
             view:viewSlider,
-            toView:self,
-            margin:kHorizontalMargin)
+            toView:self)
     }
     
     required init?(coder:NSCoder)
@@ -30,8 +28,9 @@ class VCreateCellDuration:VCreateCell
         return nil
     }
     
-    override func config(controller: CCreate, model: MCreateContentProtocol)
+    override func config(controller:CCreate, model:MCreateContentProtocol)
     {
-        
+        let modelFrame:MCreateFrame = controller.model.selectedFrameModel()
+        viewSlider.config(model:modelFrame)
     }
 }
