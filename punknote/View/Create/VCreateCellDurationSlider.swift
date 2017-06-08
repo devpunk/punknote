@@ -8,6 +8,7 @@ class VCreateCellDurationSlider:UIView
     private weak var labelDuration:UILabel!
     private weak var layoutBarWidth:NSLayoutConstraint!
     private var panInitialWidth:CGFloat?
+    private let numberFormatter:NumberFormatter
     private let deltaDuration:TimeInterval
     private let kHorizontalMargin:CGFloat = 10
     private let kCornerRadius:CGFloat = 10
@@ -16,10 +17,17 @@ class VCreateCellDurationSlider:UIView
     private let kLabelWidth:CGFloat = 200
     private let kMaxDuration:TimeInterval = 10
     private let kMinDuration:TimeInterval = 1
+    private let kMaxDecimals:Int = 0
+    private let kMinIntergers:Int = 1
     
     init()
     {
         deltaDuration = kMaxDuration - kMinDuration
+        numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        numberFormatter.maximumFractionDigits = kMaxDecimals
+        numberFormatter.minimumIntegerDigits = kMinIntergers
+        numberFormatter.positiveSuffix = NSLocalizedString("VCreateCellDurationSlider_secondsSuffix", comment:"")
         
         super.init(frame:CGRect.zero)
         clipsToBounds = true
@@ -51,7 +59,6 @@ class VCreateCellDurationSlider:UIView
         labelDuration.isUserInteractionEnabled = false
         labelDuration.textColor = UIColor.black
         labelDuration.font = UIFont.regular(size:15)
-        labelDuration.text = "14 secs"
         self.labelDuration = labelDuration
         
         viewBase.addSubview(viewBar)
@@ -185,7 +192,19 @@ class VCreateCellDurationSlider:UIView
     
     private func printDuration()
     {
+        guard
         
+            let model:MCreateFrame = self.model
+        
+        else
+        {
+            return
+        }
+        
+        let duration:NSNumber = model.duration as NSNumber
+        let durationString:String? = numberFormatter.string(from:duration)
+        
+        labelDuration.text = durationString
     }
     
     private func gestureBegan(gesture:UIPanGestureRecognizer)
@@ -237,5 +256,6 @@ class VCreateCellDurationSlider:UIView
     {
         self.model = model
         layoutDuration()
+        printDuration()
     }
 }
