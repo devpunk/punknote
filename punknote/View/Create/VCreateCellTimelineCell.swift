@@ -9,9 +9,10 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private weak var labelText:UILabel!
     private let selectedSize:CGFloat
     private let kCircleTop:CGFloat = 10
-    private let kCircleSize:CGFloat = 50
+    private let kCircleSize:CGFloat = 60
     private let kSelectedMargin:CGFloat = 5
     private let kLabelMargin:CGFloat = 4
+    private let kRibbonHeight:CGFloat = 5
     
     override init(frame:CGRect)
     {
@@ -20,6 +21,8 @@ class VCreateCellTimelineCell:UICollectionViewCell
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
+        
+        let viewRibbon:VBorder = VBorder(color:UIColor.punkPurple.withAlphaComponent(0.3))
         
         let circleCornerRadius:CGFloat = kCircleSize / 2.0
         let labelCornerRadius:CGFloat = circleCornerRadius - kLabelMargin
@@ -48,11 +51,12 @@ class VCreateCellTimelineCell:UICollectionViewCell
         labelText.textAlignment = NSTextAlignment.center
         labelText.numberOfLines = 0
         labelText.textColor = UIColor.black
-        labelText.font = UIFont.regular(size:12)
+        labelText.font = UIFont.regular(size:11)
         labelText.clipsToBounds = true
         labelText.layer.cornerRadius = labelCornerRadius
         self.labelText = labelText
         
+        addSubview(viewRibbon)
         addSubview(labelText)
         addSubview(viewGradient)
         addSubview(viewCircle)
@@ -76,6 +80,16 @@ class VCreateCellTimelineCell:UICollectionViewCell
             view:labelText,
             toView:viewCircle,
             margin:kLabelMargin)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewRibbon,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewRibbon,
+            constant:kRibbonHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewRibbon,
+            toView:self)
         
         NotificationCenter.default.addObserver(
             self,
@@ -197,7 +211,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     
     //MARK: public
     
-    func config(model:MCreateFrame)
+    func config(controller:CCreate?, model:MCreateFrame, index:IndexPath)
     {
         viewSelected.timer?.invalidate()
         self.modelFrame = model

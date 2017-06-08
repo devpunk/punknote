@@ -3,16 +3,13 @@ import UIKit
 class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
-    private let interItem2:CGFloat
-    private let kInterItem:CGFloat = 2
+    private let kCellWidth:CGFloat = 75
     private let kFooterWidth:CGFloat = 70
     private let kBorderHeight:CGFloat = 1
     private let kAfterAddRefresh:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
-        interItem2 = kInterItem + kInterItem
-        
         super.init(frame:frame)
         
         let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.1))
@@ -29,13 +26,6 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
             flow.footerReferenceSize = CGSize(width:kFooterWidth, height:0)
-            flow.minimumInteritemSpacing = kInterItem
-            flow.minimumLineSpacing = kInterItem
-            flow.sectionInset = UIEdgeInsets(
-                top:kInterItem,
-                left:kInterItem,
-                bottom:kInterItem,
-                right:0)
         }
         
         addSubview(collectionView)
@@ -150,8 +140,8 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = collectionView.bounds.maxY - interItem2
-        let size:CGSize = CGSize(width:height, height:height)
+        let height:CGFloat = collectionView.bounds.maxY
+        let size:CGSize = CGSize(width:kCellWidth, height:height)
         
         return size
     }
@@ -194,7 +184,7 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             withReuseIdentifier:
             VCreateCellTimelineCell.reusableIdentifier,
             for:indexPath) as! VCreateCellTimelineCell
-        cell.config(model:item)
+        cell.config(controller:controller, model:item, index:indexPath)
         
         return cell
     }
