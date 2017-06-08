@@ -77,6 +77,7 @@
 		DA3D97C51EE623C700E8EB33 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3D97C41EE623C700E8EB33 /* generic.xcassets */; };
 		DA54E73F1EE9B6A0008302E8 /* VCreateCellFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E73E1EE9B6A0008302E8 /* VCreateCellFontName.swift */; };
 		DA54E7411EE9B6F3008302E8 /* MCreateContentFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7401EE9B6F3008302E8 /* MCreateContentFontName.swift */; };
+		DA54E7431EE9B7C5008302E8 /* VCreateCellFontNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7421EE9B7C5008302E8 /* VCreateCellFontNameCell.swift */; };
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA54E73E1EE9B6A0008302E8 /* VCreateCellFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontName.swift; sourceTree = "<group>"; };
 		DA54E7401EE9B6F3008302E8 /* MCreateContentFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontName.swift; sourceTree = "<group>"; };
+		DA54E7421EE9B7C5008302E8 /* VCreateCellFontNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontNameCell.swift; sourceTree = "<group>"; };
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +251,7 @@
 				DA33E0031EE8B25C0096FF9D /* VCreateCellDurationSlider.swift */,
 				DA33E0051EE8B5760096FF9D /* VCreateCellDurationSliderBar.swift */,
 				DA54E73E1EE9B6A0008302E8 /* VCreateCellFontName.swift */,
+				DA54E7421EE9B7C5008302E8 /* VCreateCellFontNameCell.swift */,
 				DA1E05F71EE7625B00DDAC9B /* VCreateCellBackground.swift */,
 				DA1E05F91EE77C6500DDAC9B /* VCreateCellBackgroundCell.swift */,
 			);
@@ -503,6 +506,7 @@
 				DA33DFF21EE8A1730096FF9D /* MCreateBackgroundGreenOrange.swift in Sources */,
 				DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */,
 				DA3D97BD1EE5FDE300E8EB33 /* MCreateSelected.swift in Sources */,
+				DA54E7431EE9B7C5008302E8 /* VCreateCellFontNameCell.swift in Sources */,
 				DA3130621EE1A40000DB2FE4 /* ExtensionUIColor.swift in Sources */,
 				DA1E05F41EE7567300DDAC9B /* MCreateBackgroundPurpleGreen.swift in Sources */,
 				DA33E0001EE8AAA80096FF9D /* MCreateBackgroundBlueNight.swift in Sources */,
