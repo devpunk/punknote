@@ -76,6 +76,7 @@
 		DA3D97C31EE6206600E8EB33 /* VCreateCellTimelineFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D97C21EE6206600E8EB33 /* VCreateCellTimelineFooter.swift */; };
 		DA3D97C51EE623C700E8EB33 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3D97C41EE623C700E8EB33 /* generic.xcassets */; };
 		DA54E73F1EE9B6A0008302E8 /* VCreateCellFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E73E1EE9B6A0008302E8 /* VCreateCellFontName.swift */; };
+		DA54E7411EE9B6F3008302E8 /* MCreateContentFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7401EE9B6F3008302E8 /* MCreateContentFontName.swift */; };
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,7 @@
 		DA5146721EE0CB0900873C06 /* punknote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punknote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5146811EE0CB0900873C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA54E73E1EE9B6A0008302E8 /* VCreateCellFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontName.swift; sourceTree = "<group>"; };
+		DA54E7401EE9B6F3008302E8 /* MCreateContentFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontName.swift; sourceTree = "<group>"; };
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,6 +282,7 @@
 				DA3D97B21EE5A7BC00E8EB33 /* MCreateContentTimeline.swift */,
 				DA1E05DD1EE6FAC900DDAC9B /* MCreateContentCard.swift */,
 				DA33E0011EE8AF8B0096FF9D /* MCreateContentDuration.swift */,
+				DA54E7401EE9B6F3008302E8 /* MCreateContentFontName.swift */,
 				DA1E05F51EE7622900DDAC9B /* MCreateContentBackground.swift */,
 				DA3D97BC1EE5FDE300E8EB33 /* MCreateSelected.swift */,
 				DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */,
@@ -532,6 +535,7 @@
 				DA3131521EE1F14600DB2FE4 /* VPushBackground.swift in Sources */,
 				DA3131371EE1ECE800DB2FE4 /* Controller.swift in Sources */,
 				DA3130871EE1AEE700DB2FE4 /* MCreate.swift in Sources */,
+				DA54E7411EE9B6F3008302E8 /* MCreateContentFontName.swift in Sources */,
 				DA3D97B11EE5A7AE00E8EB33 /* MCreateContentProtocol.swift in Sources */,
 				DA1E05F61EE7622900DDAC9B /* MCreateContentBackground.swift in Sources */,
 				DA3130611EE1A40000DB2FE4 /* ExtensionUICollectionReusableView.swift in Sources */,

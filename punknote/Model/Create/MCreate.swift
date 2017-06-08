@@ -14,12 +14,14 @@ class MCreate
         let contentTimeline:MCreateContentTimeline = MCreateContentTimeline()
         let contentCard:MCreateContentCard = MCreateContentCard()
         let contentDuration:MCreateContentDuration = MCreateContentDuration()
+        let contentFontName:MCreateContentFontName = MCreateContentFontName()
         let contentBackground:MCreateContentBackground = MCreateContentBackground()
         
         let content:[MCreateContentProtocol] = [
             contentTimeline,
             contentCard,
             contentDuration,
+            contentFontName,
             contentBackground]
         
         return content
