@@ -12,7 +12,7 @@ class VCreateCellDurationSliderBar:UIView
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
         
-        let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.3))
+        let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.1))
         
         let blur:VBlur = VBlur.light()
         blur.alpha = 1

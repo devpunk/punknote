@@ -27,6 +27,7 @@ class VCreateCellDurationSlider:UIView
         translatesAutoresizingMaskIntoConstraints = false
         
         let viewBase:UIView = UIView()
+        viewBase.clipsToBounds = true
         viewBase.backgroundColor = UIColor(white:0.95, alpha:1)
         viewBase.translatesAutoresizingMaskIntoConstraints = false
         viewBase.layer.cornerRadius = kCornerRadius
@@ -162,6 +163,31 @@ class VCreateCellDurationSlider:UIView
         layoutBarWidth.constant = percentWidth
     }
     
+    private func durationMeasure()
+    {
+        let width:CGFloat = viewBase.bounds.maxX
+        
+        if width != 0
+        {
+            let currentWidth:CGFloat = layoutBarWidth.constant
+            let percentWidth:CGFloat = currentWidth / width
+            let percentDuration:TimeInterval = deltaDuration * TimeInterval(percentWidth)
+            let realDuration:TimeInterval = percentDuration + kMinDuration
+            model?.duration = realDuration
+            
+            DispatchQueue.main.async
+            { [weak self] in
+                
+                self?.printDuration()
+            }
+        }
+    }
+    
+    private func printDuration()
+    {
+        
+    }
+    
     private func gestureBegan(gesture:UIPanGestureRecognizer)
     {
         panInitialWidth = layoutBarWidth.constant
@@ -178,7 +204,7 @@ class VCreateCellDurationSlider:UIView
             return
         }
         
-        let width:CGFloat = bounds.maxX
+        let width:CGFloat = viewBase.bounds.maxX
         let translationX:CGFloat = gesture.translation(in:self).x
         var newWidth:CGFloat = panInitialWidth + translationX
         
@@ -192,6 +218,12 @@ class VCreateCellDurationSlider:UIView
         }
         
         layoutBarWidth.constant = newWidth
+        
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.durationMeasure()
+        }
     }
     
     private func gestureEnded(gesture:UIPanGestureRecognizer)
