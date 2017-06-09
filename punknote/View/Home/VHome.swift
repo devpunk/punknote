@@ -5,7 +5,7 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     private weak var spinner:VSpinner!
     private weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 64
-    private let kInterItem:CGFloat = 1
+    private let kInterItem:CGFloat = 2
     private let kCollectionBottom:CGFloat = 20
     private let kCellHeight:CGFloat = 120
     private let kFooterHeight:CGFloat = 30
@@ -13,7 +13,6 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     required init(controller:UIViewController)
     {
         super.init(controller:controller)
-        backgroundColor = UIColor(white:0.96, alpha:1)
         
         guard
             
@@ -188,5 +187,15 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         cell.config(model:item)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldHighlightItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
     }
 }
