@@ -82,6 +82,7 @@
 		DAEC9D681EEA71AA00A16366 /* VCreateCellFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */; };
 		DAEC9D6A1EEA71E200A16366 /* MCreateContentFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */; };
 		DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */; };
+		DAEC9D6F1EEB0D5400A16366 /* DPunkNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D6D1EEB0D5400A16366 /* DPunkNote.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +163,7 @@
 		DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
+		DAEC9D6E1EEB0D5400A16366 /* DPunkNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DPunkNote.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		DA31302B1EE1A40000DB2FE4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DAEC9D6D1EEB0D5400A16366 /* DPunkNote.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				DA3130631EE1A40000DB2FE4 /* ExtensionUIFont.swift in Sources */,
 				DA3131471EE1EF6800DB2FE4 /* VBorder.swift in Sources */,
 				DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */,
+				DAEC9D6F1EEB0D5400A16366 /* DPunkNote.xcdatamodeld in Sources */,
 				DA3D97B71EE5A87200E8EB33 /* VCreateCellTimeline.swift in Sources */,
 				DA31305E1EE1A40000DB2FE4 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA54E7451EEA2900008302E8 /* VSlider.swift in Sources */,
@@ -730,6 +734,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DAEC9D6D1EEB0D5400A16366 /* DPunkNote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DAEC9D6E1EEB0D5400A16366 /* DPunkNote.xcdatamodel */,
+			);
+			currentVersion = DAEC9D6E1EEB0D5400A16366 /* DPunkNote.xcdatamodel */;
+			path = DPunkNote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DA51466A1EE0CB0900873C06 /* Project object */;
 }
