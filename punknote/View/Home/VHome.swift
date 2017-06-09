@@ -1,8 +1,9 @@
 import UIKit
 
-class VHome:View
+class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var spinner:VSpinner!
+    private weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 64
     
     required init(controller:UIViewController)
@@ -49,5 +50,19 @@ class VHome:View
     deinit
     {
         spinner.stopAnimating()
+    }
+    
+    //MARK: collectionView delegate
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
+    {
+        
+        
+        return
     }
 }

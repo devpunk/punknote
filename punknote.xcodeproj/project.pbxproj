@@ -89,6 +89,7 @@
 		DAEC9D771EEB23F200A16366 /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D761EEB23F200A16366 /* VHomeBar.swift */; };
 		DAEC9D791EEB304700A16366 /* VHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D781EEB304700A16366 /* VHomeCell.swift */; };
 		DAEC9D7B1EEB322300A16366 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D7A1EEB322300A16366 /* VHomeFooter.swift */; };
+		DAEC9D7D1EEB342E00A16366 /* MHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D7C1EEB342E00A16366 /* MHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +177,7 @@
 		DAEC9D761EEB23F200A16366 /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAEC9D781EEB304700A16366 /* VHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCell.swift; sourceTree = "<group>"; };
 		DAEC9D7A1EEB322300A16366 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
+		DAEC9D7C1EEB342E00A16366 /* MHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 		DA3130571EE1A40000DB2FE4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DAEC9D7C1EEB342E00A16366 /* MHome.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				DA33DFF21EE8A1730096FF9D /* MCreateBackgroundGreenOrange.swift in Sources */,
 				DAEC9D771EEB23F200A16366 /* VHomeBar.swift in Sources */,
 				DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */,
+				DAEC9D7D1EEB342E00A16366 /* MHome.swift in Sources */,
 				DA3D97BD1EE5FDE300E8EB33 /* MCreateSelected.swift in Sources */,
 				DA54E7431EE9B7C5008302E8 /* VCreateCellFontNameCell.swift in Sources */,
 				DA3130621EE1A40000DB2FE4 /* ExtensionUIColor.swift in Sources */,
