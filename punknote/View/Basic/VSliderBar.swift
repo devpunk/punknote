@@ -17,7 +17,7 @@ class VSliderBar:UIView
         let blur:VBlur = VBlur.light()
         blur.alpha = 1
         
-        let colorStart:UIColor = UIColor(white:1, alpha:0.6)
+        let colorStart:UIColor = UIColor(white:1, alpha:0.1)
         let colorEnd:UIColor = UIColor.white
         
         let viewGradient:VGradient = VGradient.horizontal(

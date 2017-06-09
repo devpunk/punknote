@@ -33,7 +33,7 @@ class VSlider:UIView
         viewBase.translatesAutoresizingMaskIntoConstraints = false
         viewBase.layer.cornerRadius = kCornerRadius
         viewBase.layer.borderWidth = kBorderWidth
-        viewBase.layer.borderColor = UIColor(white:0, alpha:0.1).cgColor
+        viewBase.layer.borderColor = UIColor(white:0, alpha:0.2).cgColor
         self.viewBase = viewBase
         
         let viewBar:VSliderBar = VSliderBar()
