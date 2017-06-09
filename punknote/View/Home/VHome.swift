@@ -8,6 +8,7 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     private let kInterItem:CGFloat = 1
     private let kCollectionBottom:CGFloat = 20
     private let kCellHeight:CGFloat = 120
+    private let kFooterHeight:CGFloat = 60
     
     required init(controller:UIViewController)
     {
@@ -101,6 +102,31 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     //MARK: collectionView delegate
     
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, referenceSizeForFooterInSection section:Int) -> CGSize
+    {
+        guard
+            
+            let controller:CHome = self.controller as? CHome
+            
+        else
+        {
+            return CGSize.zero
+        }
+        
+        let size:CGSize
+        
+        if controller.model.items.count > 0
+        {
+            size = CGSize.zero
+        }
+        else
+        {
+            size = CGSize(width:0, height:kFooterHeight)
+        }
+        
+        return size
+    }
+    
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
         let width:CGFloat = collectionView.bounds.size.width
@@ -128,6 +154,16 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let count:Int = controller.model.items.count
         
         return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, viewForSupplementaryElementOfKind kind:String, at indexPath:IndexPath) -> UICollectionReusableView
+    {
+        let footer:UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(
+            ofKind:kind,
+            withReuseIdentifier:VHomeFooter.reusableIdentifier,
+            for:indexPath)
+        
+        return footer
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
