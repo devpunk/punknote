@@ -3,6 +3,8 @@ import UIKit
 class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private(set) weak var collectionView:VCollection!
+    private weak var viewBar:VCreateBar!
+    private weak var spinner:VSpinner!
     private weak var layoutBarTop:NSLayoutConstraint!
     private let kBarHeight:CGFloat = 64
     private let kCollectionBottom:CGFloat = 40
@@ -20,7 +22,12 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             return
         }
         
+        let spinner:VSpinner = VSpinner()
+        spinner.stopAnimating()
+        self.spinner = spinner
+        
         let viewBar:VCreateBar = VCreateBar(controller:cCreate)
+        self.viewBar = viewBar
         
         let collectionView:VCollection = VCollection()
         collectionView.alwaysBounceVertical = true
@@ -43,8 +50,13 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
                 right:0)
         }
         
+        addSubview(spinner)
         addSubview(collectionView)
         addSubview(viewBar)
+        
+        NSLayoutConstraint.equals(
+            view:spinner,
+            toView:self)
         
         layoutBarTop = NSLayoutConstraint.topToTop(
             view:viewBar,
@@ -66,6 +78,11 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         return nil
     }
     
+    deinit
+    {
+        spinner.stopAnimating()
+    }
+    
     override func layoutSubviews()
     {
         collectionView.collectionViewLayout.invalidateLayout()
@@ -81,6 +98,15 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         let item:MCreateContentProtocol = controller.model.content[index.item]
         
         return item
+    }
+    
+    //MARK: public
+    
+    func startLoading()
+    {
+        viewBar.isUserInteractionEnabled = false
+        collectionView.isHidden = true
+        spinner.startAnimating()
     }
     
     //MARK: collectionView delegate
