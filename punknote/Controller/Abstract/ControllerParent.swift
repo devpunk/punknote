@@ -34,7 +34,7 @@ class ControllerParent:UIViewController
     {
         super.viewDidLoad()
 
-        let controller:CCreate = CCreate()
+        let controller:CHome = CHome()
         mainController(controller:controller)
     }
     
