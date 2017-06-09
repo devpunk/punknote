@@ -28,7 +28,24 @@ class MHome
                 
                 return
             }
+            
+            self?.parseNotes(notes:notes)
         }
+    }
+    
+    private func parseNotes(notes:[DNote])
+    {
+        var items:[MHomeItem] = []
+        
+        for note:DNote in notes
+        {
+            let item:MHomeItem = MHomeItem(note:note)
+            items.append(item)
+        }
+        
+        self.items = items
+        
+        notesLoaded()
     }
     
     private func notesLoaded()
