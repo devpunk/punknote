@@ -86,6 +86,7 @@
 		DAEC9D711EEB0DA000A16366 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D701EEB0DA000A16366 /* DManager.swift */; };
 		DAEC9D731EEB139900A16366 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */; };
 		DAEC9D751EEB19A600A16366 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D741EEB19A600A16366 /* brand.xcassets */; };
+		DAEC9D771EEB23F200A16366 /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D761EEB23F200A16366 /* VHomeBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +171,7 @@
 		DAEC9D701EEB0DA000A16366 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DAEC9D741EEB19A600A16366 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
+		DAEC9D761EEB23F200A16366 /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3130401EE1A40000DB2FE4 /* VHome.swift */,
+				DAEC9D761EEB23F200A16366 /* VHomeBar.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				DA1E05F81EE7625B00DDAC9B /* VCreateCellBackground.swift in Sources */,
 				DA33DFFC1EE8A84D0096FF9D /* MCreateBackgroundSevenSeas.swift in Sources */,
 				DA33DFF21EE8A1730096FF9D /* MCreateBackgroundGreenOrange.swift in Sources */,
+				DAEC9D771EEB23F200A16366 /* VHomeBar.swift in Sources */,
 				DA3D97AF1EE5A68600E8EB33 /* VCreateCell.swift in Sources */,
 				DA3D97BD1EE5FDE300E8EB33 /* MCreateSelected.swift in Sources */,
 				DA54E7431EE9B7C5008302E8 /* VCreateCellFontNameCell.swift in Sources */,
