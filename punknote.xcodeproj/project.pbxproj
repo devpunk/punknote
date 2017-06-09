@@ -83,6 +83,7 @@
 		DAEC9D6A1EEA71E200A16366 /* MCreateContentFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */; };
 		DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */; };
 		DAEC9D6F1EEB0D5400A16366 /* DPunkNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D6D1EEB0D5400A16366 /* DPunkNote.xcdatamodeld */; };
+		DAEC9D711EEB0DA000A16366 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D701EEB0DA000A16366 /* DManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +165,7 @@
 		DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
 		DAEC9D6E1EEB0D5400A16366 /* DPunkNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DPunkNote.xcdatamodel; sourceTree = "<group>"; };
+		DAEC9D701EEB0DA000A16366 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				DAEC9D6D1EEB0D5400A16366 /* DPunkNote.xcdatamodeld */,
+				DAEC9D701EEB0DA000A16366 /* DManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				DA3D97C31EE6206600E8EB33 /* VCreateCellTimelineFooter.swift in Sources */,
 				DA3130641EE1A40000DB2FE4 /* ExtensionURL.swift in Sources */,
 				DA1E05FA1EE77C6500DDAC9B /* VCreateCellBackgroundCell.swift in Sources */,
+				DAEC9D711EEB0DA000A16366 /* DManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
