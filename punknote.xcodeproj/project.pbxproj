@@ -84,6 +84,7 @@
 		DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */; };
 		DAEC9D6F1EEB0D5400A16366 /* DPunkNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D6D1EEB0D5400A16366 /* DPunkNote.xcdatamodeld */; };
 		DAEC9D711EEB0DA000A16366 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D701EEB0DA000A16366 /* DManager.swift */; };
+		DAEC9D731EEB139900A16366 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
 		DAEC9D6E1EEB0D5400A16366 /* DPunkNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DPunkNote.xcdatamodel; sourceTree = "<group>"; };
 		DAEC9D701EEB0DA000A16366 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
+		DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			children = (
 				DAEC9D6D1EEB0D5400A16366 /* DPunkNote.xcdatamodeld */,
 				DAEC9D701EEB0DA000A16366 /* DManager.swift */,
+				DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				DA3131471EE1EF6800DB2FE4 /* VBorder.swift in Sources */,
 				DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */,
 				DAEC9D6F1EEB0D5400A16366 /* DPunkNote.xcdatamodeld in Sources */,
+				DAEC9D731EEB139900A16366 /* DSettingsExtension.swift in Sources */,
 				DA3D97B71EE5A87200E8EB33 /* VCreateCellTimeline.swift in Sources */,
 				DA31305E1EE1A40000DB2FE4 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA54E7451EEA2900008302E8 /* VSlider.swift in Sources */,
