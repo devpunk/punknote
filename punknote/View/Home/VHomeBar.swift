@@ -15,9 +15,10 @@ class VHomeBar:UIView
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true
-        backgroundColor = UIColor.white
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
+        
+        let blur:VBlur = VBlur.light()
         
         let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.2))
         
@@ -48,9 +49,14 @@ class VHomeBar:UIView
             action:#selector(actionNew(sender:)),
             for:UIControlEvents.touchUpInside)
         
+        addSubview(blur)
         addSubview(imageIcon)
         addSubview(border)
         addSubview(buttonNew)
+        
+        NSLayoutConstraint.equals(
+            view:blur,
+            toView:self)
         
         NSLayoutConstraint.topToTop(
             view:imageIcon,

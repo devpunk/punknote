@@ -7,9 +7,10 @@ class VHomeCell:UICollectionViewCell
     private weak var labelText:UILabel!
     private weak var labelDuration:UILabel!
     private let numberFormatter:NumberFormatter
-    private let kBackgroundHeight:CGFloat = 80
+    private let kBackgroundHeight:CGFloat = 250
     private let kBorderHeight:CGFloat = 1
-    private let kTextMargin:CGFloat = 5
+    private let kTextMarginVertical:CGFloat = 5
+    private let kTextMarginHorizontal:CGFloat = 30
     private let kDurationHeight:CGFloat = 20
     private let kDurationWidth:CGFloat = 250
     private let kDurationLeft:CGFloat = 10
@@ -45,7 +46,7 @@ class VHomeCell:UICollectionViewCell
         labelDuration.translatesAutoresizingMaskIntoConstraints = false
         labelDuration.backgroundColor = UIColor.clear
         labelDuration.font = UIFont.regular(size:12)
-        labelDuration.textColor = UIColor(white:0.4, alpha:1)
+        labelDuration.textColor = UIColor.black
         self.labelDuration = labelDuration
         
         addSubview(borderTop)
@@ -77,14 +78,15 @@ class VHomeCell:UICollectionViewCell
         NSLayoutConstraint.topToTop(
             view:labelText,
             toView:borderTop,
-            constant:kTextMargin)
+            constant:kTextMarginVertical)
         NSLayoutConstraint.bottomToBottom(
             view:labelText,
             toView:borderBottom,
-            constant:-kTextMargin)
+            constant:-kTextMarginVertical)
         NSLayoutConstraint.equalsHorizontal(
             view:labelText,
-            toView:self)
+            toView:self,
+            margin:kTextMarginHorizontal)
         
         NSLayoutConstraint.bottomToBottom(
             view:labelDuration,
@@ -159,5 +161,6 @@ class VHomeCell:UICollectionViewCell
         labelText.font = model.font()
         addBackground(model:model)
         addFirstFrameText(model:model)
+        addDuration(model:model)
     }
 }
