@@ -1,6 +1,6 @@
 import UIKit
 
-class VSlider:UIView
+class VSlider:UIView, UIGestureRecognizerDelegate
 {
     private weak var viewBase:UIView!
     private weak var viewBar:VSliderBar!
@@ -62,6 +62,7 @@ class VSlider:UIView
         let gesture:UIPanGestureRecognizer = UIPanGestureRecognizer(
             target:self,
             action:#selector(actionPanning(sender:)))
+        gesture.delegate = self
         
         addGestureRecognizer(gesture)
     }
@@ -171,5 +172,30 @@ class VSlider:UIView
     {
         self.percentUsed = percentUsed
         layoutSlider()
+    }
+    
+    //MARK: gesture delegate
+    
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer:UIGestureRecognizer) -> Bool
+    {
+        guard
+        
+            let panning:UIPanGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer
+        
+        else
+        {
+            return false
+        }
+        
+        let velocity:CGPoint = panning.velocity(in:self)
+        let velocityX:CGFloat = fabs(velocity.x)
+        let velocityY:CGFloat = fabs(velocity.y)
+        
+        if velocityY > velocityX
+        {
+            return false
+        }
+        
+        return true
     }
 }
