@@ -24,8 +24,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Punky" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGN-vA-7y3">
-                                <rect key="frame" x="0.0" y="115" width="375" height="552"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <rect key="frame" x="0.0" y="85" width="375" height="582"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -36,7 +36,7 @@
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="WGN-vA-7y3" secondAttribute="bottom" id="eD9-F0-qZy"/>
                             <constraint firstItem="WGN-vA-7y3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="nPT-ko-MMC"/>
                             <constraint firstItem="mNK-wy-igd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="qc9-cf-qAz"/>
-                            <constraint firstItem="WGN-vA-7y3" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="115" id="rQN-yR-xcv"/>
+                            <constraint firstItem="WGN-vA-7y3" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="85" id="rQN-yR-xcv"/>
                             <constraint firstAttribute="trailing" secondItem="WGN-vA-7y3" secondAttribute="trailing" id="xrG-le-k26"/>
                             <constraint firstAttribute="trailing" secondItem="mNK-wy-igd" secondAttribute="trailing" id="xrH-JA-aKl"/>
                         </constraints>
