@@ -90,6 +90,7 @@
 		DAEC9D791EEB304700A16366 /* VHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D781EEB304700A16366 /* VHomeCell.swift */; };
 		DAEC9D7B1EEB322300A16366 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D7A1EEB322300A16366 /* VHomeFooter.swift */; };
 		DAEC9D7D1EEB342E00A16366 /* MHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D7C1EEB342E00A16366 /* MHome.swift */; };
+		DAEC9D7F1EEB344200A16366 /* MHomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D7E1EEB344200A16366 /* MHomeItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +179,7 @@
 		DAEC9D781EEB304700A16366 /* VHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCell.swift; sourceTree = "<group>"; };
 		DAEC9D7A1EEB322300A16366 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DAEC9D7C1EEB342E00A16366 /* MHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHome.swift; sourceTree = "<group>"; };
+		DAEC9D7E1EEB344200A16366 /* MHomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				DAEC9D7C1EEB342E00A16366 /* MHome.swift */,
+				DAEC9D7E1EEB344200A16366 /* MHomeItem.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				DA31313B1EE1EE4A00DB2FE4 /* ControllerParent.swift in Sources */,
 				DA3131501EE1EF8400DB2FE4 /* ViewParent.swift in Sources */,
 				DA3130811EE1A61800DB2FE4 /* View.swift in Sources */,
+				DAEC9D7F1EEB344200A16366 /* MHomeItem.swift in Sources */,
 				DA54E73F1EE9B6A0008302E8 /* VCreateCellFontName.swift in Sources */,
 				DA3131451EE1EF6800DB2FE4 /* VAlert.swift in Sources */,
 				DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */,
