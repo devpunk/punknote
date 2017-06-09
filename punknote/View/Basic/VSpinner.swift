@@ -24,7 +24,9 @@ class VSpinner:UIImageView
             #imageLiteral(resourceName: "assetSpinner12"),
             #imageLiteral(resourceName: "assetSpinner13"),
             #imageLiteral(resourceName: "assetSpinner14"),
-            #imageLiteral(resourceName: "assetSpinner15")
+            #imageLiteral(resourceName: "assetSpinner15"),
+            #imageLiteral(resourceName: "assetSpinner16"),
+            #imageLiteral(resourceName: "assetSpinner17")
         ]
         
         isUserInteractionEnabled = false
