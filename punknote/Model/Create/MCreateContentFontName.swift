@@ -2,7 +2,7 @@ import UIKit
 
 class MCreateContentFontName:MCreateContentProtocol
 {
-    private let kCellHeight:CGFloat = 120
+    private let kCellHeight:CGFloat = 130
     
     var cellHeight:CGFloat
     {

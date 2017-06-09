@@ -3,20 +3,28 @@ import UIKit
 class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
+    private let interVertical2:CGFloat
     private let interItem2:CGFloat
-    private let verticalSpace2:CGFloat
-    private let kInterItem:CGFloat = 4
-    private let kVerticalSpace:CGFloat = 18
+    private let kInterItem:CGFloat = 2
+    private let kInterVertical:CGFloat = 8
+    private let kVerticalSpace:CGFloat = 22
+    private let kContentHorizontal:CGFloat = 20
     private let kCellWidth:CGFloat = 160
+    private let kBorderHeight:CGFloat = 1
+    
     private let kAfterAddRefresh:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
+        interVertical2 = kInterVertical + kInterVertical
         interItem2 = kInterItem + kInterItem
-        verticalSpace2 = kVerticalSpace + kVerticalSpace
         super.init(frame:frame)
         
+        let borderTop:VBorder = VBorder(color:UIColor(white:0, alpha:1))
+        let borderBottom:VBorder = VBorder(color:UIColor(white:0, alpha:1))
+        
         let collectionView:VCollection = VCollection()
+        collectionView.backgroundColor = UIColor(white:0.97, alpha:1)
         collectionView.alwaysBounceHorizontal = true
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -29,17 +37,43 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
             flow.minimumLineSpacing = kInterItem
             flow.minimumInteritemSpacing = kInterItem
             flow.sectionInset = UIEdgeInsets(
-                top:kVerticalSpace,
-                left:kInterItem,
-                bottom:kVerticalSpace,
-                right:kInterItem)
+                top:kInterVertical,
+                left:kContentHorizontal,
+                bottom:kInterVertical,
+                right:kContentHorizontal)
         }
         
+        collectionView.addSubview(borderTop)
+        collectionView.addSubview(borderBottom)
         addSubview(collectionView)
         
-        NSLayoutConstraint.equals(
+        NSLayoutConstraint.equalsVertical(
+            view:collectionView,
+            toView:self,
+            margin:kVerticalSpace)
+        NSLayoutConstraint.equalsHorizontal(
             view:collectionView,
             toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:borderTop,
+            toView:collectionView)
+        NSLayoutConstraint.height(
+            view:borderTop,
+            constant:kBorderHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:borderTop,
+            toView:collectionView)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:borderBottom,
+            toView:collectionView)
+        NSLayoutConstraint.height(
+            view:borderBottom,
+            constant:kBorderHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:borderBottom,
+            toView:collectionView)
     }
     
     required init?(coder:NSCoder)
@@ -95,7 +129,7 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = collectionView.bounds.maxY - verticalSpace2
+        let height:CGFloat = collectionView.bounds.maxY - interVertical2
         let size:CGSize = CGSize(width:kCellWidth, height:height)
         
         return size

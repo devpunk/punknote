@@ -9,17 +9,17 @@ class VCreateCellFontNameCell:UICollectionViewCell
     private let kAlphaSelected:CGFloat = 1
     private let kAlphaNotSelected:CGFloat = 0.3
     private let kBorderHeight:CGFloat = 30
-    private let kFontSizeType:CGFloat = 30
+    private let kFontSizeType:CGFloat = 22
     private let kBorderWidth:CGFloat = 1
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.white
         layer.borderWidth = kBorderWidth
         
-        let viewBorder:VBorder = VBorder(color:UIColor.punkPurple)
+        let viewBorder:VBorder = VBorder(color:UIColor.punkOrange)
         self.viewBorder = viewBorder
         
         let labelType:UILabel = UILabel()
@@ -104,9 +104,9 @@ class VCreateCellFontNameCell:UICollectionViewCell
         else
         {
             viewBorder.alpha = 0
-            layer.borderColor = UIColor(white:0, alpha:0.2).cgColor
+            layer.borderColor = UIColor(white:0, alpha:0.1).cgColor
             labelType.alpha = kAlphaNotSelected
-            labelName.textColor = UIColor(white:0.4, alpha:1)
+            labelName.textColor = UIColor(white:0.25, alpha:1)
         }
     }
     
