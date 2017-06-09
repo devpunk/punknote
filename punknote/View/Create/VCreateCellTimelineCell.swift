@@ -12,7 +12,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private var index:IndexPath?
     private let numberFormatter:NumberFormatter
     private let selectedSize:CGFloat
-    private let kCircleTop:CGFloat = 10
+    private let kCircleTop:CGFloat = 15
     private let kCircleSize:CGFloat = 60
     private let kSelectedMargin:CGFloat = 5
     private let kLabelMargin:CGFloat = 4
