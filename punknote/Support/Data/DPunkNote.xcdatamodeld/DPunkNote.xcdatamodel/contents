@@ -5,13 +5,15 @@
         <attribute name="fontSize" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selectedBackground" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selectedFont" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="frames" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="DNoteFrame" inverseName="note" inverseEntity="DNoteFrame" syncable="YES"/>
     </entity>
     <entity name="DNoteFrame" representedClassName="DNoteFrame" syncable="YES" codeGenerationType="class">
         <attribute name="duration" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="text" attributeType="String" syncable="YES"/>
+        <relationship name="note" maxCount="1" deletionRule="Nullify" destinationEntity="DNote" inverseName="frames" inverseEntity="DNote" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DNote" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="DNoteFrame" positionX="-54" positionY="18" width="128" height="75"/>
+        <element name="DNote" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="DNoteFrame" positionX="-54" positionY="18" width="128" height="90"/>
     </elements>
 </model>
