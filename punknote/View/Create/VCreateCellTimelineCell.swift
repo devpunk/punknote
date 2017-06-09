@@ -4,7 +4,6 @@ class VCreateCellTimelineCell:UICollectionViewCell
 {
     private weak var viewCircle:UIView!
     private weak var viewSelected:VCreateCellTimelineCellSelected!
-    private weak var viewBorder:VBorder!
     private weak var labelDuration:UILabel!
     private weak var layoutCircleLeft:NSLayoutConstraint!
     private weak var modelFrame:MCreateFrame?
@@ -17,11 +16,9 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private let kCircleSize:CGFloat = 60
     private let kSelectedMargin:CGFloat = 5
     private let kLabelMargin:CGFloat = 4
-    private let kRibbonHeight:CGFloat = 6
-    private let kBorderWidth:CGFloat = 6
-    private let kDurationRight:CGFloat = -5
+    private let kDurationRight:CGFloat = -10
     private let kDurationWidth:CGFloat = 150
-    private let kDurationHeight:CGFloat = 20
+    private let kDurationHeight:CGFloat = 22
     private let kMaxDecimals:Int = 0
     private let KMinIntegers:Int = 1
     
@@ -37,10 +34,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
         clipsToBounds = true
         backgroundColor = UIColor.clear
         
-        let bordersColor:UIColor = UIColor.punkPurple.withAlphaComponent(0.6)
-        let viewRibbon:VBorder = VBorder(color:bordersColor)
-        let viewBorder:VBorder = VBorder(color:bordersColor)
-        self.viewBorder = viewBorder
+        let viewRibbon:VBorder = VBorder(color:UIColor.punkOrange.withAlphaComponent(0.3))
         
         let circleCornerRadius:CGFloat = kCircleSize / 2.0
         let labelCornerRadius:CGFloat = circleCornerRadius - kLabelMargin
@@ -60,7 +54,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
         let labelDuration:UILabel = UILabel()
         labelDuration.translatesAutoresizingMaskIntoConstraints = false
         labelDuration.isUserInteractionEnabled = false
-        labelDuration.font = UIFont.regular(size:13)
+        labelDuration.font = UIFont.regular(size:14)
         labelDuration.textColor = UIColor.black
         labelDuration.backgroundColor = UIColor.clear
         labelDuration.textAlignment = NSTextAlignment.right
@@ -83,9 +77,8 @@ class VCreateCellTimelineCell:UICollectionViewCell
         labelText.layer.cornerRadius = labelCornerRadius
         self.labelText = labelText
         
-        addSubview(labelDuration)
-        addSubview(viewBorder)
         addSubview(viewRibbon)
+        addSubview(labelDuration)
         addSubview(labelText)
         addSubview(viewGradient)
         addSubview(viewCircle)
@@ -115,33 +108,20 @@ class VCreateCellTimelineCell:UICollectionViewCell
             toView:self)
         NSLayoutConstraint.height(
             view:viewRibbon,
-            constant:kRibbonHeight)
+            constant:kDurationHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewRibbon,
             toView:self)
         
-        NSLayoutConstraint.height(
-            view:viewBorder,
-            constant:kDurationHeight)
-        NSLayoutConstraint.bottomToTop(
-            view:viewBorder,
-            toView:viewRibbon)
-        NSLayoutConstraint.rightToRight(
-            view:viewBorder,
+        NSLayoutConstraint.bottomToBottom(
+            view:labelDuration,
             toView:self)
-        NSLayoutConstraint.width(
-            view:viewBorder,
-            constant:kBorderWidth)
-        
-        NSLayoutConstraint.bottomToTop(
-            view:labelDuration,
-            toView:viewRibbon)
         NSLayoutConstraint.height(
             view:labelDuration,
             constant:kDurationHeight)
-        NSLayoutConstraint.rightToLeft(
+        NSLayoutConstraint.rightToRight(
             view:labelDuration,
-            toView:viewBorder,
+            toView:self,
             constant:kDurationRight)
         NSLayoutConstraint.width(
             view:labelDuration,
@@ -313,14 +293,12 @@ class VCreateCellTimelineCell:UICollectionViewCell
         let numberDuration:NSNumber = duration as NSNumber
         let stringDuration:String? = numberFormatter.string(from:numberDuration)
         
-        viewBorder.isHidden = false
         labelDuration.isHidden = false
         labelDuration.text = stringDuration
     }
     
     private func notLastCell()
     {
-        viewBorder.isHidden = true
         labelDuration.isHidden = true
     }
     
