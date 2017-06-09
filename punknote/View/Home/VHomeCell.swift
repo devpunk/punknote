@@ -5,7 +5,7 @@ class VHomeCell:UICollectionViewCell
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.white
         clipsToBounds = true
     }
     
@@ -16,7 +16,7 @@ class VHomeCell:UICollectionViewCell
     
     //MARK: public
     
-    func config()
+    func config(model:MHomeItem)
     {
         
     }
