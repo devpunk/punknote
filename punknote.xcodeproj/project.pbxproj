@@ -87,6 +87,7 @@
 		DAEC9D731EEB139900A16366 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */; };
 		DAEC9D751EEB19A600A16366 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D741EEB19A600A16366 /* brand.xcassets */; };
 		DAEC9D771EEB23F200A16366 /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D761EEB23F200A16366 /* VHomeBar.swift */; };
+		DAEC9D791EEB304700A16366 /* VHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D781EEB304700A16366 /* VHomeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +173,7 @@
 		DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DAEC9D741EEB19A600A16366 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DAEC9D761EEB23F200A16366 /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
+		DAEC9D781EEB304700A16366 /* VHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 			children = (
 				DA3130401EE1A40000DB2FE4 /* VHome.swift */,
 				DAEC9D761EEB23F200A16366 /* VHomeBar.swift */,
+				DAEC9D781EEB304700A16366 /* VHomeCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				DA3130791EE1A40000DB2FE4 /* MSession.swift in Sources */,
 				DA3D97BF1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift in Sources */,
 				DA3131491EE1EF6800DB2FE4 /* VCollectionFlow.swift in Sources */,
+				DAEC9D791EEB304700A16366 /* VHomeCell.swift in Sources */,
 				DA33DFF81EE8A3FD0096FF9D /* VCreateCellDuration.swift in Sources */,
 				DA1E05E21EE7003100DDAC9B /* VCreateCellCardText.swift in Sources */,
 				DA1E05E41EE706D500DDAC9B /* MCreateFont.swift in Sources */,
