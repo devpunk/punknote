@@ -85,6 +85,7 @@
 		DAEC9D6F1EEB0D5400A16366 /* DPunkNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D6D1EEB0D5400A16366 /* DPunkNote.xcdatamodeld */; };
 		DAEC9D711EEB0DA000A16366 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D701EEB0DA000A16366 /* DManager.swift */; };
 		DAEC9D731EEB139900A16366 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */; };
+		DAEC9D751EEB19A600A16366 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D741EEB19A600A16366 /* brand.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +169,7 @@
 		DAEC9D6E1EEB0D5400A16366 /* DPunkNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DPunkNote.xcdatamodel; sourceTree = "<group>"; };
 		DAEC9D701EEB0DA000A16366 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DAEC9D721EEB139900A16366 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
+		DAEC9D741EEB19A600A16366 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */,
 				DA3D97C41EE623C700E8EB33 /* generic.xcassets */,
 				DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */,
+				DAEC9D741EEB19A600A16366 /* brand.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAEC9D751EEB19A600A16366 /* brand.xcassets in Resources */,
 				DA31305A1EE1A40000DB2FE4 /* LaunchScreen.storyboard in Resources */,
 				DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */,
 				DA3D97C51EE623C700E8EB33 /* generic.xcassets in Resources */,
@@ -695,6 +699,7 @@
 		DA5146851EE0CB0900873C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = punknote/Info.plist;
@@ -709,6 +714,7 @@
 		DA5146861EE0CB0900873C06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = punknote/Info.plist;
