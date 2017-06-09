@@ -98,6 +98,7 @@ class VCreateCellDuration:VCreateCell
     
     override func config(controller:CCreate, model:MCreateContentProtocol)
     {
+        super.config(controller:controller, model:model)
         let modelFrame:MCreateFrame = controller.model.selectedFrameModel()
         self.modelFrame = modelFrame
         

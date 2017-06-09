@@ -4,6 +4,7 @@
 "VCreateCellCardBar_titleButtonDone"="Done";
 "VCreateCellCardBar_titleButtonClear"="Clear";
 "VCreateCellDuration_secondsSuffix"=" secs";
+"VCreateCellFontSize_pointSize"=" points";
 "VCreateCellTimelineCell_secondsSuffix"="secs";
 "VCreateCellFontNameCell_labelType"="Aa";
 

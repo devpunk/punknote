@@ -96,7 +96,7 @@ class VCreateCellFontNameCell:UICollectionViewCell
     {
         if isSelected || isHighlighted
         {
-            viewBorder.alpha = 0.5
+            viewBorder.alpha = 0.6
             layer.borderColor = UIColor.black.cgColor
             labelType.alpha = kAlphaSelected
             labelName.textColor = UIColor.black

@@ -2,39 +2,39 @@ import UIKit
 
 class VCreateCellFontSize:VCreateCell
 {
-    private weak var modelFrame:MCreateFrame?
+    private weak var modelFont:MCreateFont?
     private weak var viewSlider:VSlider!
-    private weak var labelDuration:UILabel!
+    private weak var labelFontsize:UILabel!
     private let numberFormatter:NumberFormatter
-    private let deltaDuration:TimeInterval
+    private let deltaFontSize:CGFloat
     private let kImageWidth:CGFloat = 45
     private let kImageLeft:CGFloat = 10
     private let kLabelWidth:CGFloat = 300
     private let kVerticalMargin:CGFloat = 22
-    private let kMaxDuration:TimeInterval = 15
-    private let kMinDuration:TimeInterval = 1
+    private let kMaxFontSize:CGFloat = 50
+    private let kMinFontSize:CGFloat = 12
     private let kMaxDecimals:Int = 0
     private let kMinIntergers:Int = 1
     private let kAfterUpdated:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
-        deltaDuration = kMaxDuration - kMinDuration
+        deltaFontSize = kMaxFontSize - kMinFontSize
         numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         numberFormatter.maximumFractionDigits = kMaxDecimals
         numberFormatter.minimumIntegerDigits = kMinIntergers
-        numberFormatter.positiveSuffix = NSLocalizedString("VCreateCellDuration_secondsSuffix", comment:"")
+        numberFormatter.positiveSuffix = NSLocalizedString("VCreateCellFontSize_pointSize", comment:"")
         
         super.init(frame:frame)
         
         let viewSlider:VSlider = VSlider(
-            percentUsed:0,
-            sliderChange:
-            { [weak self] (percentUsed:CGFloat) in
-                
-                self?.reverseSlider(percentUsed:percentUsed)
-            })
+        percentUsed:0,
+        sliderChange:
+        { [weak self] (percentUsed:CGFloat) in
+            
+            self?.reverseSlider(percentUsed:percentUsed)
+        })
         { [weak self] in
             
             self?.refreshFrame()
@@ -47,19 +47,19 @@ class VCreateCellFontSize:VCreateCell
         image.translatesAutoresizingMaskIntoConstraints = false
         image.clipsToBounds = true
         image.contentMode = UIViewContentMode.center
-        image.image = #imageLiteral(resourceName: "assetGenericCreateDuration")
+        image.image = #imageLiteral(resourceName: "assetGenericCreateFontSize")
         
-        let labelDuration:UILabel = UILabel()
-        labelDuration.translatesAutoresizingMaskIntoConstraints = false
-        labelDuration.backgroundColor = UIColor.clear
-        labelDuration.isUserInteractionEnabled = false
-        labelDuration.textColor = UIColor.black
-        labelDuration.font = UIFont.regular(size:15)
-        self.labelDuration = labelDuration
+        let labelFontsize:UILabel = UILabel()
+        labelFontsize.translatesAutoresizingMaskIntoConstraints = false
+        labelFontsize.backgroundColor = UIColor.clear
+        labelFontsize.isUserInteractionEnabled = false
+        labelFontsize.textColor = UIColor.black
+        labelFontsize.font = UIFont.regular(size:15)
+        self.labelFontsize = labelFontsize
         
         addSubview(viewSlider)
         addSubview(image)
-        addSubview(labelDuration)
+        addSubview(labelFontsize)
         
         NSLayoutConstraint.equalsVertical(
             view:viewSlider,
@@ -81,13 +81,13 @@ class VCreateCellFontSize:VCreateCell
             constant:kImageWidth)
         
         NSLayoutConstraint.equalsVertical(
-            view:labelDuration,
+            view:labelFontsize,
             toView:self)
         NSLayoutConstraint.leftToRight(
-            view:labelDuration,
+            view:labelFontsize,
             toView:image)
         NSLayoutConstraint.width(
-            view:labelDuration,
+            view:labelFontsize,
             constant:kLabelWidth)
     }
     
@@ -98,11 +98,12 @@ class VCreateCellFontSize:VCreateCell
     
     override func config(controller:CCreate, model:MCreateContentProtocol)
     {
-        let modelFrame:MCreateFrame = controller.model.selectedFrameModel()
-        self.modelFrame = modelFrame
+        super.config(controller:controller, model:model)
+        let modelFont:MCreateFont = controller.model.font
+        self.modelFont = modelFont
         
         updateSlider()
-        printDuration()
+        printFontSize()
     }
     
     //MARK: private
@@ -111,48 +112,47 @@ class VCreateCellFontSize:VCreateCell
     {
         guard
             
-            let modelFrame:MCreateFrame = self.modelFrame
+            let modelFont:MCreateFont = self.modelFont
             
-            else
+        else
         {
             return
         }
         
-        let minDuration:TimeInterval = modelFrame.duration - kMinDuration
-        let percentUsed:TimeInterval = minDuration / deltaDuration
-        let floatPercentUsed:CGFloat = CGFloat(percentUsed)
+        let minFontSize:CGFloat = modelFont.fontSize - kMinFontSize
+        let percentUsed:CGFloat = minFontSize / deltaFontSize
         
-        viewSlider.changeSlider(percentUsed:floatPercentUsed)
+        viewSlider.changeSlider(percentUsed:percentUsed)
     }
     
     private func reverseSlider(percentUsed:CGFloat)
     {
-        let percentDuration:TimeInterval = deltaDuration * TimeInterval(percentUsed)
-        let realDuration:TimeInterval = percentDuration + kMinDuration
-        modelFrame?.duration = realDuration
+        let percentFontSize:CGFloat = deltaFontSize * percentUsed
+        let realFontSize:CGFloat = percentFontSize + kMinFontSize
+        modelFont?.fontSize = realFontSize
         
         DispatchQueue.main.async
-            { [weak self] in
-                
-                self?.printDuration()
+        { [weak self] in
+            
+            self?.printFontSize()
         }
     }
     
-    private func printDuration()
+    private func printFontSize()
     {
         guard
             
-            let modelFrame:MCreateFrame = self.modelFrame
+            let modelFont:MCreateFont = self.modelFont
             
-            else
+        else
         {
             return
         }
         
-        let duration:NSNumber = modelFrame.duration as NSNumber
-        let durationString:String? = numberFormatter.string(from:duration)
+        let fontSize:NSNumber = modelFont.fontSize as NSNumber
+        let fontSizeString:String? = numberFormatter.string(from:fontSize)
         
-        labelDuration.text = durationString
+        labelFontsize.text = fontSizeString
     }
     
     private func refreshFrame()
