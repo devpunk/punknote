@@ -6,8 +6,9 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
     private let interItem2:CGFloat
     private let verticalSpace2:CGFloat
     private let kInterItem:CGFloat = 4
-    private let kVerticalSpace:CGFloat = 10
-    private let kCellWidth:CGFloat = 140
+    private let kVerticalSpace:CGFloat = 18
+    private let kCellWidth:CGFloat = 160
+    private let kAfterAddRefresh:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
@@ -28,9 +29,9 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
             flow.minimumLineSpacing = kInterItem
             flow.minimumInteritemSpacing = kInterItem
             flow.sectionInset = UIEdgeInsets(
-                top:kInterItem,
+                top:kVerticalSpace,
                 left:kInterItem,
-                bottom:kInterItem,
+                bottom:kVerticalSpace,
                 right:kInterItem)
         }
         
@@ -46,6 +47,13 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
         return nil
     }
     
+    override func config(controller:CCreate, model:MCreateContentProtocol)
+    {
+        super.config(controller:controller, model:model)
+        collectionView.reloadData()
+        selectCurrentItem()
+    }
+    
     //MARK: private
     
     private func modelAtIndex(index:IndexPath) -> MCreateFontItem
@@ -55,11 +63,39 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
         return item
     }
     
+    private func selectCurrentItem()
+    {
+        guard
+            
+            let selectedFont:Int = controller?.model.font.selectedFont
+            
+        else
+        {
+            return
+        }
+        
+        let index:IndexPath = IndexPath(item:selectedFont, section:0)
+        collectionView.selectItem(
+            at:index,
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition.centeredHorizontally)
+    }
+    
+    private func refreshFrame()
+    {
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kAfterAddRefresh)
+        { [weak controller] in
+            
+            controller?.refreshFrame()
+        }
+    }
+    
     //MARK: collectionView delegate
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = collectionView.bounds.maxY - interItem2
+        let height:CGFloat = collectionView.bounds.maxY - verticalSpace2
         let size:CGSize = CGSize(width:kCellWidth, height:height)
         
         return size
@@ -94,5 +130,39 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
         cell.config(model:item)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        guard
+            
+            let controller:CCreate = self.controller
+            
+        else
+        {
+            return false
+        }
+        
+        if controller.model.font.selectedFont == indexPath.item
+        {
+            return false
+        }
+        
+        return true
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
+    {
+        guard
+            
+            let controller:CCreate = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        controller.model.font.selectedFont = indexPath.item
+        refreshFrame()
     }
 }

@@ -6,25 +6,20 @@ class VCreateCellFontNameCell:UICollectionViewCell
     private weak var labelType:UILabel!
     private weak var labelName:UILabel!
     private weak var model:MCreateFontItem?
-    private let colorSelected:UIColor
-    private let colorNotSelected:UIColor
     private let kAlphaSelected:CGFloat = 1
     private let kAlphaNotSelected:CGFloat = 0.3
-    private let kBorderHeight:CGFloat = 25
-    private let kFontSizeType:CGFloat = 50
+    private let kBorderHeight:CGFloat = 30
+    private let kFontSizeType:CGFloat = 30
     private let kBorderWidth:CGFloat = 1
     
     override init(frame:CGRect)
     {
-        colorSelected = UIColor.punkPurple
-        colorNotSelected = UIColor(white:0.8, alpha:1)
-        
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
         layer.borderWidth = kBorderWidth
         
-        let viewBorder:VBorder = VBorder(color:colorNotSelected)
+        let viewBorder:VBorder = VBorder(color:UIColor.punkPurple)
         self.viewBorder = viewBorder
         
         let labelType:UILabel = UILabel()
@@ -36,10 +31,18 @@ class VCreateCellFontNameCell:UICollectionViewCell
         labelType.text = NSLocalizedString("VCreateCellFontNameCell_labelType", comment:"")
         self.labelType = labelType
         
-        let labelName
+        let labelName:UILabel = UILabel()
+        labelName.translatesAutoresizingMaskIntoConstraints = false
+        labelName.isUserInteractionEnabled = false
+        labelName.backgroundColor = UIColor.clear
+        labelName.isUserInteractionEnabled = false
+        labelName.textAlignment = NSTextAlignment.center
+        labelName.font = UIFont.regular(size:14)
+        self.labelName = labelName
         
         addSubview(labelType)
         addSubview(viewBorder)
+        addSubview(labelName)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewBorder,
@@ -51,9 +54,19 @@ class VCreateCellFontNameCell:UICollectionViewCell
             view:viewBorder,
             toView:self)
         
-        NSLayoutConstraint.equals(
+        NSLayoutConstraint.topToTop(
             view:labelType,
             toView:self)
+        NSLayoutConstraint.bottomToTop(
+            view:labelType,
+            toView:viewBorder)
+        NSLayoutConstraint.equalsHorizontal(
+            view:labelType,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:labelName,
+            toView:viewBorder)
     }
     
     required init?(coder:NSCoder)
@@ -83,15 +96,17 @@ class VCreateCellFontNameCell:UICollectionViewCell
     {
         if isSelected || isHighlighted
         {
-            viewBorder.backgroundColor = colorSelected
-            layer.borderColor = UIColor(white:0, alpha:1).cgColor
+            viewBorder.alpha = 0.5
+            layer.borderColor = UIColor.black.cgColor
             labelType.alpha = kAlphaSelected
+            labelName.textColor = UIColor.black
         }
         else
         {
-            viewBorder.backgroundColor = colorNotSelected
+            viewBorder.alpha = 0
             layer.borderColor = UIColor(white:0, alpha:0.2).cgColor
             labelType.alpha = kAlphaNotSelected
+            labelName.textColor = UIColor(white:0.4, alpha:1)
         }
     }
     
@@ -101,6 +116,7 @@ class VCreateCellFontNameCell:UICollectionViewCell
     {
         self.model = model
         labelType.font = model.font(size:kFontSizeType)
+        labelName.text = model.displayName
         hover()
     }
 }

@@ -5,6 +5,6 @@
 "VCreateCellCardBar_titleButtonClear"="Clear";
 "VCreateCellDurationSlider_secondsSuffix"=" secs";
 "VCreateCellTimelineCell_secondsSuffix"="secs";
-"VCreateCellFontNameCell_labelType"="A";
+"VCreateCellFontNameCell_labelType"="Aa";
 
 "MCreateFrame_defaultText"="Text";
