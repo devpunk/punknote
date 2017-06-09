@@ -3,6 +3,7 @@ import UIKit
 class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private(set) weak var collectionView:VCollection!
+    private weak var layoutBarTop:NSLayoutConstraint!
     private let kBarHeight:CGFloat = 64
     private let kCollectionBottom:CGFloat = 40
     
@@ -45,7 +46,7 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         addSubview(collectionView)
         addSubview(viewBar)
         
-        NSLayoutConstraint.topToTop(
+        layoutBarTop = NSLayoutConstraint.topToTop(
             view:viewBar,
             toView:self)
         NSLayoutConstraint.height(
@@ -83,6 +84,23 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     //MARK: collectionView delegate
+    
+    func scrollViewDidScroll(_ scrollView:UIScrollView)
+    {
+        let offsetY:CGFloat = scrollView.contentOffset.y
+        let usableOffset:CGFloat
+        
+        if offsetY < 0
+        {
+            usableOffset = 0
+        }
+        else
+        {
+            usableOffset = -offsetY
+        }
+        
+        layoutBarTop.constant = usableOffset
+    }
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
