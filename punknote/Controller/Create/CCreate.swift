@@ -15,6 +15,22 @@ class CCreate:Controller<VCreate>
         return nil
     }
     
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        parent.viewParent.panRecognizer.isEnabled = false
+    }
+    
     //MARK: private
     
     private func saveNote()
