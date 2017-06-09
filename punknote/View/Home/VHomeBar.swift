@@ -7,9 +7,9 @@ class VHomeBar:UIView
     private let kBorderHeight:CGFloat = 1
     private let kCornerRadius:CGFloat = 5
     private let kNewWidth:CGFloat = 60
-    private let kNewHeight:CGFloat = 30
+    private let kNewHeight:CGFloat = 26
     private let kNewRight:CGFloat = -10
-    private let kNewTop:CGFloat = 27
+    private let kNewTop:CGFloat = 29
     
     init(controller:CHome)
     {
