@@ -125,11 +125,15 @@ class VCreateBar:UIView
     
     func actionCancel(sender button:UIButton)
     {
+        UIApplication.shared.keyWindow!.endEditing(true)
+        
         controller.cancel()
     }
     
     func actionDone(sender button:UIButton)
     {
+        UIApplication.shared.keyWindow!.endEditing(true)
+        
         controller.done()
     }
 }

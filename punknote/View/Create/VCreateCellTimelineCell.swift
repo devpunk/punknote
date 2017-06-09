@@ -26,6 +26,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
     {
         selectedSize = kCircleSize + kSelectedMargin + kSelectedMargin
         numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
         numberFormatter.maximumFractionDigits = kMaxDecimals
         numberFormatter.minimumIntegerDigits = KMinIntegers
         numberFormatter.positiveSuffix = NSLocalizedString("VCreateCellTimelineCell_secondsSuffix", comment:"")

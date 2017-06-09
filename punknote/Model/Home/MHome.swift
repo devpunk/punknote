@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MHome
 {
@@ -36,16 +36,22 @@ class MHome
     private func parseNotes(notes:[DNote])
     {
         let backgrounds:[MCreateBackgroundProtocol] = MCreate.factoryBackground()
+        let fonts:MCreateFont = MCreateFont()
         var items:[MHomeItem] = []
         
         for note:DNote in notes
         {
             let selectedBackground:Int = Int(note.selectedBackground)
+            let selectedFont:Int = Int(note.selectedFont)
+            let fontSize:CGFloat = CGFloat(note.fontSize)
             let background:MCreateBackgroundProtocol = backgrounds[selectedBackground]
+            let fontItem:MCreateFontItem = fonts.fonts[selectedFont]
             
             let item:MHomeItem = MHomeItem(
                 note:note,
-                background:background)
+                background:background,
+                fontItem:fontItem,
+                fontSize:fontSize)
             items.append(item)
         }
         

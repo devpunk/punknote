@@ -9,5 +9,6 @@
 "VCreateCellFontNameCell_labelType"="Aa";
 "VHomeBar_buttonNew"="New";
 "VHomeFooter_label"="You have no notes";
+"VHomeCell_durationSeconds"=" seconds";
 
 "MCreateFrame_defaultText"="Text";
