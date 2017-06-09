@@ -7,7 +7,7 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
     private let interItem2:CGFloat
     private let kInterItem:CGFloat = 2
     private let kInterVertical:CGFloat = 8
-    private let kVerticalSpace:CGFloat = 22
+    private let kVerticalSpace:CGFloat = 12
     private let kContentHorizontal:CGFloat = 20
     private let kCellWidth:CGFloat = 160
     private let kBorderHeight:CGFloat = 1

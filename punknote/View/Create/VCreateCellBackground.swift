@@ -6,7 +6,7 @@ class VCreateCellBackground:VCreateCell, UICollectionViewDelegate, UICollectionV
     private let verticalSpace2:CGFloat
     private let kCellWidth:CGFloat = 60
     private let kInterItem:CGFloat = 2
-    private let kVerticalSpace:CGFloat = 20
+    private let kVerticalSpace:CGFloat = 15
     private let kAfterAddRefresh:TimeInterval = 0.2
     
     override init(frame:CGRect)

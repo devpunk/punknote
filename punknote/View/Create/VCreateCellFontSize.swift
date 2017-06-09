@@ -10,7 +10,7 @@ class VCreateCellFontSize:VCreateCell
     private let kImageWidth:CGFloat = 45
     private let kImageLeft:CGFloat = 20
     private let kLabelWidth:CGFloat = 300
-    private let kVerticalMargin:CGFloat = 22
+    private let kVerticalMargin:CGFloat = 17
     private let kMaxFontSize:CGFloat = 60
     private let kMinFontSize:CGFloat = 8
     private let kMaxDecimals:Int = 0

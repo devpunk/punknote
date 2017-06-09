@@ -22,8 +22,8 @@ class MCreate
             contentTimeline,
             contentCard,
             contentDuration,
-            contentFontName,
             contentFontSize,
+            contentFontName,
             contentBackground]
         
         return content

@@ -10,7 +10,7 @@ class VCreateCellDuration:VCreateCell
     private let kImageWidth:CGFloat = 45
     private let kImageLeft:CGFloat = 20
     private let kLabelWidth:CGFloat = 300
-    private let kVerticalMargin:CGFloat = 22
+    private let kVerticalMargin:CGFloat = 17
     private let kMaxDuration:TimeInterval = 15
     private let kMinDuration:TimeInterval = 1
     private let kMaxDecimals:Int = 0
