@@ -88,6 +88,7 @@
 		DAEC9D751EEB19A600A16366 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D741EEB19A600A16366 /* brand.xcassets */; };
 		DAEC9D771EEB23F200A16366 /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D761EEB23F200A16366 /* VHomeBar.swift */; };
 		DAEC9D791EEB304700A16366 /* VHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D781EEB304700A16366 /* VHomeCell.swift */; };
+		DAEC9D7B1EEB322300A16366 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D7A1EEB322300A16366 /* VHomeFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,7 @@
 		DAEC9D741EEB19A600A16366 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DAEC9D761EEB23F200A16366 /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAEC9D781EEB304700A16366 /* VHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCell.swift; sourceTree = "<group>"; };
+		DAEC9D7A1EEB322300A16366 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 				DA3130401EE1A40000DB2FE4 /* VHome.swift */,
 				DAEC9D761EEB23F200A16366 /* VHomeBar.swift */,
 				DAEC9D781EEB304700A16366 /* VHomeCell.swift */,
+				DAEC9D7A1EEB322300A16366 /* VHomeFooter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				DA54E7451EEA2900008302E8 /* VSlider.swift in Sources */,
 				DA33DFFE1EE8A9B90096FF9D /* MCreateBackgroundShades.swift in Sources */,
 				DA33DFFA1EE8A63E0096FF9D /* MCreateBackgroundSweetDreams.swift in Sources */,
+				DAEC9D7B1EEB322300A16366 /* VHomeFooter.swift in Sources */,
 				DA33DFEC1EE892C80096FF9D /* MCreateBackgroundYellowGreen.swift in Sources */,
 				DA3131461EE1EF6800DB2FE4 /* VBlur.swift in Sources */,
 				DA3130691EE1A40000DB2FE4 /* VHome.swift in Sources */,
