@@ -166,4 +166,11 @@ class VSlider:UIView
         panInitialWidth = nil
         slidingFinished?()
     }
+    
+    //MARK: public
+    
+    func changeSlider(percentUsed:CGFloat)
+    {
+        self.percentUsed = percentUsed
+    }
 }
