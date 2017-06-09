@@ -19,13 +19,36 @@
                     <view key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assetGenericIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mNK-wy-igd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Punky" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGN-vA-7y3">
+                                <rect key="frame" x="0.0" y="115" width="375" height="552"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="mNK-wy-igd" secondAttribute="bottom" id="GlG-se-kcP"/>
+                            <constraint firstItem="mNK-wy-igd" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="ONO-oq-KLO"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="WGN-vA-7y3" secondAttribute="bottom" id="eD9-F0-qZy"/>
+                            <constraint firstItem="WGN-vA-7y3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="nPT-ko-MMC"/>
+                            <constraint firstItem="mNK-wy-igd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="qc9-cf-qAz"/>
+                            <constraint firstItem="WGN-vA-7y3" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="115" id="rQN-yR-xcv"/>
+                            <constraint firstAttribute="trailing" secondItem="WGN-vA-7y3" secondAttribute="trailing" id="xrG-le-k26"/>
+                            <constraint firstAttribute="trailing" secondItem="mNK-wy-igd" secondAttribute="trailing" id="xrH-JA-aKl"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="assetGenericIcon" width="82" height="82"/>
+    </resources>
 </document>
