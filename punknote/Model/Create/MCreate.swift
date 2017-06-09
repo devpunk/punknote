@@ -15,6 +15,7 @@ class MCreate
         let contentCard:MCreateContentCard = MCreateContentCard()
         let contentDuration:MCreateContentDuration = MCreateContentDuration()
         let contentFontName:MCreateContentFontName = MCreateContentFontName()
+        let contentFontSize:MCreateContentFontSize = MCreateContentFontSize()
         let contentBackground:MCreateContentBackground = MCreateContentBackground()
         
         let content:[MCreateContentProtocol] = [
@@ -22,6 +23,7 @@ class MCreate
             contentCard,
             contentDuration,
             contentFontName,
+            contentFontSize,
             contentBackground]
         
         return content

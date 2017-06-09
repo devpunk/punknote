@@ -27,6 +27,7 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         collectionView.registerCell(cell:VCreateCellCard.self)
         collectionView.registerCell(cell:VCreateCellDuration.self)
         collectionView.registerCell(cell:VCreateCellFontName.self)
+        collectionView.registerCell(cell:VCreateCellFontSize.self)
         collectionView.registerCell(cell:VCreateCellBackground.self)
         collectionView.delegate = self
         collectionView.dataSource = self

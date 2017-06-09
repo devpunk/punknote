@@ -80,6 +80,7 @@
 		DA54E7471EEA2A4D008302E8 /* VSliderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7461EEA2A4D008302E8 /* VSliderBar.swift */; };
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 		DAEC9D681EEA71AA00A16366 /* VCreateCellFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */; };
+		DAEC9D6A1EEA71E200A16366 /* MCreateContentFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +159,7 @@
 		DA54E7461EEA2A4D008302E8 /* VSliderBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSliderBar.swift; sourceTree = "<group>"; };
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
 		DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontSize.swift; sourceTree = "<group>"; };
+		DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 				DA1E05DD1EE6FAC900DDAC9B /* MCreateContentCard.swift */,
 				DA33E0011EE8AF8B0096FF9D /* MCreateContentDuration.swift */,
 				DA54E7401EE9B6F3008302E8 /* MCreateContentFontName.swift */,
+				DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */,
 				DA1E05F51EE7622900DDAC9B /* MCreateContentBackground.swift */,
 				DA3D97BC1EE5FDE300E8EB33 /* MCreateSelected.swift */,
 				DA3D97BE1EE5FDEF00E8EB33 /* MCreateSelectedItem.swift */,
@@ -504,6 +507,7 @@
 				DA3130601EE1A40000DB2FE4 /* ExtensionString.swift in Sources */,
 				DA3D97B31EE5A7BC00E8EB33 /* MCreateContentTimeline.swift in Sources */,
 				DA1E05E01EE6FB1800DDAC9B /* VCreateCellCard.swift in Sources */,
+				DAEC9D6A1EEA71E200A16366 /* MCreateContentFontSize.swift in Sources */,
 				DA1E05F81EE7625B00DDAC9B /* VCreateCellBackground.swift in Sources */,
 				DA33DFFC1EE8A84D0096FF9D /* MCreateBackgroundSevenSeas.swift in Sources */,
 				DA33DFF21EE8A1730096FF9D /* MCreateBackgroundGreenOrange.swift in Sources */,
