@@ -8,7 +8,7 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     private let kInterItem:CGFloat = 1
     private let kCollectionBottom:CGFloat = 20
     private let kCellHeight:CGFloat = 120
-    private let kFooterHeight:CGFloat = 60
+    private let kFooterHeight:CGFloat = 30
     
     required init(controller:UIViewController)
     {
@@ -30,6 +30,7 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let viewBar:VHomeBar = VHomeBar(controller:controller)
         
         let collectionView:VCollection = VCollection()
+        collectionView.alwaysBounceVertical = true
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerCell(cell:VHomeCell.self)
@@ -63,6 +64,10 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:collectionView,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
@@ -73,6 +78,13 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     deinit
     {
         spinner.stopAnimating()
+    }
+    
+    override func layoutSubviews()
+    {
+        collectionView.collectionViewLayout.invalidateLayout()
+        
+        super.layoutSubviews()
     }
     
     //MARK: public

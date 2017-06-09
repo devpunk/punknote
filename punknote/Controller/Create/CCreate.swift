@@ -35,7 +35,7 @@ class CCreate:Controller<VCreate>
     
     private func saveNote()
     {
-        
+        model.save(controller:self)
     }
     
     //MARK: public
@@ -93,5 +93,14 @@ class CCreate:Controller<VCreate>
     func addFrame()
     {
         model.addFrame()
+    }
+    
+    func noteSaved()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.cancel()
+        }
     }
 }

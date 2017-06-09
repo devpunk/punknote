@@ -89,4 +89,9 @@ class MCreate
         
         return background
     }
+    
+    func save(controller:CCreate)
+    {
+        
+    }
 }
