@@ -15,7 +15,7 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         
         guard
             
-            let cCreate:CCreate = controller as? CCreate
+            let controller:CCreate = controller as? CCreate
         
         else
         {
@@ -26,7 +26,7 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         spinner.stopAnimating()
         self.spinner = spinner
         
-        let viewBar:VCreateBar = VCreateBar(controller:cCreate)
+        let viewBar:VCreateBar = VCreateBar(controller:controller)
         self.viewBar = viewBar
         
         let collectionView:VCollection = VCollection()
