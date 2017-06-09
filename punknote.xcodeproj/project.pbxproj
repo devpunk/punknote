@@ -79,6 +79,7 @@
 		DA54E7411EE9B6F3008302E8 /* MCreateContentFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7401EE9B6F3008302E8 /* MCreateContentFontName.swift */; };
 		DA54E7431EE9B7C5008302E8 /* VCreateCellFontNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7421EE9B7C5008302E8 /* VCreateCellFontNameCell.swift */; };
 		DA54E7451EEA2900008302E8 /* VSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7441EEA2900008302E8 /* VSlider.swift */; };
+		DA54E7471EEA2A4D008302E8 /* VSliderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7461EEA2A4D008302E8 /* VSliderBar.swift */; };
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,7 @@
 		DA54E7401EE9B6F3008302E8 /* MCreateContentFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontName.swift; sourceTree = "<group>"; };
 		DA54E7421EE9B7C5008302E8 /* VCreateCellFontNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontNameCell.swift; sourceTree = "<group>"; };
 		DA54E7441EEA2900008302E8 /* VSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSlider.swift; sourceTree = "<group>"; };
+		DA54E7461EEA2A4D008302E8 /* VSliderBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSliderBar.swift; sourceTree = "<group>"; };
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -380,6 +382,7 @@
 				DA3131441EE1EF6800DB2FE4 /* VToast.swift */,
 				DA3D97C01EE6189600E8EB33 /* VGradient.swift */,
 				DA54E7441EEA2900008302E8 /* VSlider.swift */,
+				DA54E7461EEA2A4D008302E8 /* VSliderBar.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				DA3131461EE1EF6800DB2FE4 /* VBlur.swift in Sources */,
 				DA3130691EE1A40000DB2FE4 /* VHome.swift in Sources */,
 				DA3D97B91EE5B3E600E8EB33 /* VCreateCellTimelineCell.swift in Sources */,
+				DA54E7471EEA2A4D008302E8 /* VSliderBar.swift in Sources */,
 				DA1E05DE1EE6FAC900DDAC9B /* MCreateContentCard.swift in Sources */,
 				DA1E05EC1EE7200700DDAC9B /* VCreateCellCardBar.swift in Sources */,
 				DA3131321EE1ECDA00DB2FE4 /* CHome.swift in Sources */,
