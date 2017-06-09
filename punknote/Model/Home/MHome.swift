@@ -35,12 +35,24 @@ class MHome
     
     private func parseNotes(notes:[DNote])
     {
+        let backgrounds:[MCreateBackgroundProtocol] = MCreate.factoryBackground()
         var items:[MHomeItem] = []
         
         for note:DNote in notes
         {
-            let item:MHomeItem = MHomeItem(note:note)
+            let selectedBackground:Int = Int(note.selectedBackground)
+            let background:MCreateBackgroundProtocol = backgrounds[selectedBackground]
+            
+            let item:MHomeItem = MHomeItem(
+                note:note,
+                background:background)
             items.append(item)
+        }
+        
+        items.sort
+        { (itemA:MHomeItem, itemB:MHomeItem) -> Bool in
+            
+            return itemA.note.created > itemB.note.created
         }
         
         self.items = items

@@ -5,9 +5,9 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     private weak var spinner:VSpinner!
     private weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 64
-    private let kInterItem:CGFloat = 2
+    private let kInterItem:CGFloat = 20
     private let kCollectionBottom:CGFloat = 20
-    private let kCellHeight:CGFloat = 120
+    private let kCellHeight:CGFloat = 130
     private let kFooterHeight:CGFloat = 30
     
     required init(controller:UIViewController)

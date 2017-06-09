@@ -2,10 +2,14 @@ import Foundation
 
 class MHomeItem
 {
-    private let note:DNote
+    let note:DNote
+    let background:MCreateBackgroundProtocol
     
-    init(note:DNote)
+    init(
+        note:DNote,
+        background:MCreateBackgroundProtocol)
     {
         self.note = note
+        self.background = background
     }
 }

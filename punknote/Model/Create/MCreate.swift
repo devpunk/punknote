@@ -30,7 +30,7 @@ class MCreate
         return content
     }
     
-    private class func factoryBackground() -> [MCreateBackgroundProtocol]
+    class func factoryBackground() -> [MCreateBackgroundProtocol]
     {
         let backgroundSweetDreams:MCreateBackgroundSweetDreams = MCreateBackgroundSweetDreams()
         let backgroundSevenSeas:MCreateBackgroundSevenSeas = MCreateBackgroundSevenSeas()
