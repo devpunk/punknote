@@ -8,6 +8,7 @@ class MCreate
     var frames:[MCreateFrame]
     var selectedFrame:Int
     var selectedBackground:Int
+    private weak var controller:CCreate?
     
     private class func factoryContent() -> [MCreateContentProtocol]
     {
@@ -66,6 +67,47 @@ class MCreate
         addFrame()
     }
     
+    private func createFrames(note:DNote)
+    {
+        if frames.count > 0
+        {
+            let frame:MCreateFrame = frames.removeFirst()
+            
+            DManager.sharedInstance?.createData(
+                entityName:DNoteFrame.entityName)
+            { [weak self] (data) in
+                
+                guard
+                
+                    let noteFrame:DNoteFrame = data as? DNoteFrame
+                
+                else
+                {
+                    return
+                }
+                
+                noteFrame.duration = frame.duration
+                noteFrame.text = frame.text
+                note.addToFrames(noteFrame)
+                
+                self?.createFrames(note:note)
+            }
+        }
+        else
+        {
+            noteSaved()
+        }
+    }
+    
+    private func noteSaved()
+    {
+        DManager.sharedInstance?.save
+        { [weak self] in
+            
+            self?.controller?.noteSaved()
+        }
+    }
+    
     //MARK: public
     
     func addFrame()
@@ -92,6 +134,31 @@ class MCreate
     
     func save(controller:CCreate)
     {
+        self.controller = controller
         
+        let created:TimeInterval = Date().timeIntervalSince1970
+        
+        DManager.sharedInstance?.createData(
+            entityName:DNote.entityName)
+        { [weak self] (data) in
+            
+            guard
+            
+                let note:DNote = data as? DNote,
+                let font:MCreateFont = self?.font,
+                let selectedBackground:Int = self?.selectedBackground
+            
+            else
+            {
+                return
+            }
+            
+            note.created = created
+            note.fontSize = Float(font.fontSize)
+            note.selectedFont = Int16(font.selectedFont)
+            note.selectedBackground = Int16(selectedBackground)
+            
+            self?.createFrames(note:note)
+        }
     }
 }
