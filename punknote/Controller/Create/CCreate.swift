@@ -15,6 +15,13 @@ class CCreate:Controller<VCreate>
         return nil
     }
     
+    //MARK: private
+    
+    private func saveNote()
+    {
+        
+    }
+    
     //MARK: public
     
     func refreshFrame()
@@ -49,7 +56,22 @@ class CCreate:Controller<VCreate>
     
     func done()
     {
+        guard
         
+            let view:VCreate = self.view as? VCreate
+        
+        else
+        {
+            return
+        }
+        
+        view.startLoading()
+        
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.saveNote()
+        }
     }
     
     func addFrame()
