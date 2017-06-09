@@ -7,5 +7,6 @@
 "VCreateCellFontSize_pointSize"=" points";
 "VCreateCellTimelineCell_secondsSuffix"=" s";
 "VCreateCellFontNameCell_labelType"="Aa";
+"VHomeBar_buttonNew"="New";
 
 "MCreateFrame_defaultText"="Text";
