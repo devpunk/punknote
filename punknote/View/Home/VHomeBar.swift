@@ -6,10 +6,10 @@ class VHomeBar:UIView
     private let kIconTop:CGFloat = 20
     private let kBorderHeight:CGFloat = 1
     private let kCornerRadius:CGFloat = 5
-    private let kNewWidth:CGFloat = 80
-    private let kNewHeight:CGFloat = 32
+    private let kNewWidth:CGFloat = 60
+    private let kNewHeight:CGFloat = 30
     private let kNewRight:CGFloat = -10
-    private let kNewTop:CGFloat = 32
+    private let kNewTop:CGFloat = 27
     
     init(controller:CHome)
     {
@@ -42,7 +42,7 @@ class VHomeBar:UIView
         buttonNew.setTitleColor(
             UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
-        buttonNew.titleLabel!.font = UIFont.bold(size:14)
+        buttonNew.titleLabel!.font = UIFont.bold(size:13)
         buttonNew.addTarget(
             self,
             action:#selector(actionNew(sender:)),
@@ -98,6 +98,6 @@ class VHomeBar:UIView
     
     func actionNew(sender button:UIButton)
     {
-        
+        controller.newNote()
     }
 }
