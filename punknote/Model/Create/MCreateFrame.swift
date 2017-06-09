@@ -5,7 +5,7 @@ class MCreateFrame
     var text:String
     var duration:TimeInterval
     let selected:MCreateSelected
-    private let kDefaultDuration:TimeInterval = 3
+    private let kDefaultDuration:TimeInterval = 5
     
     init()
     {

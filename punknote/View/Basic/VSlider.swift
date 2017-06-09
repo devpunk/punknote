@@ -74,9 +74,7 @@ class VSlider:UIView
     override func layoutSubviews()
     {
         super.layoutSubviews()
-        layoutSlide()
-        
-        print("sliding")
+        layoutSlider()
     }
     
     //MARK: actions
@@ -110,7 +108,7 @@ class VSlider:UIView
     
     //MARK: private
     
-    private func layoutSlide()
+    private func layoutSlider()
     {
         let width:CGFloat = viewBase.bounds.maxX
         let percentWidth:CGFloat = percentUsed * width
@@ -172,5 +170,6 @@ class VSlider:UIView
     func changeSlider(percentUsed:CGFloat)
     {
         self.percentUsed = percentUsed
+        layoutSlider()
     }
 }
