@@ -81,6 +81,7 @@
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 		DAEC9D681EEA71AA00A16366 /* VCreateCellFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */; };
 		DAEC9D6A1EEA71E200A16366 /* MCreateContentFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */; };
+		DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,6 +161,7 @@
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
 		DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontSize.swift; sourceTree = "<group>"; };
+		DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			children = (
 				DA31302A1EE1A40000DB2FE4 /* LaunchScreen.storyboard */,
 				DA3D97C41EE623C700E8EB33 /* generic.xcassets */,
+				DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA31305A1EE1A40000DB2FE4 /* LaunchScreen.storyboard in Resources */,
+				DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */,
 				DA3D97C51EE623C700E8EB33 /* generic.xcassets in Resources */,
 				DA3130651EE1A40000DB2FE4 /* Localizable.strings in Resources */,
 				DA3130661EE1A40000DB2FE4 /* ResourceURL.plist in Resources */,
