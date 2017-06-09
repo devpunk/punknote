@@ -9,7 +9,7 @@ class VSlider:UIView
     private var slidingFinished:(() -> ())?
     private var panInitialWidth:CGFloat?
     private var percentUsed:CGFloat
-    private let kHorizontalMargin:CGFloat = 10
+    private let kHorizontalMargin:CGFloat = 20
     private let kCornerRadius:CGFloat = 10
     private let kBorderWidth:CGFloat = 1
     

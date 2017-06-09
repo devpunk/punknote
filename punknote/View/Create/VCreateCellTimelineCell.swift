@@ -17,8 +17,8 @@ class VCreateCellTimelineCell:UICollectionViewCell
     private let kCircleSize:CGFloat = 60
     private let kSelectedMargin:CGFloat = 5
     private let kLabelMargin:CGFloat = 4
-    private let kRibbonHeight:CGFloat = 5
-    private let kBorderWidth:CGFloat = 5
+    private let kRibbonHeight:CGFloat = 6
+    private let kBorderWidth:CGFloat = 6
     private let kDurationRight:CGFloat = -5
     private let kDurationWidth:CGFloat = 150
     private let kDurationHeight:CGFloat = 20
@@ -60,7 +60,7 @@ class VCreateCellTimelineCell:UICollectionViewCell
         let labelDuration:UILabel = UILabel()
         labelDuration.translatesAutoresizingMaskIntoConstraints = false
         labelDuration.isUserInteractionEnabled = false
-        labelDuration.font = UIFont.regular(size:12)
+        labelDuration.font = UIFont.regular(size:13)
         labelDuration.textColor = UIColor.black
         labelDuration.backgroundColor = UIColor.clear
         labelDuration.textAlignment = NSTextAlignment.right

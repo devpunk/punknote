@@ -20,8 +20,8 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
         interItem2 = kInterItem + kInterItem
         super.init(frame:frame)
         
-        let borderTop:VBorder = VBorder(color:UIColor(white:0, alpha:1))
-        let borderBottom:VBorder = VBorder(color:UIColor(white:0, alpha:1))
+        let borderTop:VBorder = VBorder(color:UIColor(white:0, alpha:0.1))
+        let borderBottom:VBorder = VBorder(color:UIColor(white:0, alpha:0.1))
         
         let collectionView:VCollection = VCollection()
         collectionView.backgroundColor = UIColor(white:0.97, alpha:1)
@@ -43,9 +43,9 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
                 right:kContentHorizontal)
         }
         
-        collectionView.addSubview(borderTop)
-        collectionView.addSubview(borderBottom)
         addSubview(collectionView)
+        addSubview(borderTop)
+        addSubview(borderBottom)
         
         NSLayoutConstraint.equalsVertical(
             view:collectionView,
