@@ -2,11 +2,13 @@ import UIKit
 
 class CShare:Controller<VShare>
 {
-    let model:MHomeItem
+    let model:MShare
+    let modelHomeItem:MHomeItem
     
-    init(model:MHomeItem)
+    init(modelHomeItem:MHomeItem)
     {
-        self.model = model
+        self.modelHomeItem = modelHomeItem
+        model = MShare()
         
         super.init()
     }

@@ -117,7 +117,7 @@ class CHome:Controller<VHome>
             return
         }
         
-        let controller:CShare = CShare(model:item)
+        let controller:CShare = CShare(modelHomeItem:item)
         parent.push(
             controller:controller,
             horizontal:ControllerParent.Horizontal.right)
