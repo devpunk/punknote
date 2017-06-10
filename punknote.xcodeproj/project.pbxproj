@@ -81,6 +81,9 @@
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 		DAA563D41EEB676800AEE8B9 /* VHomeCellAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D31EEB676800AEE8B9 /* VHomeCellAction.swift */; };
 		DAA563D61EEB681500AEE8B9 /* MHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D51EEB681500AEE8B9 /* MHomeProtocol.swift */; };
+		DAA563D81EEB6AF500AEE8B9 /* MHomeDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */; };
+		DAA563DA1EEB6B0000AEE8B9 /* MHomeEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D91EEB6B0000AEE8B9 /* MHomeEdit.swift */; };
+		DAA563DC1EEB6B0B00AEE8B9 /* MHomeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563DB1EEB6B0B00AEE8B9 /* MHomeShare.swift */; };
 		DAEC9D681EEA71AA00A16366 /* VCreateCellFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */; };
 		DAEC9D6A1EEA71E200A16366 /* MCreateContentFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */; };
 		DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */; };
@@ -172,6 +175,9 @@
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
 		DAA563D31EEB676800AEE8B9 /* VHomeCellAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCellAction.swift; sourceTree = "<group>"; };
 		DAA563D51EEB681500AEE8B9 /* MHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeProtocol.swift; sourceTree = "<group>"; };
+		DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDelete.swift; sourceTree = "<group>"; };
+		DAA563D91EEB6B0000AEE8B9 /* MHomeEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeEdit.swift; sourceTree = "<group>"; };
+		DAA563DB1EEB6B0B00AEE8B9 /* MHomeShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeShare.swift; sourceTree = "<group>"; };
 		DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
@@ -348,6 +354,9 @@
 				DAEC9D7C1EEB342E00A16366 /* MHome.swift */,
 				DAEC9D7E1EEB344200A16366 /* MHomeItem.swift */,
 				DAA563D51EEB681500AEE8B9 /* MHomeProtocol.swift */,
+				DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */,
+				DAA563D91EEB6B0000AEE8B9 /* MHomeEdit.swift */,
+				DAA563DB1EEB6B0B00AEE8B9 /* MHomeShare.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -564,8 +573,10 @@
 				DA3130681EE1A40000DB2FE4 /* VCreateBar.swift in Sources */,
 				DAA563D41EEB676800AEE8B9 /* VHomeCellAction.swift in Sources */,
 				DA33DFEA1EE892610096FF9D /* MCreateBackgroundYellowOrange.swift in Sources */,
+				DAA563D81EEB6AF500AEE8B9 /* MHomeDelete.swift in Sources */,
 				DA3130631EE1A40000DB2FE4 /* ExtensionUIFont.swift in Sources */,
 				DA3131471EE1EF6800DB2FE4 /* VBorder.swift in Sources */,
+				DAA563DC1EEB6B0B00AEE8B9 /* MHomeShare.swift in Sources */,
 				DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */,
 				DAEC9D6F1EEB0D5400A16366 /* DPunkNote.xcdatamodeld in Sources */,
 				DAA563D61EEB681500AEE8B9 /* MHomeProtocol.swift in Sources */,
@@ -602,6 +613,7 @@
 				DA3130671EE1A40000DB2FE4 /* VCreate.swift in Sources */,
 				DA3D97BB1EE5EC2B00E8EB33 /* VCreateCellTimelineCellSelected.swift in Sources */,
 				DA31314B1EE1EF6800DB2FE4 /* VSpinner.swift in Sources */,
+				DAA563DA1EEB6B0000AEE8B9 /* MHomeEdit.swift in Sources */,
 				DA3D97C31EE6206600E8EB33 /* VCreateCellTimelineFooter.swift in Sources */,
 				DA3130641EE1A40000DB2FE4 /* ExtensionURL.swift in Sources */,
 				DA1E05FA1EE77C6500DDAC9B /* VCreateCellBackgroundCell.swift in Sources */,

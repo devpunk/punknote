@@ -2,12 +2,21 @@ import UIKit
 
 class MHome
 {
+    let actions:[MHomeProtocol]
     private(set) var items:[MHomeItem]
     private weak var controller:CHome?
     
     init()
     {
+        let actionDelete:MHomeDelete = MHomeDelete()
+        let actionEdit:MHomeEdit = MHomeEdit()
+        let actionShare:MHomeShare = MHomeShare()
+        
         items = []
+        actions = [
+            actionDelete,
+            actionEdit,
+            actionShare]
     }
     
     //MARK: private
