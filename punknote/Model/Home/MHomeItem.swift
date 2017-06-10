@@ -56,7 +56,8 @@ class MHomeItem
         
         for noteFrame:DNoteFrame in noteFrames
         {
-            
+            let frame:MCreateFrame = MCreateFrame(noteFrame:noteFrame)
+            frames.append(frame)
         }
         
         return frames

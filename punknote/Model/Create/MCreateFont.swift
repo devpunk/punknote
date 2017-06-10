@@ -9,7 +9,7 @@ class MCreateFont
     private let kResourceExtension:String = "plist"
     private let kKeyName:String = "name"
     private let kKeyFont:String = "font"
-    private let kDefaultFontSize:CGFloat = 20
+    private let kDefaultFontSize:CGFloat = 18
     
     init()
     {

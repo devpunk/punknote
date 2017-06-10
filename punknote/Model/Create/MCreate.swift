@@ -172,4 +172,21 @@ class MCreate
             self?.createFrames(note:note)
         }
     }
+    
+    func saveEdition(controller:CCreate, note:DNote)
+    {
+        self.controller = controller
+        
+        if let countFrames:Int = note.frames?.count
+        {
+            let range:NSRange = NSMakeRange(0, countFrames)
+            let indexSet:NSIndexSet = NSIndexSet(indexesIn:range)
+            note.removeFromFrames(at:indexSet)
+        }
+        
+        note.fontSize = Float(font.fontSize)
+        note.selectedFont = Int16(font.selectedFont)
+        note.selectedBackground = Int16(selectedBackground)
+        createFrames(note:note)
+    }
 }
