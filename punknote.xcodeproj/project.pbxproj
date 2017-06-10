@@ -80,6 +80,7 @@
 		DA54E7471EEA2A4D008302E8 /* VSliderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54E7461EEA2A4D008302E8 /* VSliderBar.swift */; };
 		DA643C781EE4C5D8006295BA /* MCreateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643C771EE4C5D8006295BA /* MCreateFrame.swift */; };
 		DA8A716E1EEC4A3B00215DF6 /* MShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A716D1EEC4A3B00215DF6 /* MShare.swift */; };
+		DA8A71701EEC4A5100215DF6 /* MShareContentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A716F1EEC4A5100215DF6 /* MShareContentProtocol.swift */; };
 		DAA563D41EEB676800AEE8B9 /* VHomeCellAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D31EEB676800AEE8B9 /* VHomeCellAction.swift */; };
 		DAA563D61EEB681500AEE8B9 /* MHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D51EEB681500AEE8B9 /* MHomeProtocol.swift */; };
 		DAA563D81EEB6AF500AEE8B9 /* MHomeDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */; };
@@ -178,6 +179,7 @@
 		DA54E7461EEA2A4D008302E8 /* VSliderBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSliderBar.swift; sourceTree = "<group>"; };
 		DA643C771EE4C5D8006295BA /* MCreateFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateFrame.swift; sourceTree = "<group>"; };
 		DA8A716D1EEC4A3B00215DF6 /* MShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MShare.swift; sourceTree = "<group>"; };
+		DA8A716F1EEC4A5100215DF6 /* MShareContentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MShareContentProtocol.swift; sourceTree = "<group>"; };
 		DAA563D31EEB676800AEE8B9 /* VHomeCellAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCellAction.swift; sourceTree = "<group>"; };
 		DAA563D51EEB681500AEE8B9 /* MHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeProtocol.swift; sourceTree = "<group>"; };
 		DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDelete.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8A716D1EEC4A3B00215DF6 /* MShare.swift */,
+				DA8A716F1EEC4A5100215DF6 /* MShareContentProtocol.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				DA3130631EE1A40000DB2FE4 /* ExtensionUIFont.swift in Sources */,
 				DA3131471EE1EF6800DB2FE4 /* VBorder.swift in Sources */,
 				DAA563DC1EEB6B0B00AEE8B9 /* MHomeShare.swift in Sources */,
+				DA8A71701EEC4A5100215DF6 /* MShareContentProtocol.swift in Sources */,
 				DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */,
 				DA8A716E1EEC4A3B00215DF6 /* MShare.swift in Sources */,
 				DAA563E41EEC3A0900AEE8B9 /* VShareBar.swift in Sources */,
