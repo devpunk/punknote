@@ -2,7 +2,7 @@ import UIKit
 
 class VShareImage:UIView
 {
-    private let kMarginHorizontal:CGFloat = 35
+    private let kMarginHorizontal:CGFloat = 30
     
     init(
         modelHomeItem:MHomeItem,
@@ -13,6 +13,7 @@ class VShareImage:UIView
         let font:UIFont = modelHomeItem.font()
         let fontSize:CGFloat = font.pointSize
         let scaledFont:UIFont = font.withSize(fontSize * scale)
+        let marginScaled:CGFloat = kMarginHorizontal * scale
         
         super.init(frame:frame)
         clipsToBounds = true
@@ -44,7 +45,7 @@ class VShareImage:UIView
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self,
-            margin:kMarginHorizontal)
+            margin:marginScaled)
     }
     
     required init?(coder:NSCoder)
