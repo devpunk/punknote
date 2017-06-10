@@ -2,7 +2,7 @@ import UIKit
 
 class MShareContentScale:MShareContentProtocol
 {
-    private let kCellHeight:CGFloat = 90
+    private let kCellHeight:CGFloat = 120
     
     var cellHeight:CGFloat
     {

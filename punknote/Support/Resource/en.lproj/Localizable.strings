@@ -13,7 +13,7 @@
 "VShareBar_labelTitle"="Share";
 "VHomeBar_labelTitle"="Punky";
 "VShareCellScaleCell_labelTitle"="x%@";
-"VShareCellScaleCell_labelDescr"="%@x%@ px";
+"VShareCellScaleCell_labelDescr"="%@x%@";
 
 "MCreateFrame_defaultText"="Text";
 

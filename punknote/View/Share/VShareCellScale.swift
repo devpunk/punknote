@@ -3,7 +3,7 @@ import UIKit
 class VShareCellScale:VShareCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
-    private let kMarginVertical:CGFloat = 15
+    private let kBottom:CGFloat = -20
     private let kCellWidth:CGFloat = 80
     
     override init(frame:CGRect)
@@ -25,10 +25,13 @@ class VShareCellScale:VShareCell, UICollectionViewDelegate, UICollectionViewData
         
         addSubview(collectionView)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
+            view:collectionView,
+            toView:self)
+        NSLayoutConstraint.bottomToBottom(
             view:collectionView,
             toView:self,
-            margin:kMarginVertical)
+            constant:kBottom)
         NSLayoutConstraint.equalsHorizontal(
             view:collectionView,
             toView:self)
