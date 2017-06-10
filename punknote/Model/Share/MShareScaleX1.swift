@@ -1,9 +1,22 @@
-//
-//  MShareScaleX1.swift
-//  punknote
-//
-//  Created by zero on 6/10/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class MShareScaleX1:MShareScaleProtocol
+{
+    private let kScale:CGFloat = 1
+    
+    var title:String
+    {
+        get
+        {
+            return NSLocalizedString("MShareScaleX1_title", comment:"")
+        }
+    }
+    
+    var scale:CGFloat
+    {
+        get
+        {
+            return kScale
+        }
+    }
+}
