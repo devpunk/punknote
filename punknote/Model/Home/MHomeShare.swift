@@ -6,7 +6,7 @@ class MHomeShare:MHomeProtocol
     {
         get
         {
-            return #imageLiteral(resourceName: "assetGenericEdit")
+            return #imageLiteral(resourceName: "assetGenericShare")
         }
     }
     

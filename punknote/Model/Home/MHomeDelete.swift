@@ -6,7 +6,7 @@ class MHomeDelete:MHomeProtocol
     {
         get
         {
-            return #imageLiteral(resourceName: "assetGenericEdit")
+            return #imageLiteral(resourceName: "assetGenericDelete")
         }
     }
     

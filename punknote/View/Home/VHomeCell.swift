@@ -9,12 +9,12 @@ class VHomeCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     private weak var labelText:UILabel!
     private weak var labelDuration:UILabel!
     private let numberFormatter:NumberFormatter
-    private let kActionsHeight:CGFloat = 60
+    private let kActionsHeight:CGFloat = 50
     private let kBackgroundHeight:CGFloat = 250
     private let kBorderHeight:CGFloat = 1
     private let kTextMarginVertical:CGFloat = 5
     private let kTextMarginHorizontal:CGFloat = 30
-    private let kDurationHeight:CGFloat = 20
+    private let kDurationHeight:CGFloat = 40
     private let kDurationWidth:CGFloat = 250
     private let kDurationLeft:CGFloat = 10
     private let kMaxDecimals:Int = 0
@@ -48,7 +48,7 @@ class VHomeCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         labelDuration.isUserInteractionEnabled = false
         labelDuration.translatesAutoresizingMaskIntoConstraints = false
         labelDuration.backgroundColor = UIColor.clear
-        labelDuration.font = UIFont.regular(size:12)
+        labelDuration.font = UIFont.regular(size:13)
         labelDuration.textColor = UIColor.black
         self.labelDuration = labelDuration
         
