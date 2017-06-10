@@ -9,7 +9,7 @@ class VHomeCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     private weak var labelText:UILabel!
     private weak var labelDuration:UILabel!
     private let numberFormatter:NumberFormatter
-    private let kActionsHeight:CGFloat = 50
+    private let kActionsHeight:CGFloat = 60
     private let kBackgroundHeight:CGFloat = 250
     private let kBorderHeight:CGFloat = 1
     private let kTextMarginVertical:CGFloat = 5
@@ -53,8 +53,18 @@ class VHomeCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         self.labelDuration = labelDuration
         
         let collectionView:VCollection = VCollection()
-        collectionView.backgroundColor = UIColor.red
+        collectionView.isScrollEnabled = false
+        collectionView.bounces = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.registerCell(cell:VHomeCellAction.self)
         self.collectionView = collectionView
+        
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.scrollDirection = UICollectionViewScrollDirection.horizontal
+            flow.itemSize = CGSize(width:kActionsHeight, height:kActionsHeight)
+        }
         
         addSubview(borderTop)
         addSubview(borderBottom)
