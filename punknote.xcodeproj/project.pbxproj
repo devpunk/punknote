@@ -86,6 +86,7 @@
 		DAA563DC1EEB6B0B00AEE8B9 /* MHomeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563DB1EEB6B0B00AEE8B9 /* MHomeShare.swift */; };
 		DAA563DF1EEC363400AEE8B9 /* CShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563DE1EEC363400AEE8B9 /* CShare.swift */; };
 		DAA563E21EEC395C00AEE8B9 /* VShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563E11EEC395C00AEE8B9 /* VShare.swift */; };
+		DAA563E41EEC3A0900AEE8B9 /* VShareBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563E31EEC3A0900AEE8B9 /* VShareBar.swift */; };
 		DAEC9D681EEA71AA00A16366 /* VCreateCellFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */; };
 		DAEC9D6A1EEA71E200A16366 /* MCreateContentFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */; };
 		DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */; };
@@ -182,6 +183,7 @@
 		DAA563DB1EEB6B0B00AEE8B9 /* MHomeShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeShare.swift; sourceTree = "<group>"; };
 		DAA563DE1EEC363400AEE8B9 /* CShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CShare.swift; sourceTree = "<group>"; };
 		DAA563E11EEC395C00AEE8B9 /* VShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShare.swift; sourceTree = "<group>"; };
+		DAA563E31EEC3A0900AEE8B9 /* VShareBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShareBar.swift; sourceTree = "<group>"; };
 		DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA563E11EEC395C00AEE8B9 /* VShare.swift */,
+				DAA563E31EEC3A0900AEE8B9 /* VShareBar.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				DA3131471EE1EF6800DB2FE4 /* VBorder.swift in Sources */,
 				DAA563DC1EEB6B0B00AEE8B9 /* MHomeShare.swift in Sources */,
 				DA3131311EE1ECDA00DB2FE4 /* CCreate.swift in Sources */,
+				DAA563E41EEC3A0900AEE8B9 /* VShareBar.swift in Sources */,
 				DAEC9D6F1EEB0D5400A16366 /* DPunkNote.xcdatamodeld in Sources */,
 				DAA563E21EEC395C00AEE8B9 /* VShare.swift in Sources */,
 				DAA563D61EEB681500AEE8B9 /* MHomeProtocol.swift in Sources */,
