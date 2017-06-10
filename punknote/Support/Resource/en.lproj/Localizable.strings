@@ -12,6 +12,7 @@
 "VHomeCell_durationSeconds"=" seconds";
 "VShareBar_labelTitle"="Share";
 "VHomeBar_labelTitle"="Punky";
+"VShareCellScaleCell_labelTitle"="x%@";
 
 "MCreateFrame_defaultText"="Text";
 

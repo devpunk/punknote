@@ -78,6 +78,14 @@ class VShareCellScale:VShareCell, UICollectionViewDelegate, UICollectionViewData
         return insets
     }
     
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
+    {
+        let height:CGFloat = collectionView.bounds.maxY
+        let size:CGSize = CGSize(width:kCellWidth, height:height)
+        
+        return size
+    }
+    
     func numberOfSections(in collectionView:UICollectionView) -> Int
     {
         return 1

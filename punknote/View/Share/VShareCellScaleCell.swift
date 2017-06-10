@@ -2,11 +2,27 @@ import UIKit
 
 class VShareCellScaleCell:UICollectionViewCell
 {
+    private weak var labelTitle:UILabel!
+    
     override init(frame:CGRect)
     {
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
+        
+        let labelTitle:UILabel = UILabel()
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.font = UIFont.regular(size:20)
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.backgroundColor = UIColor.clear
+        self.labelTitle = labelTitle
+        
+        addSubview(labelTitle)
+        
+        NSLayoutConstraint.equals(
+            view:labelTitle,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
@@ -18,6 +34,10 @@ class VShareCellScaleCell:UICollectionViewCell
     
     func config(scale:CGFloat)
     {
-        
+        let scaleNumber:NSNumber = scale as NSNumber
+        let stringTitle:String = String(
+            format:NSLocalizedString("VShareCellScaleCell_labelTitle", comment:""),
+            scaleNumber)
+        labelTitle.text = stringTitle
     }
 }
