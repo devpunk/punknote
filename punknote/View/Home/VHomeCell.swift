@@ -19,6 +19,7 @@ class VHomeCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     private let kDurationLeft:CGFloat = 10
     private let kMaxDecimals:Int = 0
     private let kMinIntegers:Int = 1
+    private let kDeselectTime:TimeInterval = 0.2
     
     override init(frame:CGRect)
     {
@@ -231,5 +232,33 @@ class VHomeCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         cell.config(model:item)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
+    {
+        guard
+            
+            let controller:CHome = self.controller,
+            let model:MHomeItem = self.model
+        
+        else
+        {
+            return
+        }
+        
+        collectionView.isUserInteractionEnabled = false
+        let item:MHomeProtocol = modelAtIndex(index:indexPath)
+        item.selected(controller:controller, model:model)
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kDeselectTime)
+        { [weak collectionView] in
+            
+            collectionView?.isUserInteractionEnabled = true
+            collectionView?.selectItem(
+                at:nil,
+                animated:true,
+                scrollPosition:UICollectionViewScrollPosition())
+        }
     }
 }
