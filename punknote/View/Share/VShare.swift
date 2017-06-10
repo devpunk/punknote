@@ -2,7 +2,9 @@ import UIKit
 
 class VShare:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    private weak var viewBar:VShareBar!
     private weak var collectionView:VCollection!
+    private weak var spinner:VSpinner!
     private let kBarHeight:CGFloat = 64
     private let kCollectionBottom:CGFloat = 20
     
@@ -20,6 +22,11 @@ class VShare:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         }
         
         let viewBar:VShareBar = VShareBar(controller:controller)
+        self.viewBar = viewBar
+        
+        let spinner:VSpinner = VSpinner()
+        spinner.stopAnimating()
+        self.spinner = spinner
         
         let collectionView:VCollection = VCollection()
         collectionView.alwaysBounceVertical = true
@@ -39,6 +46,7 @@ class VShare:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColle
                 right:0)
         }
         
+        addSubview(spinner)
         addSubview(collectionView)
         addSubview(viewBar)
         
@@ -55,10 +63,82 @@ class VShare:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         NSLayoutConstraint.equals(
             view:collectionView,
             toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:spinner,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func layoutSubviews()
+    {
+        collectionView.collectionViewLayout.invalidateLayout()
+        super.layoutSubviews()
+    }
+    
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> MShareContentProtocol
+    {
+        let controller:CShare = self.controller as! CShare
+        let item:MShareContentProtocol = controller.model.content[index.item]
+        
+        return item
+    }
+    
+    //MARK: public
+    
+    func startLoading()
+    {
+        collectionView.isHidden = true
+        spinner.startAnimating()
+        viewBar.isUserInteractionEnabled = false
+    }
+    
+    func stopLoading()
+    {
+        collectionView.isHidden = false
+        spinner.stopAnimating()
+        viewBar.isUserInteractionEnabled = true
+    }
+    
+    //MARK: collectionView delegate
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
+    {
+        guard
+        
+            let controller:CShare = self.controller as? CShare
+        
+        else
+        {
+            return 0
+        }
+        
+        let count:Int = controller.model.content.count
+        
+        return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let controller:CShare = self.controller as! CShare
+        let item:MShareContentProtocol = modelAtIndex(index:indexPath)
+        let cell:VShareCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier:
+            item.reusableIdentifier,
+            for:indexPath) as! VShareCell
+        cell.config(controller:controller)
+        
+        return cell
     }
 }
