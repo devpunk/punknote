@@ -15,4 +15,20 @@ class CShare:Controller<VShare>
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func back()
+    {
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        parent.pop(horizontal:ControllerParent.Horizontal.right)
+    }
 }

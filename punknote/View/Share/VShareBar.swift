@@ -6,7 +6,7 @@ class VShareBar:UIView
     private let kBorderHeight:CGFloat = 1
     private let kContentTop:CGFloat = 20
     private let kBackWidth:CGFloat = 100
-    private let kBackInsets:CGFloat = 50
+    private let kBackInsets:CGFloat = 62
     
     init(controller:CShare)
     {
