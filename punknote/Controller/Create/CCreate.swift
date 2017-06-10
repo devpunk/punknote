@@ -8,7 +8,16 @@ class CCreate:Controller<VCreate>
     init(modelHomeItem:MHomeItem?)
     {
         self.modelHomeItem = modelHomeItem
-        model = MCreate()
+        
+        if let modelHomeItem:MHomeItem = modelHomeItem
+        {
+            model = MCreate(modelHomeItem:modelHomeItem)
+        }
+        else
+        {
+            model = MCreate()
+        }
+        
         super.init()
     }
     

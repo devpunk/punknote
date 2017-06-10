@@ -95,13 +95,16 @@ class VCreateCellTimeline:VCreateCell, UICollectionViewDelegate, UICollectionVie
             return
         }
         
-        let selected:Int = controller.model.selectedFrame
-        let indexPath:IndexPath = IndexPath(item:selected, section:0)
-        
-        collectionView.selectItem(
-            at:indexPath,
-            animated:true,
-            scrollPosition:UICollectionViewScrollPosition.centeredHorizontally)
+        if controller.model.frames.count > 0
+        {
+            let selected:Int = controller.model.selectedFrame
+            let indexPath:IndexPath = IndexPath(item:selected, section:0)
+            
+            collectionView.selectItem(
+                at:indexPath,
+                animated:true,
+                scrollPosition:UICollectionViewScrollPosition.centeredHorizontally)
+        }
     }
     
     //MARK: public
