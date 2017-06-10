@@ -56,17 +56,6 @@ class MCreate
         return background
     }
     
-    init(modelHomeItem:MHomeItem)
-    {
-        selectedFrame = 0
-        selectedBackground = Int(modelHomeItem.note.selectedBackground)
-        frames = modelHomeItem.editFrames()
-        content = MCreate.factoryContent()
-        backgrounds = MCreate.factoryBackground()
-        font = MCreateFont()
-        font.selectedFont = Int(modelHomeItem.note.selectedFont)
-    }
-    
     init()
     {
         selectedFrame = 0
@@ -76,6 +65,17 @@ class MCreate
         backgrounds = MCreate.factoryBackground()
         font = MCreateFont()
         addFrame()
+    }
+    
+    init(modelHomeItem:MHomeItem)
+    {
+        selectedFrame = 0
+        selectedBackground = Int(modelHomeItem.note.selectedBackground)
+        frames = modelHomeItem.editFrames()
+        content = MCreate.factoryContent()
+        backgrounds = MCreate.factoryBackground()
+        font = MCreateFont()
+        font.selectedFont = Int(modelHomeItem.note.selectedFont)
     }
     
     private func createFrames(note:DNote)

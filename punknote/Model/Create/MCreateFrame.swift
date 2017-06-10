@@ -13,4 +13,19 @@ class MCreateFrame
         duration = kDefaultDuration
         selected = MCreateSelected()
     }
+    
+    init(noteFrame:DNoteFrame)
+    {
+        if let text:String = noteFrame.text
+        {
+            self.text = text
+        }
+        else
+        {
+            text = NSLocalizedString("MCreateFrame_defaultText", comment:"")
+        }
+        
+        duration = noteFrame.duration
+        selected = MCreateSelected()
+    }
 }

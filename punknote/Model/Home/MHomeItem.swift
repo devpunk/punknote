@@ -45,6 +45,19 @@ class MHomeItem
     {
         var frames:[MCreateFrame] = []
         
+        guard
+        
+            let noteFrames:[DNoteFrame] = note.frames?.array as? [DNoteFrame]
+        
+        else
+        {
+            return frames
+        }
+        
+        for noteFrame:DNoteFrame in noteFrames
+        {
+            
+        }
         
         return frames
     }
