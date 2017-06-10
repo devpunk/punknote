@@ -13,7 +13,7 @@ class VShareBar:UIView
         super.init(frame:CGRect.zero)
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.white
         self.controller = controller
         
         let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.2))
