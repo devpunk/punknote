@@ -5,6 +5,8 @@ class VShareBar:UIView
     private weak var controller:CShare!
     private let kBorderHeight:CGFloat = 1
     private let kContentTop:CGFloat = 20
+    private let kBackWidth:CGFloat = 100
+    private let kBackInsets:CGFloat = 50
     
     init(controller:CShare)
     {
@@ -25,8 +27,31 @@ class VShareBar:UIView
         labelTitle.textColor = UIColor.black
         labelTitle.text = NSLocalizedString("VShareBar_labelTitle", comment:"")
         
+        let buttonBack:UIButton = UIButton()
+        buttonBack.translatesAutoresizingMaskIntoConstraints = false
+        buttonBack.clipsToBounds = true
+        buttonBack.setImage(
+            #imageLiteral(resourceName: "assetGenericBack").withRenderingMode(UIImageRenderingMode.alwaysOriginal),
+            for:UIControlState.normal)
+        buttonBack.setImage(
+            #imageLiteral(resourceName: "assetGenericBack").withRenderingMode(UIImageRenderingMode.alwaysTemplate),
+            for:UIControlState.highlighted)
+        buttonBack.imageView!.clipsToBounds = true
+        buttonBack.imageView!.contentMode = UIViewContentMode.center
+        buttonBack.imageView!.tintColor = UIColor(white:0, alpha:0.2)
+        buttonBack.imageEdgeInsets = UIEdgeInsets(
+            top:0,
+            left:0,
+            bottom:0,
+            right:kBackInsets)
+        buttonBack.addTarget(
+            self,
+            action:#selector(actionBack(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
         addSubview(border)
         addSubview(labelTitle)
+        addSubview(buttonBack)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -48,10 +73,31 @@ class VShareBar:UIView
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
             toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:buttonBack,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:buttonBack,
+            toView:self)
+        NSLayoutConstraint.leftToLeft(
+            view:buttonBack,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:buttonBack,
+            constant:kBackWidth)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: actions
+    
+    func actionBack(sender button:UIButton)
+    {
+        controller.back()
     }
 }
