@@ -2,17 +2,17 @@ import UIKit
 
 class VShareImage:UIView
 {
-    private let kMarginHorizontal:CGFloat = 20
+    private let kMarginHorizontal:CGFloat = 35
     
-    init(modelHomeItem:MHomeItem, noteFrame:DNoteFrame)
+    init(
+        modelHomeItem:MHomeItem,
+        noteFrame:DNoteFrame,
+        scale:CGFloat,
+        frame:CGRect)
     {
-        let width:CGFloat = MShare.width
-        let height:CGFloat = MShare.height
-        let frame:CGRect = CGRect(
-            x:0,
-            y:0,
-            width:width,
-            height:height)
+        let font:UIFont = modelHomeItem.font()
+        let fontSize:CGFloat = font.pointSize
+        let scaledFont:UIFont = font.withSize(fontSize * scale)
         
         super.init(frame:frame)
         clipsToBounds = true
@@ -26,7 +26,7 @@ class VShareImage:UIView
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clear
         label.textColor = UIColor.white
-        label.font = modelHomeItem.font()
+        label.font = scaledFont
         label.text = noteFrame.text
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.center

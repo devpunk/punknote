@@ -144,8 +144,9 @@ class CShare:Controller<VShare>
     
     private func frameToImage(noteFrame:DNoteFrame) -> UIImage?
     {
-        let width:CGFloat = MShare.width
-        let height:CGFloat = MShare.height
+        let scale:CGFloat = model.currentScale()
+        let width:CGFloat = MShare.width * scale
+        let height:CGFloat = MShare.height * scale
         let imageSize:CGSize = CGSize(width:width, height:height)
         let imageFrame:CGRect = CGRect(origin:CGPoint.zero, size:imageSize)
         
@@ -163,11 +164,13 @@ class CShare:Controller<VShare>
         imageFrame:CGRect) -> UIImage?
     {
         let scale:CGFloat = model.currentScale()
-        UIGraphicsBeginImageContextWithOptions(imageSize, false, scale)
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, 1)
         
         let shareImage:VShareImage = VShareImage(
             modelHomeItem:modelHomeItem,
-            noteFrame:noteFrame)
+            noteFrame:noteFrame,
+            scale:scale,
+            frame:imageFrame)
         shareImage.drawHierarchy(in:imageFrame, afterScreenUpdates:true)
         
         guard
