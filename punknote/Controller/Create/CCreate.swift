@@ -3,7 +3,7 @@ import UIKit
 class CCreate:Controller<VCreate>
 {
     let model:MCreate
-    private weak var modelHomeItem:MHomeItem?
+    private(set) weak var modelHomeItem:MHomeItem?
     
     init(modelHomeItem:MHomeItem?)
     {

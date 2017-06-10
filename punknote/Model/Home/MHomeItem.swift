@@ -40,4 +40,12 @@ class MHomeItem
         
         return currentFont
     }
+    
+    func editFrames() -> [MCreateFrame]
+    {
+        var frames:[MCreateFrame] = []
+        
+        
+        return frames
+    }
 }

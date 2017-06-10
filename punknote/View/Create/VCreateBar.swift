@@ -26,7 +26,15 @@ class VCreateBar:UIView
         labelTitle.font = UIFont.bold(size:15)
         labelTitle.textColor = UIColor.black
         labelTitle.isUserInteractionEnabled = false
-        labelTitle.text = NSLocalizedString("VCreateBar_labelTitle", comment:"")
+        
+        if let _:MHomeItem = controller.modelHomeItem
+        {
+            labelTitle.text = NSLocalizedString("VCreateBar_labelTitleEdit", comment:"")
+        }
+        else
+        {
+            labelTitle.text = NSLocalizedString("VCreateBar_labelTitle", comment:"")
+        }
         
         let buttonCancel:UIButton = UIButton()
         buttonCancel.translatesAutoresizingMaskIntoConstraints = false
