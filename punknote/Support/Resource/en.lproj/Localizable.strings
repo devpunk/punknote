@@ -14,6 +14,7 @@
 "VHomeBar_labelTitle"="Punky";
 "VShareCellScaleCell_labelTitle"="x%@";
 "VShareCellScaleCell_labelDescr"="%@x%@";
+"VShareCellGif_labelTitle"="Animated GIF";
 
 "MCreateFrame_defaultText"="Text";
 

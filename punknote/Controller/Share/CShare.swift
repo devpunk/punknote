@@ -33,4 +33,14 @@ class CShare:Controller<VShare>
         
         parent.pop(horizontal:ControllerParent.Horizontal.right)
     }
+    
+    func shareGif()
+    {
+        
+    }
+    
+    func sharePng()
+    {
+        
+    }
 }

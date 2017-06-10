@@ -2,7 +2,7 @@ import UIKit
 
 class MShareContentPng:MShareContentProtocol
 {
-    private let kCellHeight:CGFloat = 60
+    private let kCellHeight:CGFloat = 70
     
     var cellHeight:CGFloat
     {
