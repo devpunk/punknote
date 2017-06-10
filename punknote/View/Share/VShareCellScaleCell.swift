@@ -30,6 +30,36 @@ class VShareCellScaleCell:UICollectionViewCell
         return nil
     }
     
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    //MARK: private
+    
+    private func hover()
+    {
+        if isSelected || isHighlighted
+        {
+            labelTitle.textColor = UIColor.white
+        }
+        else
+        {
+            labelTitle.textColor = UIColor(white:0.5, alpha:1)
+        }
+    }
+    
     //MARK: public
     
     func config(scale:CGFloat)
@@ -39,5 +69,7 @@ class VShareCellScaleCell:UICollectionViewCell
             format:NSLocalizedString("VShareCellScaleCell_labelTitle", comment:""),
             scaleNumber)
         labelTitle.text = stringTitle
+        
+        hover()
     }
 }

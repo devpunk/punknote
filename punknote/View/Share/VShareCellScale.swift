@@ -49,6 +49,7 @@ class VShareCellScale:VShareCell, UICollectionViewDelegate, UICollectionViewData
     {
         super.config(controller:controller)
         collectionView.reloadData()
+        selectCurrent()
     }
     
     //MARK: private
@@ -58,6 +59,24 @@ class VShareCellScale:VShareCell, UICollectionViewDelegate, UICollectionViewData
         let item:CGFloat = controller!.model.scales[index.item]
         
         return item
+    }
+    
+    private func selectCurrent()
+    {
+        guard
+        
+            let selected:Int = controller?.model.selectedScale
+        
+        else
+        {
+            return
+        }
+        
+        let index:IndexPath = IndexPath(item:selected, section:0)
+        collectionView.selectItem(
+            at:index,
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition())
     }
     
     //MARK: collectionView delegate
