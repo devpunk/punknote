@@ -19,6 +19,8 @@ class VShareImage:UIView
         backgroundColor = UIColor.black
         isUserInteractionEnabled = false
         
+        let background:UIView = modelHomeItem.background.view()
+        
         let label:UILabel = UILabel()
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,10 +31,20 @@ class VShareImage:UIView
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.center
         
+        addSubview(background)
         addSubview(label)
         
+        NSLayoutConstraint.equals(
+            view:background,
+            toView:self)
+        
         NSLayoutConstraint.equalsVertical(
-            view:label, toView: <#T##UIView#>)
+            view:label,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:label,
+            toView:self,
+            margin:kMarginHorizontal)
     }
     
     required init?(coder:NSCoder)

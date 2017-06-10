@@ -9,10 +9,6 @@ class CShare:Controller<VShare>
     {
         self.modelHomeItem = modelHomeItem
         model = MShare()
-        drawingOptions = NSStringDrawingOptions(
-            [NSStringDrawingOptions.usesLineFragmentOrigin,
-             NSStringDrawingOptions.usesFontLeading])
-        marginHorizontal2 = kMarginHorizontal + kMarginHorizontal
         
         super.init()
     }
@@ -38,9 +34,7 @@ class CShare:Controller<VShare>
         view.startLoading()
     }
     
-    private func frameToImage(
-        background:UIView,
-        attributedString:NSAttributedString) -> UIImage?
+    private func frameToImage(noteFrame:DNoteFrame) -> UIImage?
     {
         let width:CGFloat = MShare.width
         let height:CGFloat = MShare.height
@@ -75,11 +69,9 @@ class CShare:Controller<VShare>
     }
     
     private func imageWidthData(
-        background:UIView,
-        attributedString:NSAttributedString,
+        noteFrame:DNoteFrame
         imageSize:CGSize,
-        imageFrame:CGRect,
-        textFrame:CGRect) -> UIImage?
+        imageFrame:CGRect) -> UIImage?
     {
         let scale:CGFloat = model.currentScale()
         UIGraphicsBeginImageContextWithOptions(imageSize, true, scale)
@@ -93,13 +85,15 @@ class CShare:Controller<VShare>
             UIGraphicsEndImageContext()
             
             let error:String = NSLocalizedString("CShare_errorContext", comment:"")
-            errorSharing(error:error)
+            VAlert.messageOrange(message:error)
             
             return nil
         }
         
-        background.drawHierarchy(in:imageFrame, afterScreenUpdates:true)
-        attributedString.draw(in:textFrame)
+        let shareImage:VShareImage = VShareImage(
+            modelHomeItem:modelHomeItem,
+            noteFrame:noteFrame)
+        shareImage.drawHierarchy(in:imageFrame, afterScreenUpdates:true)
         
         guard
             
@@ -110,7 +104,7 @@ class CShare:Controller<VShare>
             UIGraphicsEndImageContext()
             
             let error:String = NSLocalizedString("CShare_errorImage", comment:"")
-            errorSharing(error:error)
+            VAlert.messageOrange(message:error)
             
             return nil
         }
@@ -118,61 +112,6 @@ class CShare:Controller<VShare>
         UIGraphicsEndImageContext()
         
         return image
-    }
-    
-    private func asyncShareGif()
-    {
-        
-    }
-    
-    private func asyncSharePng(background:UIView)
-    {
-        guard
-        
-            let frames:[DNoteFrame] = modelHomeItem.note.frames?.array as? [DNoteFrame],
-            let firstFrameString:String = frames.first?.text
-        
-        else
-        {
-            finishSharing()
-            
-            return
-        }
-        
-        
-        
-        let textAttributes:[String:AnyObject] = [
-            NSFontAttributeName:modelHomeItem.font(),
-            NSForegroundColorAttributeName:UIColor.white]
-        
-        let attributedString:NSAttributedString = NSAttributedString(
-            string:firstFrameString,
-            attributes:textAttributes)
-        
-        guard
-        
-            let image:UIImage = frameToImage(
-                background:background,
-                attributedString:attributedString)
-        
-        else
-        {
-            finishSharing()
-            
-            return
-        }
-        
-        successShare(image:image)
-    }
-    
-    private func successShare(image:UIImage)
-    {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.export(image:image)
-            self?.finishSharing()
-        }
     }
     
     private func export(image:UIImage)
@@ -191,27 +130,18 @@ class CShare:Controller<VShare>
         present(activity, animated:true, completion:nil)
     }
     
-    private func errorSharing(error:String)
-    {
-        VAlert.messageOrange(message:error)
-    }
-    
     private func finishSharing()
     {
-        DispatchQueue.main.async
-        { [weak self] in
+        guard
             
-            guard
-                
-                let view:VShare = self?.view as? VShare
-                
-            else
-            {
-                return
-            }
+            let view:VShare = view as? VShare
             
-            view.stopLoading()
+        else
+        {
+            return
         }
+        
+        view.stopLoading()
     }
     
     //MARK: public
@@ -233,25 +163,36 @@ class CShare:Controller<VShare>
     func shareGif()
     {
         startLoading()
-        
-        DispatchQueue.main.async
-        { [weak self] in
-
-            self?.asyncShareGif()
-        }
     }
     
     func sharePng()
     {
         startLoading()
         
-        let background:UIView = modelHomeItem.background.view()
-        background.translatesAutoresizingMaskIntoConstraints = true
-        
-        DispatchQueue.main.async
-        { [weak self] in
+        guard
             
-            self?.asyncSharePng(background:background)
+            let frames:[DNoteFrame] = modelHomeItem.note.frames?.array as? [DNoteFrame],
+            let firstFrame:DNoteFrame = frames.first
+            
+        else
+        {
+            finishSharing()
+            
+            return
         }
+        
+        guard
+            
+            let image:UIImage = frameToImage(noteFrame:firstFrame)
+            
+        else
+        {
+            finishSharing()
+            
+            return
+        }
+        
+        export(image:image)
+        finishSharing()
     }
 }
