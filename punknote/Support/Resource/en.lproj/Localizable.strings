@@ -8,9 +8,10 @@
 "VCreateCellTimelineCell_secondsSuffix"=" s";
 "VCreateCellFontNameCell_labelType"="Aa";
 "VHomeBar_buttonNew"="New";
-"VHomeFooter_label"="You have no notes";
+"VHomeFooter_label"="Start by creating a new note";
 "VHomeCell_durationSeconds"=" seconds";
 "VShareBar_labelTitle"="Share";
+"VHomeBar_labelTitle"="Punky";
 
 "MCreateFrame_defaultText"="Text";
 

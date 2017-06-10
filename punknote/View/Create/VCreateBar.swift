@@ -6,7 +6,8 @@ class VCreateBar:UIView
     private let kBorderHeight:CGFloat = 1
     private let kContentTop:CGFloat = 20
     private let kCancelWidth:CGFloat = 90
-    private let kDoneWidth:CGFloat = 80
+    private let kDoneWidth:CGFloat = 90
+    private let kButtonInsets:CGFloat = 25
     
     init(controller:CCreate)
     {
@@ -22,7 +23,7 @@ class VCreateBar:UIView
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.regular(size:15)
+        labelTitle.font = UIFont.bold(size:15)
         labelTitle.textColor = UIColor.black
         labelTitle.isUserInteractionEnabled = false
         labelTitle.text = NSLocalizedString("VCreateBar_labelTitle", comment:"")
@@ -33,12 +34,17 @@ class VCreateBar:UIView
             NSLocalizedString("VCreateBar_buttonCancel", comment:""),
             for:UIControlState.normal)
         buttonCancel.setTitleColor(
-            UIColor.punkOrange,
+            UIColor.black,
             for:UIControlState.normal)
         buttonCancel.setTitleColor(
-            UIColor.black,
+            UIColor(white:0, alpha:0.2),
             for:UIControlState.highlighted)
-        buttonCancel.titleLabel!.font = UIFont.bold(size:15)
+        buttonCancel.titleLabel!.font = UIFont.regular(size:15)
+        buttonCancel.titleEdgeInsets = UIEdgeInsets(
+            top:0,
+            left:0,
+            bottom:0,
+            right:kButtonInsets)
         buttonCancel.addTarget(
             self,
             action:#selector(actionCancel(sender:)),
@@ -50,12 +56,17 @@ class VCreateBar:UIView
             NSLocalizedString("VCreateBar_buttonDone", comment:""),
             for:UIControlState.normal)
         buttonDone.setTitleColor(
-            UIColor.punkPurple,
+            UIColor.black,
             for:UIControlState.normal)
         buttonDone.setTitleColor(
-            UIColor.black,
+            UIColor(white:0, alpha:0.2),
             for:UIControlState.highlighted)
-        buttonDone.titleLabel!.font = UIFont.bold(size:15)
+        buttonDone.titleLabel!.font = UIFont.regular(size:15)
+        buttonDone.titleEdgeInsets = UIEdgeInsets(
+            top:0,
+            left:kButtonInsets,
+            bottom:0,
+            right:0)
         buttonDone.addTarget(
             self,
             action:#selector(actionDone(sender:)),

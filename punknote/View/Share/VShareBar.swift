@@ -21,8 +21,8 @@ class VShareBar:UIView
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.bold(size:16)
-        labelTitle.textColor = UIColor(white:0.4, alpha:1)
+        labelTitle.font = UIFont.bold(size:15)
+        labelTitle.textColor = UIColor.black
         labelTitle.text = NSLocalizedString("VShareBar_labelTitle", comment:"")
         
         addSubview(border)

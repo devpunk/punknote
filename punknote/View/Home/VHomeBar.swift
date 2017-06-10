@@ -3,13 +3,10 @@ import UIKit
 class VHomeBar:UIView
 {
     private weak var controller:CHome!
-    private let kIconTop:CGFloat = 20
+    private let kContentTop:CGFloat = 20
     private let kBorderHeight:CGFloat = 1
-    private let kCornerRadius:CGFloat = 5
-    private let kNewWidth:CGFloat = 60
-    private let kNewHeight:CGFloat = 26
-    private let kNewRight:CGFloat = -10
-    private let kNewTop:CGFloat = 29
+    private let kNewWidth:CGFloat = 90
+    private let kButtonInsets:CGFloat = 30
     
     init(controller:CHome)
     {
@@ -22,35 +19,41 @@ class VHomeBar:UIView
         
         let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.2))
         
-        let imageIcon:UIImageView = UIImageView()
-        imageIcon.isUserInteractionEnabled = false
-        imageIcon.translatesAutoresizingMaskIntoConstraints = false
-        imageIcon.contentMode = UIViewContentMode.center
-        imageIcon.clipsToBounds = true
-        imageIcon.image = #imageLiteral(resourceName: "assetGenericSmallIcon")
+        let labelTitle:UILabel = UILabel()
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.font = UIFont.bold(size:15)
+        labelTitle.textColor = UIColor.black
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.backgroundColor = UIColor.clear
+        labelTitle.text = NSLocalizedString("VHomeBar_labelTitle", comment:"")
         
         let buttonNew:UIButton = UIButton()
         buttonNew.translatesAutoresizingMaskIntoConstraints = false
         buttonNew.clipsToBounds = true
-        buttonNew.backgroundColor = UIColor.punkPurple
-        buttonNew.layer.cornerRadius = kCornerRadius
+        buttonNew.backgroundColor = UIColor.clear
         buttonNew.setTitle(
             NSLocalizedString("VHomeBar_buttonNew", comment:""),
             for:UIControlState.normal)
         buttonNew.setTitleColor(
-            UIColor.white,
+            UIColor.black,
             for:UIControlState.normal)
         buttonNew.setTitleColor(
-            UIColor(white:1, alpha:0.2),
+            UIColor(white:0, alpha:0.2),
             for:UIControlState.highlighted)
-        buttonNew.titleLabel!.font = UIFont.bold(size:13)
+        buttonNew.titleLabel!.font = UIFont.regular(size:15)
+        buttonNew.titleEdgeInsets = UIEdgeInsets(
+            top:0,
+            left:kButtonInsets,
+            bottom:0,
+            right:0)
         buttonNew.addTarget(
             self,
             action:#selector(actionNew(sender:)),
             for:UIControlEvents.touchUpInside)
         
         addSubview(blur)
-        addSubview(imageIcon)
+        addSubview(labelTitle)
         addSubview(border)
         addSubview(buttonNew)
         
@@ -59,14 +62,14 @@ class VHomeBar:UIView
             toView:self)
         
         NSLayoutConstraint.topToTop(
-            view:imageIcon,
+            view:labelTitle,
             toView:self,
-            constant:kIconTop)
+            constant:kContentTop)
         NSLayoutConstraint.bottomToBottom(
-            view:imageIcon,
+            view:labelTitle,
             toView:self)
         NSLayoutConstraint.equalsHorizontal(
-            view:imageIcon,
+            view:labelTitle,
             toView:self)
         
         NSLayoutConstraint.bottomToBottom(
@@ -82,14 +85,13 @@ class VHomeBar:UIView
         NSLayoutConstraint.topToTop(
             view:buttonNew,
             toView:self,
-            constant:kNewTop)
-        NSLayoutConstraint.height(
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
             view:buttonNew,
-            constant:kNewHeight)
+            toView:self)
         NSLayoutConstraint.rightToRight(
             view:buttonNew,
-            toView:self,
-            constant:kNewRight)
+            toView:self)
         NSLayoutConstraint.width(
             view:buttonNew,
             constant:kNewWidth)
