@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MCreate
 {
@@ -76,6 +76,7 @@ class MCreate
         backgrounds = MCreate.factoryBackground()
         font = MCreateFont()
         font.selectedFont = Int(modelHomeItem.note.selectedFont)
+        font.fontSize = CGFloat(modelHomeItem.note.fontSize)
     }
     
     private func createFrames(note:DNote)
@@ -116,6 +117,42 @@ class MCreate
         { [weak self] in
             
             self?.controller?.noteSaved()
+        }
+    }
+    
+    private func deletePreviousFrames(note:DNote)
+    {
+        guard
+        
+            let countFrames:Int = note.frames?.count
+        
+        else
+        {
+            return
+        }
+        
+        if countFrames > 0
+        {
+            guard
+            
+                let noteFrame:DNoteFrame = note.frames?.lastObject as? DNoteFrame
+            
+            else
+            {
+                return
+            }
+            
+            note.removeFromFrames(noteFrame)
+            
+            DManager.sharedInstance?.delete(data:noteFrame)
+            { [weak self] in
+                
+                self?.deletePreviousFrames(note:note)
+            }
+        }
+        else
+        {
+            createFrames(note:note)
         }
     }
     
@@ -176,17 +213,9 @@ class MCreate
     func saveEdition(controller:CCreate, note:DNote)
     {
         self.controller = controller
-        
-        if let countFrames:Int = note.frames?.count
-        {
-            let range:NSRange = NSMakeRange(0, countFrames)
-            let indexSet:NSIndexSet = NSIndexSet(indexesIn:range)
-            note.removeFromFrames(at:indexSet)
-        }
-        
         note.fontSize = Float(font.fontSize)
         note.selectedFont = Int16(font.selectedFont)
         note.selectedBackground = Int16(selectedBackground)
-        createFrames(note:note)
+        deletePreviousFrames(note:note)
     }
 }

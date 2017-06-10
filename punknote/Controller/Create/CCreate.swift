@@ -46,7 +46,14 @@ class CCreate:Controller<VCreate>
     
     private func saveNote()
     {
-        model.save(controller:self)
+        if let note:DNote = modelHomeItem?.note
+        {
+            model.saveEdition(controller:self, note:note)
+        }
+        else
+        {
+            model.save(controller:self)
+        }
     }
     
     //MARK: public
