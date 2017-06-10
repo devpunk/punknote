@@ -2,6 +2,8 @@ import UIKit
 
 class VShareCell:UICollectionViewCell
 {
+    private(set) weak var controller:CShare?
+    
     override init(frame:CGRect)
     {
         super.init(frame:CGRect.zero)
@@ -18,5 +20,6 @@ class VShareCell:UICollectionViewCell
     
     func config(controller:CShare)
     {
+        self.controller = controller
     }
 }
