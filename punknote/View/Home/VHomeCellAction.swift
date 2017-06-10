@@ -14,7 +14,7 @@ class VHomeCellAction:UICollectionViewCell
     
     //MARK: public
     
-    func config()
+    func config(model:MHomeProtocol)
     {
         
     }

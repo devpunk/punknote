@@ -177,14 +177,15 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         return footer
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
+        let controller:CHome = self.controller as! CHome
         let item:MHomeItem = modelAtIndex(index:indexPath)
         let cell:VHomeCell = collectionView.dequeueReusableCell(
             withReuseIdentifier:
             VHomeCell.reusableIdentifier,
             for:indexPath) as! VHomeCell
-        cell.config(model:item)
+        cell.config(controller:controller, model:item)
         
         return cell
     }

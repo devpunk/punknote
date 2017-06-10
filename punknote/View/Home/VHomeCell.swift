@@ -1,12 +1,15 @@
 import UIKit
 
-class VHomeCell:UICollectionViewCell
+class VHomeCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    private weak var controller:CHome?
     private weak var model:MHomeItem?
     private weak var viewBackground:UIView?
+    private weak var collectionView:VCollection!
     private weak var labelText:UILabel!
     private weak var labelDuration:UILabel!
     private let numberFormatter:NumberFormatter
+    private let kActionsHeight:CGFloat = 50
     private let kBackgroundHeight:CGFloat = 250
     private let kBorderHeight:CGFloat = 1
     private let kTextMarginVertical:CGFloat = 5
@@ -49,10 +52,15 @@ class VHomeCell:UICollectionViewCell
         labelDuration.textColor = UIColor.black
         self.labelDuration = labelDuration
         
+        let collectionView:VCollection = VCollection()
+        collectionView.backgroundColor = UIColor.red
+        self.collectionView = collectionView
+        
         addSubview(borderTop)
         addSubview(borderBottom)
         addSubview(labelText)
         addSubview(labelDuration)
+        addSubview(collectionView)
         
         NSLayoutConstraint.topToTop(
             view:borderTop,
@@ -101,6 +109,16 @@ class VHomeCell:UICollectionViewCell
         NSLayoutConstraint.width(
             view:labelDuration,
             constant:kDurationWidth)
+        
+        NSLayoutConstraint.topToBottom(
+            view:collectionView,
+            toView:borderBottom)
+        NSLayoutConstraint.height(
+            view:collectionView,
+            constant:kActionsHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:collectionView,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
@@ -152,15 +170,56 @@ class VHomeCell:UICollectionViewCell
         labelDuration.text = durationString
     }
     
+    private func modelAtIndex(index:IndexPath) -> MHomeProtocol
+    {
+        let item:MHomeProtocol = controller!.model.actions[index.item]
+        
+        return item
+    }
+    
     //MARK: public
     
-    func config(model:MHomeItem)
+    func config(controller:CHome, model:MHomeItem)
     {
+        self.controller = controller
         self.model = model
         
         labelText.font = model.font()
         addBackground(model:model)
         addFirstFrameText(model:model)
         addDuration(model:model)
+    }
+    
+    //MARK: collectionView delegate
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        guard
+        
+            let count:Int = controller?.model.actions.count
+        
+        else
+        {
+            return 0
+        }
+        
+        return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let item:MHomeProtocol = modelAtIndex(index:indexPath)
+        let cell:VHomeCellAction = collectionView.dequeueReusableCell(
+            withReuseIdentifier:
+            VHomeCellAction.reusableIdentifier,
+            for:indexPath) as! VHomeCellAction
+        cell.config(model:item)
+        
+        return cell
     }
 }
