@@ -3,7 +3,7 @@ import UIKit
 class VShareCellScale:VShareCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
-    private let kBottom:CGFloat = -20
+    private let kBottom:CGFloat = -40
     private let kCellWidth:CGFloat = 80
     
     override init(frame:CGRect)

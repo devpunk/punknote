@@ -2,7 +2,8 @@ import UIKit
 
 class VShareCellGif:VShareCell
 {
-    private let kShareWidth:CGFloat = 70
+    private let kShareWidth:CGFloat = 75
+    private let kShareInsets:CGFloat = 6
     private let kTitleWidth:CGFloat = 300
     
     override init(frame:CGRect)
@@ -21,6 +22,11 @@ class VShareCellGif:VShareCell
         buttonShare.imageView!.clipsToBounds = true
         buttonShare.imageView!.contentMode = UIViewContentMode.center
         buttonShare.imageView!.tintColor = UIColor.punkOrange
+        buttonShare.imageEdgeInsets = UIEdgeInsets(
+            top:0,
+            left:0,
+            bottom:kShareInsets,
+            right:0)
         buttonShare.addTarget(
             self,
             action:#selector(actionShare(sender:)),

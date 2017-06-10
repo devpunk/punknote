@@ -15,6 +15,7 @@
 "VShareCellScaleCell_labelTitle"="x%@";
 "VShareCellScaleCell_labelDescr"="%@x%@";
 "VShareCellGif_labelTitle"="Animated GIF";
+"VShareCellPng_labelTitle"="First image only";
 
 "MCreateFrame_defaultText"="Text";
 
