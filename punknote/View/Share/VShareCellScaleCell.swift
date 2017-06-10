@@ -1,9 +1,23 @@
-//
-//  VShareCellScaleCell.swift
-//  punknote
-//
-//  Created by zero on 6/10/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class VShareCellScaleCell:UICollectionViewCell
+{
+    override init(frame:CGRect)
+    {
+        super.init(frame:frame)
+        clipsToBounds = true
+        backgroundColor = UIColor.clear
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
+    //MARK: public
+    
+    func config(scale:CGFloat)
+    {
+        
+    }
+}
