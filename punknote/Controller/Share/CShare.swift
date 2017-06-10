@@ -4,9 +4,6 @@ class CShare:Controller<VShare>
 {
     let model:MShare
     let modelHomeItem:MHomeItem
-    private let drawingOptions:NSStringDrawingOptions
-    private let marginHorizontal2:CGFloat
-    private let kMarginHorizontal:CGFloat = 20
     
     init(modelHomeItem:MHomeItem)
     {
@@ -42,13 +39,13 @@ class CShare:Controller<VShare>
     }
     
     private func frameToImage(
+        background:UIView,
         attributedString:NSAttributedString) -> UIImage?
     {
-        let scale:CGFloat = model.currentScale()
         let width:CGFloat = MShare.width
         let height:CGFloat = MShare.height
-        let size:CGSize = CGSize(width:width, height:height)
-        let imageFrame:CGRect = CGRect(origin:CGPoint.zero, size:size)
+        let imageSize:CGSize = CGSize(width:width, height:height)
+        let imageFrame:CGRect = CGRect(origin:CGPoint.zero, size:imageSize)
         let textUsableWidth:CGFloat = width - marginHorizontal2
         let textMaxSize:CGSize = CGSize(width:textUsableWidth, height:height)
         let textRawFrame:CGRect = attributedString.boundingRect(
@@ -67,7 +64,25 @@ class CShare:Controller<VShare>
             width:textWidth,
             height:textHeight)
         
-        UIGraphicsBeginImageContextWithOptions(size, true, scale)
+        let image:UIImage? = imageWidthData(
+            background:background,
+            attributedString:attributedString,
+            imageSize:imageSize,
+            imageFrame:imageFrame,
+            textFrame:textFrame)
+        
+        return image
+    }
+    
+    private func imageWidthData(
+        background:UIView,
+        attributedString:NSAttributedString,
+        imageSize:CGSize,
+        imageFrame:CGRect,
+        textFrame:CGRect) -> UIImage?
+    {
+        let scale:CGFloat = model.currentScale()
+        UIGraphicsBeginImageContextWithOptions(imageSize, true, scale)
         
         guard
             
@@ -83,8 +98,7 @@ class CShare:Controller<VShare>
             return nil
         }
         
-        context.setFillColor(UIColor.white.cgColor)
-        context.fill(imageFrame)
+        background.drawHierarchy(in:imageFrame, afterScreenUpdates:true)
         attributedString.draw(in:textFrame)
         
         guard
@@ -111,7 +125,7 @@ class CShare:Controller<VShare>
         
     }
     
-    private func asyncSharePng()
+    private func asyncSharePng(background:UIView)
     {
         guard
         
@@ -125,9 +139,11 @@ class CShare:Controller<VShare>
             return
         }
         
+        
+        
         let textAttributes:[String:AnyObject] = [
             NSFontAttributeName:modelHomeItem.font(),
-            NSForegroundColorAttributeName:UIColor.black]
+            NSForegroundColorAttributeName:UIColor.white]
         
         let attributedString:NSAttributedString = NSAttributedString(
             string:firstFrameString,
@@ -135,7 +151,9 @@ class CShare:Controller<VShare>
         
         guard
         
-            let image:UIImage = frameToImage(attributedString:attributedString)
+            let image:UIImage = frameToImage(
+                background:background,
+                attributedString:attributedString)
         
         else
         {
@@ -216,7 +234,7 @@ class CShare:Controller<VShare>
     {
         startLoading()
         
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.main.async
         { [weak self] in
 
             self?.asyncShareGif()
@@ -227,10 +245,13 @@ class CShare:Controller<VShare>
     {
         startLoading()
         
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        let background:UIView = modelHomeItem.background.view()
+        background.translatesAutoresizingMaskIntoConstraints = true
+        
+        DispatchQueue.main.async
         { [weak self] in
             
-            self?.asyncSharePng()
+            self?.asyncSharePng(background:background)
         }
     }
 }

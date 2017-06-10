@@ -89,6 +89,7 @@
 		DA8A717C1EEC4C1900215DF6 /* VShareCellScaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A717B1EEC4C1900215DF6 /* VShareCellScaleCell.swift */; };
 		DA8A717E1EEC4C2200215DF6 /* VShareCellGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A717D1EEC4C2200215DF6 /* VShareCellGif.swift */; };
 		DA8A71801EEC4C2A00215DF6 /* VShareCellPng.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A717F1EEC4C2A00215DF6 /* VShareCellPng.swift */; };
+		DA8A718C1EEC703C00215DF6 /* VShareImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A718B1EEC703C00215DF6 /* VShareImage.swift */; };
 		DAA563D41EEB676800AEE8B9 /* VHomeCellAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D31EEB676800AEE8B9 /* VHomeCellAction.swift */; };
 		DAA563D61EEB681500AEE8B9 /* MHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D51EEB681500AEE8B9 /* MHomeProtocol.swift */; };
 		DAA563D81EEB6AF500AEE8B9 /* MHomeDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */; };
@@ -196,6 +197,7 @@
 		DA8A717B1EEC4C1900215DF6 /* VShareCellScaleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShareCellScaleCell.swift; sourceTree = "<group>"; };
 		DA8A717D1EEC4C2200215DF6 /* VShareCellGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShareCellGif.swift; sourceTree = "<group>"; };
 		DA8A717F1EEC4C2A00215DF6 /* VShareCellPng.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShareCellPng.swift; sourceTree = "<group>"; };
+		DA8A718B1EEC703C00215DF6 /* VShareImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShareImage.swift; sourceTree = "<group>"; };
 		DAA563D31EEB676800AEE8B9 /* VHomeCellAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCellAction.swift; sourceTree = "<group>"; };
 		DAA563D51EEB681500AEE8B9 /* MHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeProtocol.swift; sourceTree = "<group>"; };
 		DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDelete.swift; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				DA8A717B1EEC4C1900215DF6 /* VShareCellScaleCell.swift */,
 				DA8A717D1EEC4C2200215DF6 /* VShareCellGif.swift */,
 				DA8A717F1EEC4C2A00215DF6 /* VShareCellPng.swift */,
+				DA8A718B1EEC703C00215DF6 /* VShareImage.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				DAEC9D731EEB139900A16366 /* DSettingsExtension.swift in Sources */,
 				DA3D97B71EE5A87200E8EB33 /* VCreateCellTimeline.swift in Sources */,
 				DA31305E1EE1A40000DB2FE4 /* ExtensionNSLayoutConstraint.swift in Sources */,
+				DA8A718C1EEC703C00215DF6 /* VShareImage.swift in Sources */,
 				DA54E7451EEA2900008302E8 /* VSlider.swift in Sources */,
 				DA33DFFE1EE8A9B90096FF9D /* MCreateBackgroundShades.swift in Sources */,
 				DA33DFFA1EE8A63E0096FF9D /* MCreateBackgroundSweetDreams.swift in Sources */,
