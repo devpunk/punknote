@@ -13,4 +13,10 @@ class VShareCell:UICollectionViewCell
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func config(controller:CShare)
+    {
+    }
 }

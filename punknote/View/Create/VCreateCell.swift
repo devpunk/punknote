@@ -18,7 +18,7 @@ class VCreateCell:UICollectionViewCell
     
     //MARK: public
     
-    func config(controller:CCreate, model:MCreateContentProtocol)
+    func config(controller:CCreate)
     {
         self.controller = controller
     }

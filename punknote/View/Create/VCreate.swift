@@ -158,7 +158,7 @@ class VCreate:View, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             withReuseIdentifier:
             item.reusableIdentifier,
             for:indexPath) as! VCreateCell
-        cell.config(controller:controller, model:item)
+        cell.config(controller:controller)
         
         return cell
     }

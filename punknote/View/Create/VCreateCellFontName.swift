@@ -81,9 +81,9 @@ class VCreateCellFontName:VCreateCell, UICollectionViewDelegate, UICollectionVie
         return nil
     }
     
-    override func config(controller:CCreate, model:MCreateContentProtocol)
+    override func config(controller:CCreate)
     {
-        super.config(controller:controller, model:model)
+        super.config(controller:controller)
         collectionView.reloadData()
         selectCurrentItem()
     }
