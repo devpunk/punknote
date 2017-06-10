@@ -16,7 +16,7 @@ class MShareContentGif:MShareContentProtocol
     {
         get
         {
-            return VCreateCellTimeline.reusableIdentifier
+            return VShareCellGif.reusableIdentifier
         }
     }
 }

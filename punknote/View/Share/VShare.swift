@@ -1,8 +1,10 @@
 import UIKit
 
-class VShare:View
+class VShare:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    private weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 64
+    private let kCollectionBottom:CGFloat = 20
     
     required init(controller:UIViewController)
     {
@@ -19,6 +21,25 @@ class VShare:View
         
         let viewBar:VShareBar = VShareBar(controller:controller)
         
+        let collectionView:VCollection = VCollection()
+        collectionView.alwaysBounceVertical = true
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.registerCell(cell:VShareCellScale.self)
+        collectionView.registerCell(cell:VShareCellGif.self)
+        collectionView.registerCell(cell:VShareCellPng.self)
+        self.collectionView = collectionView
+        
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.sectionInset = UIEdgeInsets(
+                top:kBarHeight,
+                left:0,
+                bottom:kCollectionBottom,
+                right:0)
+        }
+        
+        addSubview(collectionView)
         addSubview(viewBar)
         
         NSLayoutConstraint.topToTop(
@@ -29,6 +50,10 @@ class VShare:View
             constant:kBarHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:collectionView,
             toView:self)
     }
     

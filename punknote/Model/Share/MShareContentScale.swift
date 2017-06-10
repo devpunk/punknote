@@ -16,7 +16,7 @@ class MShareContentScale:MShareContentProtocol
     {
         get
         {
-            return VCreateCellTimeline.reusableIdentifier
+            return VShareCellScale.reusableIdentifier
         }
     }
 }

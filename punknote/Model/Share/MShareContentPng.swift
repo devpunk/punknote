@@ -16,7 +16,7 @@ class MShareContentPng:MShareContentProtocol
     {
         get
         {
-            return VCreateCellTimeline.reusableIdentifier
+            return VShareCellPng.reusableIdentifier
         }
     }
 }
