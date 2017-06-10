@@ -3,9 +3,11 @@ import UIKit
 class CCreate:Controller<VCreate>
 {
     let model:MCreate
+    private weak var modelHomeItem:MHomeItem?
     
-    override init()
+    init(modelHomeItem:MHomeItem?)
     {
+        self.modelHomeItem = modelHomeItem
         model = MCreate()
         super.init()
     }

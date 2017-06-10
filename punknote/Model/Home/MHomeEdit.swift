@@ -12,6 +12,6 @@ class MHomeEdit:MHomeProtocol
     
     func selected(controller:CHome, model:MHomeItem)
     {
-        
+        controller.editNote(item:model)
     }
 }

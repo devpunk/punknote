@@ -2,7 +2,7 @@ import UIKit
 
 class VShareImage:UIView
 {
-    private let kMarginHorizontal:CGFloat = 30
+    private let kMarginHorizontal:CGFloat = 40
     
     init(
         modelHomeItem:MHomeItem,

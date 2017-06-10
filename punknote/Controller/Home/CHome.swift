@@ -37,19 +37,7 @@ class CHome:Controller<VHome>
     
     func newNote()
     {
-        guard
-            
-            let parent:ControllerParent = self.parent as? ControllerParent
-        
-        else
-        {
-            return
-        }
-        
-        let controller:CCreate = CCreate()
-        parent.push(
-            controller:controller,
-            horizontal:ControllerParent.Horizontal.right)
+        editNote(item:nil)
     }
     
     func notesLoaded()
@@ -106,7 +94,7 @@ class CHome:Controller<VHome>
         present(alert, animated:true, completion:nil)
     }
     
-    func editNote(item:MHomeItem)
+    func editNote(item:MHomeItem?)
     {
         guard
             
@@ -117,7 +105,7 @@ class CHome:Controller<VHome>
             return
         }
         
-        let controller:CCreate = CCreate()
+        let controller:CCreate = CCreate(modelHomeItem:item)
         parent.push(
             controller:controller,
             horizontal:ControllerParent.Horizontal.right)
