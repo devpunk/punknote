@@ -124,8 +124,8 @@ class VShareCellScaleCell:UICollectionViewCell
     
     private func printDescr(scale:CGFloat)
     {
-        let width:CGFloat = scale * MShare.width
-        let height:CGFloat = scale * MShare.height
+        let width:CGFloat = MShare.widthForScale(scale:scale)
+        let height:CGFloat = MShare.heightForScale(scale:scale)
         let widthNumber:NSNumber = width as NSNumber
         let heightNumber:NSNumber = height as NSNumber
         let stringDescr:String = String(

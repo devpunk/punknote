@@ -58,7 +58,7 @@ class VAlert:UIView
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.bold(size:kFontSize)
-        label.textColor = UIColor.white
+        label.textColor = UIColor.black
         label.textAlignment = NSTextAlignment.center
         label.numberOfLines = 0
         label.backgroundColor = UIColor.clear

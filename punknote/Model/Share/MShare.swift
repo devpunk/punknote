@@ -22,9 +22,28 @@ class MShare
         return content
     }
     
+    class func widthForScale(scale:CGFloat) -> CGFloat
+    {
+        return width * scale
+    }
+    
+    class func heightForScale(scale:CGFloat) -> CGFloat
+    {
+        return height * scale
+    }
+    
     init()
     {
         content = MShare.factoryContent()
         selectedScale = 0
+    }
+    
+    //MARK: public
+    
+    func currentScale() -> CGFloat
+    {
+        let scale:CGFloat = scales[selectedScale]
+        
+        return scale
     }
 }

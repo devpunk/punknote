@@ -22,3 +22,5 @@
 "CHome_deleteAlertTitle"="Delete note?";
 "CHome_deleteAlertCancel"="Cancel";
 "CHome_deleteAlertDelete"="Delete";
+"CShare_errorContext"="Error loading context";
+"CShare_errorImage"="Error creating image";
