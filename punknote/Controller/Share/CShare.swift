@@ -40,55 +40,22 @@ class CShare:Controller<VShare>
         let height:CGFloat = MShare.height
         let imageSize:CGSize = CGSize(width:width, height:height)
         let imageFrame:CGRect = CGRect(origin:CGPoint.zero, size:imageSize)
-        let textUsableWidth:CGFloat = width - marginHorizontal2
-        let textMaxSize:CGSize = CGSize(width:textUsableWidth, height:height)
-        let textRawFrame:CGRect = attributedString.boundingRect(
-            with:textMaxSize,
-            options:drawingOptions,
-            context:nil)
-        let textWidth:CGFloat = ceil(textRawFrame.width)
-        let textHeight:CGFloat = ceil(textRawFrame.height)
-        let textHeightRemain:CGFloat = height - textHeight
-        let textTop:CGFloat = textHeightRemain / 2.0
-        let textWidthRemain:CGFloat = width - textWidth
-        let textLeft:CGFloat = textWidthRemain / 2.0
-        let textFrame:CGRect = CGRect(
-            x:textLeft,
-            y:textTop,
-            width:textWidth,
-            height:textHeight)
         
         let image:UIImage? = imageWidthData(
-            background:background,
-            attributedString:attributedString,
+            noteFrame:noteFrame,
             imageSize:imageSize,
-            imageFrame:imageFrame,
-            textFrame:textFrame)
+            imageFrame:imageFrame)
         
         return image
     }
     
     private func imageWidthData(
-        noteFrame:DNoteFrame
+        noteFrame:DNoteFrame,
         imageSize:CGSize,
         imageFrame:CGRect) -> UIImage?
     {
         let scale:CGFloat = model.currentScale()
         UIGraphicsBeginImageContextWithOptions(imageSize, true, scale)
-        
-        guard
-            
-            let context:CGContext = UIGraphicsGetCurrentContext()
-            
-        else
-        {
-            UIGraphicsEndImageContext()
-            
-            let error:String = NSLocalizedString("CShare_errorContext", comment:"")
-            VAlert.messageOrange(message:error)
-            
-            return nil
-        }
         
         let shareImage:VShareImage = VShareImage(
             modelHomeItem:modelHomeItem,
