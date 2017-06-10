@@ -84,6 +84,7 @@
 		DAA563D81EEB6AF500AEE8B9 /* MHomeDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */; };
 		DAA563DA1EEB6B0000AEE8B9 /* MHomeEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563D91EEB6B0000AEE8B9 /* MHomeEdit.swift */; };
 		DAA563DC1EEB6B0B00AEE8B9 /* MHomeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563DB1EEB6B0B00AEE8B9 /* MHomeShare.swift */; };
+		DAA563DF1EEC363400AEE8B9 /* CShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA563DE1EEC363400AEE8B9 /* CShare.swift */; };
 		DAEC9D681EEA71AA00A16366 /* VCreateCellFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */; };
 		DAEC9D6A1EEA71E200A16366 /* MCreateContentFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */; };
 		DAEC9D6C1EEB063E00A16366 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */; };
@@ -178,6 +179,7 @@
 		DAA563D71EEB6AF500AEE8B9 /* MHomeDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDelete.swift; sourceTree = "<group>"; };
 		DAA563D91EEB6B0000AEE8B9 /* MHomeEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeEdit.swift; sourceTree = "<group>"; };
 		DAA563DB1EEB6B0B00AEE8B9 /* MHomeShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeShare.swift; sourceTree = "<group>"; };
+		DAA563DE1EEC363400AEE8B9 /* CShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CShare.swift; sourceTree = "<group>"; };
 		DAEC9D671EEA71AA00A16366 /* VCreateCellFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D691EEA71E200A16366 /* MCreateContentFontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateContentFontSize.swift; sourceTree = "<group>"; };
 		DAEC9D6B1EEB063E00A16366 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3131261EE1ECDA00DB2FE4 /* Abstract */,
+				DAA563DD1EEC362B00AEE8B9 /* Share */,
 				DA31312A1EE1ECDA00DB2FE4 /* Home */,
 				DA3131281EE1ECDA00DB2FE4 /* Create */,
 			);
@@ -458,6 +461,14 @@
 				DA5146811EE0CB0900873C06 /* Info.plist */,
 			);
 			path = punknote;
+			sourceTree = "<group>";
+		};
+		DAA563DD1EEC362B00AEE8B9 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				DAA563DE1EEC363400AEE8B9 /* CShare.swift */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,6 +576,7 @@
 				DA3D97BD1EE5FDE300E8EB33 /* MCreateSelected.swift in Sources */,
 				DA54E7431EE9B7C5008302E8 /* VCreateCellFontNameCell.swift in Sources */,
 				DA3130621EE1A40000DB2FE4 /* ExtensionUIColor.swift in Sources */,
+				DAA563DF1EEC363400AEE8B9 /* CShare.swift in Sources */,
 				DA1E05F41EE7567300DDAC9B /* MCreateBackgroundPurpleGreen.swift in Sources */,
 				DA33E0001EE8AAA80096FF9D /* MCreateBackgroundBlueNight.swift in Sources */,
 				DA31305D1EE1A40000DB2FE4 /* ExtensionNotification.swift in Sources */,
