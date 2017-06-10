@@ -12,3 +12,7 @@
 "VHomeCell_durationSeconds"=" seconds";
 
 "MCreateFrame_defaultText"="Text";
+
+"CHome_deleteAlertTitle"="Delete note?";
+"CHome_deleteAlertCancel"="Cancel";
+"CHome_deleteAlertDelete"="Delete";

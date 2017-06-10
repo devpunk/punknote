@@ -80,6 +80,16 @@ class MHome
         controller?.notesLoaded()
     }
     
+    private func asyncDeleteNote(item:MHomeItem)
+    {
+        DManager.sharedInstance?.delete(data:item.note)
+        { [weak self] in
+            
+            DManager.sharedInstance?.save()
+            self?.asyncReload()
+        }
+    }
+    
     //MARK: public
     
     func reload(controller:CHome)
@@ -90,6 +100,17 @@ class MHome
         { [weak self] in
             
             self?.asyncReload()
+        }
+    }
+    
+    func deleteNote(controller:CHome, item:MHomeItem)
+    {
+        self.controller = controller
+        
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+                
+            self?.asyncDeleteNote(item:item)
         }
     }
 }

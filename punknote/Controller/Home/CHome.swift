@@ -26,17 +26,28 @@ class CHome:Controller<VHome>
     {
         super.viewDidAppear(animated)
         
+        startLoading()
+        model.reload(controller:self)
+    }
+    
+    private func startLoading()
+    {
         guard
-        
+            
             let view:VHome = self.view as? VHome
-        
+            
         else
         {
             return
         }
         
         view.startLoading()
-        model.reload(controller:self)
+    }
+    
+    private func confirmDelete(item:MHomeItem)
+    {
+        startLoading()
+        model.deleteNote(controller:self, item:item)
     }
     
     //MARK: public
@@ -74,5 +85,41 @@ class CHome:Controller<VHome>
             
             view.stopLoading()
         }
+    }
+    
+    func deleteNote(item:MHomeItem)
+    {
+        let alert:UIAlertController = UIAlertController(
+            title:NSLocalizedString("CHome_deleteAlertTitle", comment:""),
+            message:nil,
+            preferredStyle:UIAlertControllerStyle.actionSheet)
+        
+        let actionCancel:UIAlertAction = UIAlertAction(
+            title:
+            NSLocalizedString("CHome_deleteAlertCancel", comment:""),
+            style:
+            UIAlertActionStyle.cancel)
+        
+        let actionDelete:UIAlertAction = UIAlertAction(
+            title:
+            NSLocalizedString("CHome_deleteAlertDelete", comment:""),
+            style:
+            UIAlertActionStyle.destructive)
+        { [weak self] (action:UIAlertAction) in
+            
+            self?.confirmDelete(item:item)
+        }
+        
+        alert.addAction(actionDelete)
+        alert.addAction(actionCancel)
+        
+        if let popover:UIPopoverPresentationController = alert.popoverPresentationController
+        {
+            popover.sourceView = view
+            popover.sourceRect = CGRect.zero
+            popover.permittedArrowDirections = UIPopoverArrowDirection.up
+        }
+        
+        present(alert, animated:true, completion:nil)
     }
 }

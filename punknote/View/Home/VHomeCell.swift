@@ -14,7 +14,7 @@ class VHomeCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     private let kBorderHeight:CGFloat = 1
     private let kTextMarginVertical:CGFloat = 5
     private let kTextMarginHorizontal:CGFloat = 30
-    private let kDurationHeight:CGFloat = 40
+    private let kDurationHeight:CGFloat = 50
     private let kDurationWidth:CGFloat = 250
     private let kDurationLeft:CGFloat = 10
     private let kMaxDecimals:Int = 0

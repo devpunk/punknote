@@ -12,6 +12,6 @@ class MHomeDelete:MHomeProtocol
     
     func selected(controller:CHome, model:MHomeItem)
     {
-        
+        controller.deleteNote(item:model)
     }
 }
