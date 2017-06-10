@@ -1,9 +1,14 @@
 import UIKit
+import ImageIO
+import MobileCoreServices
 
 class CShare:Controller<VShare>
 {
     let model:MShare
     let modelHomeItem:MHomeItem
+    private let kFilenameGif:String = "punky.gif"
+    private let kFilenamePng:String = "punky.png"
+    private let kLoopCount:Int = 0
     
     init(modelHomeItem:MHomeItem)
     {
@@ -34,6 +39,109 @@ class CShare:Controller<VShare>
         view.startLoading()
     }
     
+    private func finishSharing()
+    {
+        guard
+            
+            let view:VShare = view as? VShare
+            
+        else
+        {
+            return
+        }
+        
+        view.stopLoading()
+    }
+    
+    private func loadImages() -> [MShareImage]
+    {
+        var images:[MShareImage] = []
+        
+        guard
+        
+            let frames:[DNoteFrame] = modelHomeItem.note.frames?.array as? [DNoteFrame]
+        
+        else
+        {
+            return images
+        }
+        
+        for frame:DNoteFrame in frames
+        {
+            guard
+            
+                let image:UIImage = frameToImage(noteFrame:frame)
+            
+            else
+            {
+                continue
+            }
+            
+            let model:MShareImage = MShareImage(image:image, duration:frame.duration)
+            images.append(model)
+        }
+        
+        return images
+    }
+    
+    private func animateGif(images:[MShareImage]) -> URL?
+    {
+        let directoryUrl:URL = URL(fileURLWithPath:NSTemporaryDirectory())
+        let fileUrl:URL = directoryUrl.appendingPathComponent(kFilenameGif)
+        let totalImages:Int = images.count
+        
+        guard
+            
+            let destination:CGImageDestination = CGImageDestinationCreateWithURL(
+                fileUrl as CFURL,
+                kUTTypeGIF,
+                totalImages,
+                nil)
+            
+        else
+        {
+            let error:String = NSLocalizedString("CShare_errorGif", comment:"")
+            VAlert.messageOrange(message:error)
+            
+            return nil
+        }
+        
+        let destinationPropertiesRaw:[String:Any] = [
+            kCGImagePropertyGIFDictionary as String:[
+                kCGImagePropertyGIFLoopCount as String:kLoopCount]]
+        let destinationProperties:CFDictionary = destinationPropertiesRaw as CFDictionary
+        
+        CGImageDestinationSetProperties(
+            destination,
+            destinationProperties)
+        
+        for image:MShareImage in images
+        {
+            guard
+                
+                let cgImage:CGImage = image.image.cgImage
+                
+            else
+            {
+                continue
+            }
+            
+            let gifPropertiesRaw:[String:Any] = [
+                kCGImagePropertyGIFDictionary as String:[
+                    kCGImagePropertyGIFDelayTime as String:image.duration]]
+            let gifProperties:CFDictionary = gifPropertiesRaw as CFDictionary
+            
+            CGImageDestinationAddImage(
+                destination,
+                cgImage,
+                gifProperties)
+        }
+        
+        CGImageDestinationFinalize(destination)
+        
+        return fileUrl
+    }
+    
     private func frameToImage(noteFrame:DNoteFrame) -> UIImage?
     {
         let width:CGFloat = MShare.width
@@ -55,7 +163,7 @@ class CShare:Controller<VShare>
         imageFrame:CGRect) -> UIImage?
     {
         let scale:CGFloat = model.currentScale()
-        UIGraphicsBeginImageContextWithOptions(imageSize, true, scale)
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, scale)
         
         let shareImage:VShareImage = VShareImage(
             modelHomeItem:modelHomeItem,
@@ -81,10 +189,10 @@ class CShare:Controller<VShare>
         return image
     }
     
-    private func export(image:UIImage)
+    private func export(url:URL)
     {
         let activity:UIActivityViewController = UIActivityViewController(
-            activityItems:[image],
+            activityItems:[url],
             applicationActivities:nil)
         
         if let popover:UIPopoverPresentationController = activity.popoverPresentationController
@@ -95,20 +203,6 @@ class CShare:Controller<VShare>
         }
         
         present(activity, animated:true, completion:nil)
-    }
-    
-    private func finishSharing()
-    {
-        guard
-            
-            let view:VShare = view as? VShare
-            
-        else
-        {
-            return
-        }
-        
-        view.stopLoading()
     }
     
     //MARK: public
@@ -130,6 +224,29 @@ class CShare:Controller<VShare>
     func shareGif()
     {
         startLoading()
+        let images:[MShareImage] = loadImages()
+        
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+         
+            guard
+            
+                let fileUrl:URL = self?.animateGif(images:images)
+            
+            else
+            {
+                self?.finishSharing()
+                
+                return
+            }
+            
+            DispatchQueue.main.async
+            { [weak self] in
+                
+                self?.export(url:fileUrl)
+                self?.finishSharing()
+            }
+        }
     }
     
     func sharePng()
@@ -158,8 +275,33 @@ class CShare:Controller<VShare>
             
             return
         }
+
+        let directoryUrl:URL = URL(fileURLWithPath:NSTemporaryDirectory())
+        let fileUrl:URL = directoryUrl.appendingPathComponent(kFilenamePng)
         
-        export(image:image)
+        guard
+            
+            let data:Data = UIImagePNGRepresentation(image)
+        
+        else
+        {
+            finishSharing()
+            
+            return
+        }
+        
+        do
+        {
+            try data.write(to:fileUrl, options:Data.WritingOptions.atomicWrite)
+        }
+        catch
+        {
+            finishSharing()
+            
+            return
+        }
+        
+        export(url:fileUrl)
         finishSharing()
     }
 }
