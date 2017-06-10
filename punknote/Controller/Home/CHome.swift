@@ -25,28 +25,11 @@ class CHome:Controller<VHome>
     override func viewDidAppear(_ animated:Bool)
     {
         super.viewDidAppear(animated)
-        
-        startLoading()
         model.reload(controller:self)
-    }
-    
-    private func startLoading()
-    {
-        guard
-            
-            let view:VHome = self.view as? VHome
-            
-        else
-        {
-            return
-        }
-        
-        view.startLoading()
     }
     
     private func confirmDelete(item:MHomeItem)
     {
-        startLoading()
         model.deleteNote(controller:self, item:item)
     }
     

@@ -29,6 +29,7 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let viewBar:VHomeBar = VHomeBar(controller:controller)
         
         let collectionView:VCollection = VCollection()
+        collectionView.isHidden = true
         collectionView.alwaysBounceVertical = true
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -87,12 +88,6 @@ class VHome:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     //MARK: public
-    
-    func startLoading()
-    {
-        spinner.startAnimating()
-        collectionView.isHidden = true
-    }
     
     func stopLoading()
     {

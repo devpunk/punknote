@@ -10,6 +10,7 @@
 "VHomeBar_buttonNew"="New";
 "VHomeFooter_label"="You have no notes";
 "VHomeCell_durationSeconds"=" seconds";
+"VShareBar_labelTitle"="Share";
 
 "MCreateFrame_defaultText"="Text";
 

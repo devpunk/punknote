@@ -12,6 +12,6 @@ class MHomeShare:MHomeProtocol
     
     func selected(controller:CHome, model:MHomeItem)
     {
-        
+        controller.shareNote(item:model)
     }
 }

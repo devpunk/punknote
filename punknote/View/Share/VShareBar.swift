@@ -4,6 +4,7 @@ class VShareBar:UIView
 {
     private weak var controller:CShare!
     private let kBorderHeight:CGFloat = 1
+    private let kContentTop:CGFloat = 20
     
     init(controller:CShare)
     {
@@ -15,7 +16,17 @@ class VShareBar:UIView
         
         let border:VBorder = VBorder(color:UIColor(white:0, alpha:0.2))
         
+        let labelTitle:UILabel = UILabel()
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.backgroundColor = UIColor.clear
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.font = UIFont.bold(size:14)
+        labelTitle.textColor = UIColor.black
+        labelTitle.text = NSLocalizedString("VShareBar_labelTitle", comment:"")
+        
         addSubview(border)
+        addSubview(labelTitle)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -25,6 +36,17 @@ class VShareBar:UIView
             constant:kBorderHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
+            toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:labelTitle,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:labelTitle,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:labelTitle,
             toView:self)
     }
     
