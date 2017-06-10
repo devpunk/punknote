@@ -122,4 +122,21 @@ class CHome:Controller<VHome>
         
         present(alert, animated:true, completion:nil)
     }
+    
+    func shareNote(item:MHomeItem)
+    {
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        let controller:CShare = CShare(model:item)
+        parent.push(
+            controller:controller,
+            horizontal:ControllerParent.Horizontal.right)
+    }
 }

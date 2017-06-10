@@ -6,7 +6,7 @@ class ViewParent:UIView
     private weak var controller:ControllerParent!
     private weak var layoutBarTop:NSLayoutConstraint!
     private var panningX:CGFloat?
-    private let kAnimationDuration:TimeInterval = 0.4
+    private let kAnimationDuration:TimeInterval = 0.25
     private let kBarHeight:CGFloat = 70
     private let kMaxXPanning:CGFloat = 60
     private let kMaxXDelta:CGFloat = 210
