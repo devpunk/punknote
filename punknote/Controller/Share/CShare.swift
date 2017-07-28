@@ -150,7 +150,7 @@ class CShare:Controller<VShare>
         let imageSize:CGSize = CGSize(width:width, height:height)
         let imageFrame:CGRect = CGRect(origin:CGPoint.zero, size:imageSize)
         
-        let image:UIImage? = imageWidthData(
+        let image:UIImage? = imageWithData(
             noteFrame:noteFrame,
             imageSize:imageSize,
             imageFrame:imageFrame)
@@ -158,7 +158,7 @@ class CShare:Controller<VShare>
         return image
     }
     
-    private func imageWidthData(
+    private func imageWithData(
         noteFrame:DNoteFrame,
         imageSize:CGSize,
         imageFrame:CGRect) -> UIImage?
